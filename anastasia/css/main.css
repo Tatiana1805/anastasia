@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Great";
+  src: url("../fonts/GreatVibes-Regular.ttf"); }
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-VariableFont_wght.ttf"); }
 * {
   box-sizing: border-box; }
 
@@ -71,20 +77,21 @@ fieldset {
     justify-content: space-between;
     align-items: center; }
   .header__logo {
-    font-family: "Great Vibes", serif;
-    font-weight: 400;
+    font-family: "Great", serif;
+    font-weight: 500;
     font-style: normal;
-    font-size: 2rem; }
+    font-size: 2.5rem; }
 
 .nav__list {
   display: flex;
   height: 70px;
   align-items: center;
-  gap: 20px;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
+  gap: 30px;
+  font-family: "Comfortaa", serif;
+  font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  text-transform: uppercase; }
   .nav__list__item {
     color: black; }
 
