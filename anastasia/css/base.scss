@@ -9,7 +9,7 @@ html, body {
 body {
     overflow-x: hidden;
     margin: rem(0px);
-    font-size: rem(16px);
+    // font-size: rem(16px);
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -24,9 +24,32 @@ ul > li {
     list-style: none;
 }
 
+ul {
+    font-size: 1.5rem;
+    font-family: "Comfortaa";
+}
+
+li {
+    font-size: 1.5rem;
+    font-family: "Comfortaa";
+    position: relative;
+    padding-left: 20px; 
+}
+li::before{
+    content: '✔';
+    position: absolute; 
+    left: 0; 
+    color: var(--bg-color); 
+    font-size: 20px; 
+}
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+b {
+    font-family: "Comfortaa";
+    font-size: 3rem;
 }
 
 button {
@@ -66,10 +89,21 @@ fieldset {
 
 .container {
     position: relative;
-    max-width: rem(1400px); //ширина контейнера
+    max-width: 70%; //ширина контейнера
     width: 100%;
-    margin: 0 auto;
+    margin: 40px auto;
 }
+
+h2 {
+    font-size: 2rem;
+    font-family: "Comfortaa"
+}
+
+h4, span {
+    font-size: 1.5rem;
+    font-family: "Comfortaa"
+}
+
 
 :root{
     --bg-color: #78b5d9;

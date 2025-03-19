@@ -1,0 +1,24 @@
+.price__container {
+    margin-top: 40px;
+    &__el {
+        display: flex;
+        justify-content: space-between;
+        &__item{
+            width: 30%;
+            height: 350px;
+            border: 1px solid var(--bg-color);
+            border-radius: 5px;
+            padding: 40px 30px;
+            text-align: center;
+            line-height: 2;
+            margin-top: 20px;
+            & > ul {
+                text-align: left;
+            }   
+            &__info{
+                height: 200px;
+            }
+        }
+
+    }
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Great";
   src: url("../fonts/GreatVibes-Regular.ttf"); }
@@ -13,7 +14,6 @@ html, body {
 body {
   overflow-x: hidden;
   margin: 0rem;
-  font-size: 1rem;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -25,9 +25,30 @@ ul, p, h1, h2, h3, h4, h5, h6 {
 ul > li {
   list-style: none; }
 
+ul {
+  font-size: 1.5rem;
+  font-family: "Comfortaa"; }
+
+li {
+  font-size: 1.5rem;
+  font-family: "Comfortaa";
+  position: relative;
+  padding-left: 20px; }
+
+li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--bg-color);
+  font-size: 20px; }
+
 a {
   text-decoration: none;
   cursor: pointer; }
+
+b {
+  font-family: "Comfortaa";
+  font-size: 3rem; }
 
 button {
   appearance: none;
@@ -61,18 +82,29 @@ fieldset {
 
 .container {
   position: relative;
-  max-width: 87.5rem;
+  max-width: 70%;
   width: 100%;
-  margin: 0 auto; }
+  margin: 40px auto; }
+
+h2 {
+  font-size: 2rem;
+  font-family: "Comfortaa"; }
+
+h4, span {
+  font-size: 1.5rem;
+  font-family: "Comfortaa"; }
 
 :root {
   --bg-color: #78b5d9; }
 
 .header {
   width: 100%;
-  background: var(--bg-color); }
+  background: var(--bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; }
   .header__container {
-    max-width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -84,10 +116,9 @@ fieldset {
 
 .nav__list {
   display: flex;
-  height: 70px;
+  height: 90px;
   align-items: center;
   gap: 30px;
-  font-family: "Comfortaa", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1.5rem;
@@ -98,9 +129,104 @@ fieldset {
 a {
   color: black; }
 
+.start__container {
+  display: flex;
+  margin-top: 225px; }
+  .start__container__hero {
+    min-width: 35%;
+    height: 700px; }
+  .start__container__heroInfo {
+    font-family: 'Comfortaa';
+    max-width: 65%; }
+    .start__container__heroInfo-base {
+      font-size: 2.5rem; }
+  .start__container__info {
+    font-size: 2rem;
+    line-height: 30px; }
+
+p {
+  margin-bottom: 1.5rem; }
+
+button {
+  width: auto;
+  height: 45px;
+  border-radius: 25px;
+  background-color: var(--bg-color);
+  padding: 35px 50px;
+  font-size: 2rem;
+  font-family: "Comfortaa";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+  margin: auto; }
+
+.skills__container {
+  margin-top: 45px;
+  font-family: 'Comfortaa';
+  font-size: 1.5rem;
+  text-align: center; }
+  .skills__container__info {
+    max-width: 50%;
+    margin: auto;
+    padding-top: 30px; }
+  .skills__container__content__item {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between; }
+    .skills__container__content__item-category {
+      font-weight: 800;
+      width: 23%;
+      border: 1px solid var(--bg-color);
+      border-radius: 5px;
+      padding: 5px 10px; }
+      .skills__container__content__item-category-el {
+        font-weight: 500;
+        text-align: left;
+        margin-top: 20px; }
+
+.advantages__container {
+  margin-top: 40px; }
+  .advantages__container__element {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .advantages__container__element__item {
+      width: 30%;
+      border: 1px solid var(--bg-color);
+      border-radius: 7px;
+      margin-top: 20px;
+      padding: 10px 15px; }
+
+h2 {
+  text-align: center; }
+
+.price__container {
+  margin-top: 40px; }
+  .price__container__el {
+    display: flex;
+    justify-content: space-between; }
+    .price__container__el__item {
+      width: 30%;
+      height: 350px;
+      border: 1px solid var(--bg-color);
+      border-radius: 5px;
+      padding: 40px 30px;
+      text-align: center;
+      line-height: 2;
+      margin-top: 20px; }
+      .price__container__el__item > ul {
+        text-align: left; }
+      .price__container__el__item__info {
+        height: 200px; }
+
+.qualification__container__info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  line-height: 2; }
+
 .footer {
-  height: 70px;
-  width: 100%;
   background: var(--bg-color);
   margin-top: 100px; }
 
