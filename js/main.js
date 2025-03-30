@@ -9,13 +9,13 @@ function scalePage() {
     const scale = windowWidth / maxWidth;
 
     // Применяем масштабирование
-    $(".wrapper").css({
+    $(".main").css({
       transform: `scale(${scale})`,
       width: `${maxWidth}px`, // Фиксируем ширину контейнера
       transformOrigin: "top left", // Точка отсчета масштабирования
     });
   } else {
-    $(".wrapper").css({
+    $(".main").css({
       transform: "none",
       width: "100%",
       transformOrigin: "unset",
