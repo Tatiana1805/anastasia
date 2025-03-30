@@ -1,0 +1,16 @@
+@import 'fonts.scss';
+
+@function rem($px) {
+    @return $px / 16px + 0rem;
+}
+
+@import 'base.scss';
+@import 'header.scss';
+@import 'start.scss';
+@import 'skills.scss';
+@import 'advantages.scss';
+@import 'price.scss';
+@import 'qualification.scss';
+@import 'footer.scss';
+
+@import 'media.scss';

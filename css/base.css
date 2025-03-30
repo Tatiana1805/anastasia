@@ -1,0 +1,94 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  overflow-x: hidden;
+  margin: rem(0px);
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ul, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+ul > li {
+  list-style: none; }
+
+ul {
+  font-size: 1.5rem;
+  font-family: "Comfortaa"; }
+
+li {
+  font-size: 1.5rem;
+  font-family: "Comfortaa";
+  position: relative;
+  padding-left: 20px; }
+
+li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--bg-color);
+  font-size: 20px; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+b {
+  font-family: "Comfortaa";
+  font-size: 3rem; }
+
+button {
+  appearance: none;
+  background: none;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer; }
+
+input {
+  outline: none;
+  border: none; }
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield; }
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100%; }
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  background: #FFFFFF;
+  overflow-x: hidden; }
+
+.container {
+  position: relative;
+  max-width: 70%;
+  width: 100%;
+  margin: 40px auto; }
+
+h2 {
+  font-size: 2rem;
+  font-family: "Comfortaa"; }
+
+h4, span {
+  font-size: 1.5rem;
+  font-family: "Comfortaa"; }
+
+:root {
+  --bg-color: #006DB4; }
+
+/*# sourceMappingURL=base.css.map */
