@@ -19,20 +19,25 @@
 
 }
 
-.nav__list {
-    display: flex;
-    height: 90px;
-    align-items: center;
-    gap: 30px;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
-    text-transform: uppercase;
 
-    &__item {
-        color: black;
+.nav {
+    margin: auto;
+    &__list {
+        display: flex;
+        height: 90px;
+        align-items: center;
+        gap: 30px;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    
+        &__item {
+            color: black;
+        }
     }
 }
+
 
 a {
     color: black;

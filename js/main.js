@@ -14,6 +14,15 @@ function scalePage() {
       width: `${maxWidth}px`, // Фиксируем ширину контейнера
       transformOrigin: "top left", // Точка отсчета масштабирования
     });
+
+    function heightCorrection() {
+      const originalHeight = $(".main").outerHeight();
+      const scaledHeight = originalHeight * scale;
+      $(".main").css("height", `${scaledHeight}px`);
+    }
+
+    heightCorrection();
+
   } else {
     $(".main").css({
       transform: "none",
