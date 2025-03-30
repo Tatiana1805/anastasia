@@ -1,26 +1,31 @@
-.header{
+.header {
     width: 100%;
     background: var(--bg-color);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+
     &__container {
         // max-width: 70%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 10px 0;
     }
+
     &__logo{
-            font-family: "Great", serif;
-            font-weight: 500;
-            font-style: normal;
-            font-size: 2.5rem;
+        font-family: "Great", serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 2.5rem;
     }
 
 }
 
-.nav__list{
+.nav__list {
     display: flex;
     height: 90px;
     align-items: center;
@@ -30,7 +35,7 @@
     font-size: 1.5rem;
     text-transform: uppercase;
 
-    &__item{
+    &__item {
         color: black;
     }
 }
