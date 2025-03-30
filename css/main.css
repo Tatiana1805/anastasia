@@ -95,7 +95,8 @@ h4, span {
   font-family: "Comfortaa"; }
 
 :root {
-  --bg-color: #006DB4; }
+  --bg-color: #3EA6F4
+  ; }
 
 .header {
   width: 100%;
