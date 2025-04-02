@@ -241,7 +241,7 @@ h2 {
     justify-content: space-between; }
     .price__container__el__item {
       width: 30%;
-      height: 350px;
+      height: 950px;
       border: 1px solid var(--bg-color);
       border-radius: 5px;
       padding: 40px 30px;
@@ -251,7 +251,7 @@ h2 {
       .price__container__el__item > ul {
         text-align: left; }
       .price__container__el__item__info {
-        height: 200px; }
+        height: 800px; }
 
 .qualification__container__info {
   display: flex;
