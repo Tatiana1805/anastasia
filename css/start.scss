@@ -1,20 +1,33 @@
 .start__container {
     display: flex;
     margin-top: 225px;
+    background-color: var(--bg-color);
+    max-width: 50%;
+    border-radius: 10px;
+    padding: 50px;
     &__hero {
         max-width: 50%;
         // height: 700px;
+        &-img{
+            border-radius: 50%;
+            background-color: #fdf5db;
+        }
     }
     &__heroInfo {
         font-family: 'MainFont';
         max-width: 50%;
+        text-align: right;
         &-base{
             font-size: 2.5rem;
+            color: #ffcda2;
+            font-weight: 800;
         }
     }
     &__info {
-        font-size: 1vw;
-        line-height: 30px;
+        font-size: 1.2vw;
+        line-height: 25px;
+        color: #fdf5db;
+        margin-top: 40px;
     }
 
 }
@@ -23,17 +36,19 @@ p {
     margin-bottom: 1.5rem;
 }
 
-button {
-    width: auto;
-    height: 45px;
-    border-radius: 25px;
-    background-color: var(--bg-color);
-    padding: 35px 50px;
-    font-size: 2rem;
-    font-family: "MainFont";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: normal;
-    margin: auto;
-}
+// button {
+//     width: auto;
+//     height: 45px;
+//     border-radius: 25px;
+//     background-color: var(--bg-color);
+//     padding: 35px 50px;
+//     font-size: 2rem;
+//     font-family: "MainFont";
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     line-height: normal;
+//     margin: auto;
+// }
+
+

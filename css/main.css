@@ -81,7 +81,7 @@ fieldset {
 .wrapper {
   position: relative;
   width: 100%;
-  background: #FFFFFF;
+  background: #fdf5db;
   overflow-x: hidden; }
 
 .container {
@@ -136,34 +136,32 @@ a {
 
 .start__container {
   display: flex;
-  margin-top: 225px; }
+  margin-top: 225px;
+  background-color: var(--bg-color);
+  max-width: 50%;
+  border-radius: 10px;
+  padding: 50px; }
   .start__container__hero {
     max-width: 50%; }
+    .start__container__hero-img {
+      border-radius: 50%;
+      background-color: #fdf5db; }
   .start__container__heroInfo {
     font-family: 'MainFont';
-    max-width: 50%; }
+    max-width: 50%;
+    text-align: right; }
     .start__container__heroInfo-base {
-      font-size: 2.5rem; }
+      font-size: 2.5rem;
+      color: #ffcda2;
+      font-weight: 800; }
   .start__container__info {
-    font-size: 1vw;
-    line-height: 30px; }
+    font-size: 1.2vw;
+    line-height: 25px;
+    color: #fdf5db;
+    margin-top: 40px; }
 
 p {
   margin-bottom: 1.5rem; }
-
-button {
-  width: auto;
-  height: 45px;
-  border-radius: 25px;
-  background-color: var(--bg-color);
-  padding: 35px 50px;
-  font-size: 2rem;
-  font-family: "MainFont";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: normal;
-  margin: auto; }
 
 .skills__container {
   margin-top: 45px;
@@ -195,7 +193,8 @@ button {
       .skills__list__item__img__el, .skills__list__item-reverse__img__el {
         width: 100%;
         height: 95%;
-        background-size: cover; }
+        background-size: cover;
+        border-radius: 5px; }
     .skills__list__item__el, .skills__list__item-reverse__el {
       display: flex;
       flex-direction: column;
@@ -238,20 +237,15 @@ h2 {
   margin-top: 40px; }
   .price__container__el {
     display: flex;
-    justify-content: space-between; }
+    flex-direction: column; }
     .price__container__el__item {
-      width: 30%;
-      height: 950px;
-      border: 1px solid var(--bg-color);
+      border: 4px solid var(--bg-color);
       border-radius: 5px;
       padding: 40px 30px;
-      text-align: center;
-      line-height: 2;
+      line-height: 1.6;
       margin-top: 20px; }
       .price__container__el__item > ul {
         text-align: left; }
-      .price__container__el__item__info {
-        height: 800px; }
 
 .qualification__container__info {
   display: flex;

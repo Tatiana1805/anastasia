@@ -2,21 +2,21 @@
     margin-top: 40px;
     &__el {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         &__item{
-            width: 30%;
-            height: 950px;
-            border: 1px solid var(--bg-color);
+            // width: 30%;
+            // height: 950px;
+            border: 4px solid var(--bg-color);
             border-radius: 5px;
             padding: 40px 30px;
-            text-align: center;
-            line-height: 2;
+            // text-align: center;
+            line-height: 1.6;
             margin-top: 20px;
             & > ul {
                 text-align: left;
             }   
             &__info{
-                height: 800px;
+                // height: 800px;
             }
         }
 
