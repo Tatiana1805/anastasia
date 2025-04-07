@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Great";
   src: url("../fonts/GreatVibes-Regular.ttf"); }
@@ -32,15 +31,7 @@ ul {
 li {
   font-size: 1.5rem;
   font-family: "MainFont";
-  position: relative;
-  padding-left: 20px; }
-
-li::before {
-  content: '✔';
-  position: absolute;
-  left: 0;
-  color: var(--bg-color);
-  font-size: 20px; }
+  position: relative; }
 
 a {
   text-decoration: none;
@@ -117,16 +108,16 @@ h4, span {
     padding: 10px 0; }
 
 .nav {
-  margin: auto; }
+  width: 100%; }
   .nav__list {
     display: flex;
     height: 60px;
     align-items: center;
-    gap: 30px;
     font-weight: 400;
     font-style: normal;
     font-size: 1vw;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    justify-content: space-between; }
     .nav__list__item {
       color: black; }
 
@@ -135,7 +126,7 @@ a {
 
 .start__container {
   display: flex;
-  margin-top: 225px;
+  margin-top: 135px;
   background-color: var(--bg-color);
   max-width: 70%;
   border-radius: 10px;
@@ -179,7 +170,6 @@ p {
     display: flex;
     gap: 5px;
     width: 100%;
-    padding: 15px;
     height: 500px;
     justify-content: space-around;
     justify-content: center; }
