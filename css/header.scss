@@ -21,9 +21,13 @@
 
 
 .nav {
+    font-family: 'MainFont';
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     // margin: auto;
     &__list {
+        width: 65%;
         display: flex;
         height: 60px;
         align-items: center;
@@ -36,6 +40,16 @@
     
         &__item {
             color: black;
+        }
+        &__contacts{
+            width: 30%;
+            gap: 30px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1vw;
+            &__icon{
+                width: 41px;
+            }
         }
     }
 }

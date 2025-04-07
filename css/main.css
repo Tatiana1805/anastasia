@@ -29,7 +29,7 @@ ul {
   font-family: "MainFont"; }
 
 li {
-  font-size: 1.5rem;
+  font-size: 1.1vw;
   font-family: "MainFont";
   position: relative; }
 
@@ -42,7 +42,6 @@ b {
   font-size: 3rem; }
 
 img {
-  width: 100%;
   background-size: cover; }
 
 button {
@@ -108,8 +107,12 @@ h4, span {
     padding: 10px 0; }
 
 .nav {
-  width: 100%; }
+  font-family: 'MainFont';
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
   .nav__list {
+    width: 65%;
     display: flex;
     height: 60px;
     align-items: center;
@@ -120,6 +123,14 @@ h4, span {
     justify-content: space-between; }
     .nav__list__item {
       color: black; }
+    .nav__list__contacts {
+      width: 30%;
+      gap: 30px;
+      display: flex;
+      align-items: center;
+      font-size: 1.1vw; }
+      .nav__list__contacts__icon {
+        width: 41px; }
 
 a {
   color: black; }
