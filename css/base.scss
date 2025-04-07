@@ -86,7 +86,7 @@ fieldset {
 .wrapper {
     position: relative;
     width: 100%;
-    background: #fdf5db; //основной цвет фона
+    background: #fdf5db69; //основной цвет фона
     overflow-x: hidden;
 }
 
@@ -109,6 +109,6 @@ h4, span {
 
 
 :root{
-    --bg-color: #659DBD
-    ;
+    --bg-color: #659DBD;
+   // --color: #f0f8ff; //нежно-голубой, на всякий
 }

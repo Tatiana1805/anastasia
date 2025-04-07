@@ -2,11 +2,12 @@
     display: flex;
     margin-top: 225px;
     background-color: var(--bg-color);
-    max-width: 50%;
+    max-width: 70%;
     border-radius: 10px;
     padding: 50px;
     &__hero {
         max-width: 50%;
+        margin: auto;
         // height: 700px;
         &-img{
             border-radius: 50%;
@@ -16,7 +17,8 @@
     &__heroInfo {
         font-family: 'MainFont';
         max-width: 50%;
-        text-align: right;
+        // text-align: right;
+        margin: auto;
         &-base{
             font-size: 2.5rem;
             color: #ffcda2;
