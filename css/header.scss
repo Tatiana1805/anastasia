@@ -47,8 +47,16 @@
             display: flex;
             align-items: center;
             font-size: 1.1vw;
+            justify-content: flex-end;
+
             &__icon{
                 width: 41px;
+            }
+
+            &__bt{
+                background-color: #ffcda2;
+                border-radius: 10px;
+                padding: 10px 15px;
             }
         }
     }

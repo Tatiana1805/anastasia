@@ -128,9 +128,14 @@ h4, span {
       gap: 30px;
       display: flex;
       align-items: center;
-      font-size: 1.1vw; }
+      font-size: 1.1vw;
+      justify-content: flex-end; }
       .nav__list__contacts__icon {
         width: 41px; }
+      .nav__list__contacts__bt {
+        background-color: #ffcda2;
+        border-radius: 10px;
+        padding: 10px 15px; }
 
 a {
   color: black; }
@@ -258,5 +263,3 @@ h2 {
 .footer {
   background: var(--bg-color);
   margin-top: 100px; }
-
-/*# sourceMappingURL=main.css.map */
