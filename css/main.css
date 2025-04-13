@@ -89,7 +89,7 @@ h4, span {
   font-family: "MainFont"; }
 
 :root {
-  --bg-color: #659DBD; }
+  --bg-color: #97b9cd; }
 
 .header {
   width: 100%;
@@ -159,7 +159,7 @@ a {
     margin: auto; }
     .start__container__heroInfo-base {
       font-size: 2.5rem;
-      color: #ffcda2;
+      color: #50227cb3;
       font-weight: 800; }
   .start__container__info {
     font-size: 1.2vw;
@@ -263,3 +263,5 @@ h2 {
 .footer {
   background: var(--bg-color);
   margin-top: 100px; }
+
+/*# sourceMappingURL=main.css.map */
