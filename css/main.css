@@ -186,7 +186,6 @@ p {
     display: flex;
     gap: 5px;
     width: 100%;
-    height: 500px;
     justify-content: space-around;
     justify-content: center; }
     .skills__list__item:before, .skills__list__item-reverse:before {
