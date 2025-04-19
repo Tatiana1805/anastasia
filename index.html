@@ -200,8 +200,13 @@
                 <div class="container price__container">
                     <h2>Программы</h2>
                     <div class="price__container__el">
-                        
-                        <div class="price__container__el__item">
+                       <div class="price__container__el__button">
+                            <button class="price__container__el__button__el" onclick="toggleContainer('container1')">Первая консультация</button>
+                            <button class="price__container__el__button__el" onclick="toggleContainer('container2')">Программа для подростков «Ты способен на большее»</button>
+                            <button class="price__container__el__button__el" onclick="toggleContainer('container3')">Мини-курс для развития и установления эмоциональной близости между родителями и детьми, между детьми в одной семье</button>
+                            <button class="price__container__el__button__el" onclick="toggleContainer('container4')">10-недельная глубокая проработка проблемы</button>
+                        </div> 
+                        <div class="price__container__el__item" id="container1">
                             <div class="price__container__el__item__info">
                                 <h4>Первая консультация</h4>
                                 <span>800 руб.</span>
@@ -211,7 +216,7 @@
                             </div>
                             <!-- <button class="price__container__el__button">записаться</button> -->
                         </div>
-                        <div class="price__container__el__item">
+                        <div class="price__container__el__item" id="container2">
                             <div class="price__container__el__item__info">
                                 <h4>Программа для подростков «Ты способен на большее»</h4>
                                 <span>15000 руб.</span>
@@ -222,7 +227,7 @@
                             </div>
                             <!-- <button class="price__container__el__button">записаться</button> -->
                         </div>
-                        <div class="price__container__el__item">
+                        <div class="price__container__el__item" id="container3">
                         <div class="price__container__el__item__info">
                             <h4>Мини-курс для развития и установления эмоциональной близости между родителями и детьми, между детьми в одной семье</h4>
                             <span>10000 руб.</span>
@@ -235,7 +240,7 @@
                         </div>
                         <!-- <button class="price__container__el__button">записаться</button> -->
                         </div>
-                        <div class="price__container__el__item">
+                        <div class="price__container__el__item" id="container4">
                             <div class="price__container__el__item__info">
                                 <h4>10-недельная глубокая проработка проблемы</h4>
                                 <span>40000 руб.</span>
