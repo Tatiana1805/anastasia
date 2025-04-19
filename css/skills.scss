@@ -23,13 +23,13 @@
                 display: flex;
                 // flex-direction: column;
                 gap: 5px;
-                width: 100%;
+                // width: 100%;
                 // border: 1px solid var(--bg-color);
                 // border-radius: 10px;
                 // padding: 15px;
                 // height: 500px;
-                justify-content: space-around;
-                justify-content: center;
+                // justify-content: space-around;
+                // justify-content: center;
 
                 &:before {
                     display: none;
@@ -41,10 +41,11 @@
                 }
 
                 &__img{
-                    width: 700px;
+                    width: 50%;
+                    padding: 10px 0;
                     &__el{
                         width: 100%;
-                        height: 95%;
+                        // height: 95%;
                         background-size: cover; 
                         border-radius: 5px;
                     }
@@ -54,9 +55,11 @@
                     display: flex;
                     flex-direction: column;
                     width: 50%;
-                    align-items: flex-start;
+                    // align-items: flex-start;
                     gap: 20px;
                     margin: auto;
+                    padding-left: 15px;
+                    // text-align: right;
                     &__title {
                         font-weight: 800;
                         text-align: left;

@@ -7,12 +7,14 @@ html, body {
 }
 
 body {
-    overflow-x: hidden;
+    // overflow-x: hidden;
     margin: rem(0px);
     // font-size: rem(16px);
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: #fdf5db69; //основной цвет фона
+
 }
 
 ul, p, h1, h2, h3, h4, h5, h6 {
@@ -86,8 +88,7 @@ fieldset {
 .wrapper {
     position: relative;
     width: 100%;
-    background: #fdf5db69; //основной цвет фона
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 .container {
