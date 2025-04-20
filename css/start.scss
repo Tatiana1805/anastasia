@@ -5,6 +5,9 @@
     max-width: 70%;
     border-radius: 10px;
     padding: 50px;
+    -webkit-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
+    -moz-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
+    box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
     &__hero {
         max-width: 50%;
         margin: auto;
@@ -12,6 +15,9 @@
         &-img{
             border-radius: 50%;
             background-color: #fdf5db;
+            -webkit-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
+            -moz-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
+            box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
         }
     }
     &__heroInfo {
