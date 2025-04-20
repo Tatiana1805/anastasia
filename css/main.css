@@ -15,7 +15,8 @@ body {
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fdf5db69; }
+  background: #fdf5db69;
+  color: #393652; }
 
 ul, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -86,6 +87,9 @@ h4, span {
   font-size: 1.5rem;
   font-family: "MainFont"; }
 
+p {
+  font-size: 1vw; }
+
 :root {
   --bg-color: #97b9cd; }
 
@@ -95,7 +99,8 @@ h4, span {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1; }
+  z-index: 1;
+  border-bottom: 2px solid #9f9f9f7a; }
   .header__container {
     display: flex;
     justify-content: space-between;
@@ -136,7 +141,7 @@ h4, span {
         padding: 10px 15px; }
 
 a {
-  color: black; }
+  color: #393652; }
 
 .start__container {
   display: flex;
@@ -187,7 +192,11 @@ p {
       display: none; }
     .skills__list__item-reverse, .skills__list__item-reverse-reverse {
       display: flex;
-      flex-direction: row-reverse; }
+      flex-direction: row-reverse;
+      padding-left: 0; }
+      .skills__list__item-reverse__el, .skills__list__item-reverse-reverse__el {
+        padding-right: 25px;
+        padding-left: 0 !important; }
     .skills__list__item__img, .skills__list__item-reverse__img {
       width: 50%;
       padding: 10px 0; }
@@ -201,7 +210,7 @@ p {
       width: 50%;
       gap: 20px;
       margin: auto;
-      padding-left: 15px; }
+      padding-left: 25px; }
       .skills__list__item__el__title, .skills__list__item-reverse__el__title {
         font-weight: 800;
         text-align: left;
@@ -237,16 +246,32 @@ h2 {
   margin-top: 40px; }
   .price__container__el {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: 20px; }
+    .price__container__el__button {
+      margin-bottom: 30px;
+      display: flex;
+      gap: 12px; }
+      .price__container__el__button__el {
+        border: 1px solid #50227cb3;
+        border-radius: 10px;
+        padding: 20px 10px;
+        display: flex;
+        cursor: pointer; }
+        .price__container__el__button__el:hover {
+          background-color: #50227cb3;
+          color: white; }
     .price__container__el__item {
-      height: 620px;
-      border: 4px solid var(--bg-color);
-      border-radius: 5px;
-      padding: 40px 30px;
-      line-height: 1.6;
-      margin-top: 20px; }
-      .price__container__el__item > ul {
-        text-align: left; }
+      display: none; }
+  .price__container__item {
+    height: 620px;
+    border: 4px solid var(--bg-color);
+    border-radius: 5px;
+    padding: 40px 30px;
+    line-height: 1.6;
+    margin-top: 20px; }
+    .price__container__item > ul {
+      text-align: left; }
 
 .qualification__container__info {
   display: flex;

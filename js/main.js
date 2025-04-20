@@ -35,3 +35,19 @@ function scalePage() {
 // Вызываем функцию при загрузке страницы и изменении размера окна
 $(window).on("resize load", scalePage);
 //скейлинг страницы при уменьшении экрана
+
+
+
+function toggleContainer(containerId) {
+  const container = document.getElementById(containerId);
+  const isVisible = container.style.display === 'block';
+
+  // Скрываем все контейнеры
+  const containers = document.querySelectorAll('.price__container__el__item');
+  containers.forEach((c) => {
+      c.style.display = 'none';
+  });
+
+  // Показываем или скрываем выбранный контейнер
+  container.style.display = isVisible ? 'none' : 'block';
+}
