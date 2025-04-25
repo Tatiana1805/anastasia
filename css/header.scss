@@ -1,11 +1,11 @@
 .header {
     width: 100%;
-    background: var(--bg-color);
+    // background: var(--bg-color);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    border-bottom: 2px solid #9f9f9f7a;
+    // border-bottom: 2px solid #9f9f9f7a;
 
     &__container {
         // max-width: 70%;
@@ -14,7 +14,7 @@
         align-items: center;
         margin-top: 0;
         margin-bottom: 0;
-        padding: 10px 0;
+        padding: 22px 0;
     }
 
 
@@ -22,46 +22,46 @@
 
 
 .nav {
-    font-family: 'MainFont';
     width: 100%;
     display: flex;
     justify-content: space-between;
-    // margin: auto;
-    &__list {
-        width: 65%;
-        display: flex;
-        height: 60px;
-        align-items: center;
-        // gap: 30px;
+    align-items: center;
+    &__logo{
+        font-family: "Logo";
+        font-size: 24px;
         font-weight: 400;
-        font-style: normal;
-        font-size: 1vw;
-        text-transform: uppercase;
+    }
+    &__contacts{
+        // width: 30%;
+        gap: 30px;
+        display: flex;
+        align-items: center;
+        // font-size: 1.1vw;
+        justify-content: flex-end;
+
+        &__icon{
+            width: 24px;
+        }
+    }
+    &__list {
+
+        display: flex;
+
+        align-items: center;
+        gap: 40px;
+        font-weight: 400;
+        // font-style: normal;
+        font-size: 18px;
+        // text-transform: uppercase;
         justify-content: space-between;
     
         &__item {
-            color: black;
+            color: #6F6F70;
         }
-        &__contacts{
-            width: 30%;
-            gap: 30px;
-            display: flex;
-            align-items: center;
-            font-size: 1.1vw;
-            justify-content: flex-end;
 
-            &__icon{
-                width: 41px;
-            }
-
-            &__bt{
-                background-color: #ffcda2;
-                border-radius: 10px;
-                padding: 10px 15px;
-            }
         }
     }
-}
+
 
 
 a {

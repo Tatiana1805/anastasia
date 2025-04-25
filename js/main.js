@@ -1,6 +1,6 @@
 //скейлинг страницы при уменьшении экрана
 function scalePage() {
-  const maxWidth = 1920; // Максимальная ширина контейнера
+  const maxWidth = 1628; // Максимальная ширина контейнера
   const browserWidth = window.innerWidth; // Ширина окна браузера
   const windowWidth = $(window).width(); // Внутренняя ширина, без скроллбара
 

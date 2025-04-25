@@ -1,13 +1,12 @@
 .start__container {
     display: flex;
     margin-top: 135px;
-    background-color: var(--bg-color);
-    max-width: 70%;
-    border-radius: 10px;
+    background-color: #FBFDFF;
+    // max-width: 70%;
+    border-radius: 50px;
+    border: 2px dashed #B1C0CF;
     padding: 50px;
-    -webkit-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-    -moz-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-    box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
+   
     &__hero {
         max-width: 50%;
         margin: auto;
