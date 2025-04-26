@@ -76,6 +76,12 @@ fieldset {
   width: 1400px;
   margin: 40px auto; }
 
+h1 {
+  color: #1A5186;
+  font-size: 60px;
+  font-family: "MainFont";
+  font-weight: 600; }
+
 h2 {
   font-size: 1.5vw;
   font-family: "MainFont"; }
@@ -92,6 +98,7 @@ p {
 
 .header {
   width: 100%;
+  background: #e1eef6ab;
   position: fixed;
   top: 0;
   left: 0;
@@ -135,36 +142,50 @@ a {
 
 .start__container {
   display: flex;
-  margin-top: 135px;
+  margin-top: 76px;
   background-color: #FBFDFF;
   border-radius: 50px;
   border: 2px dashed #B1C0CF;
   padding: 50px; }
   .start__container__hero {
-    max-width: 50%;
+    max-width: 40%;
     margin: auto; }
-    .start__container__hero-img {
-      border-radius: 50%;
-      background-color: #fdf5db;
-      -webkit-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-      -moz-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-      box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2); }
   .start__container__heroInfo {
     font-family: 'MainFont';
-    max-width: 50%;
+    max-width: 60%;
     margin: auto; }
-    .start__container__heroInfo-base {
-      font-size: 2.5rem;
-      color: #50227cb3;
-      font-weight: 800; }
+    .start__container__heroInfo__base {
+      font-size: 24px;
+      color: #0E0E0E;
+      font-weight: 500;
+      display: flex;
+      gap: 25px; }
   .start__container__info {
     font-size: 1.2vw;
     line-height: 25px;
-    color: #fdf5db;
+    color: #63676C;
     margin-top: 40px; }
 
 p {
   margin-bottom: 1.5rem; }
+
+button {
+  width: auto;
+  height: 45px;
+  border-radius: 25px;
+  background-color: #1A5186;
+  color: #FFFFFF;
+  line-height: 150%;
+  padding: 28px 55px;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "MainFont";
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+button:hover {
+  background-color: #276EB3; }
 
 .skills__container {
   margin-top: 45px;

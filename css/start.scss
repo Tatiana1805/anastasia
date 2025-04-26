@@ -1,6 +1,6 @@
 .start__container {
     display: flex;
-    margin-top: 135px;
+    margin-top: 76px;
     background-color: #FBFDFF;
     // max-width: 70%;
     border-radius: 50px;
@@ -8,32 +8,33 @@
     padding: 50px;
    
     &__hero {
-        max-width: 50%;
+        max-width: 40%;
         margin: auto;
         // height: 700px;
-        &-img{
-            border-radius: 50%;
-            background-color: #fdf5db;
-            -webkit-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-            -moz-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-            box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-        }
+        // &__img{
+        //     border-radius: 50%;
+        //     background-color: #fdf5db;
+        //     -webkit-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
+        //     -moz-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
+        //     box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
+        // }
     }
     &__heroInfo {
         font-family: 'MainFont';
-        max-width: 50%;
-        // text-align: right;
+        max-width: 60%;
         margin: auto;
-        &-base{
-            font-size: 2.5rem;
-            color: #50227cb3;
-            font-weight: 800;
+        &__base{
+            font-size: 24px;
+            color: #0E0E0E;
+            font-weight: 500;
+            display: flex;
+            gap: 25px;
         }
     }
     &__info {
         font-size: 1.2vw;
         line-height: 25px;
-        color: #fdf5db;
+        color: #63676C;
         margin-top: 40px;
     }
 
@@ -43,19 +44,23 @@ p {
     margin-bottom: 1.5rem;
 }
 
-// button {
-//     width: auto;
-//     height: 45px;
-//     border-radius: 25px;
-//     background-color: var(--bg-color);
-//     padding: 35px 50px;
-//     font-size: 2rem;
-//     font-family: "MainFont";
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     line-height: normal;
-//     margin: auto;
-// }
+button {
+    width: auto;
+    height: 45px;
+    border-radius: 25px;
+    background-color: #1A5186;
+    color: #FFFFFF;
+    line-height: 150%;
+    padding: 28px 55px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "MainFont";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button:hover{
+    background-color: #276EB3;
+}
 
 

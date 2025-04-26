@@ -51,3 +51,14 @@ function toggleContainer(containerId) {
   // Показываем или скрываем выбранный контейнер
   container.style.display = isVisible ? 'none' : 'block';
 }
+
+// let header = document.querySelector(".header")
+// window.onscroll = function(){
+    
+// if(window.scrollY > 100){
+// header.style.background = "#E1EEF6"
+// }
+// else{
+// header.style.background = "#e1eef6ab" 
+// }
+// }
