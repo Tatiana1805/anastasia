@@ -1,94 +1,186 @@
-.skills {
+.skills__container{
+    &__header{
+        width: 596px;
+        position: relative;
+        left: -55px;
+        &__img{
+            position: relative;
+            top: 130px;
+            z-index: -1;
+        }
+        &__h2{
+            margin-bottom: 60px;
+        }
+    }
+    &__grid{
+        &__row1{
+            &__head{
+
+            }
+        }
+    }
+}
+
+
+// .grid-container {
+//     display: grid;
+//     grid-template-columns: 2fr 1fr; /* По умолчанию первая колонка шире */
+//     gap: 10px;
+//   }
+  
+//   .item {
+//     padding: 15px;
+//     background: #f0f0f0;
+//     border: 1px solid #ddd;
+//   }
+  
+//   /* Первый ряд */
+//   .big {
+//     grid-column: 1;
+//     grid-row: 1;
+//     background: #ffdddd;
+//   }
+  
+//   .small {
+//     grid-column: 2;
+//     grid-row: 1;
+//     background: #ddffdd;
+//   }
+  
+//   /* Второй ряд - первая колонка занимает два ряда */
+//   .tall {
+//     grid-column: 1;
+//     grid-row: 2 / span 2; /* Занимает ряды 2 и 3 */
+//     background: #ddddff;
+//     height: 100%; /* Занимает всю доступную высоту */
+//   }
+  
+//   /* Вторая колонка разделена на две части */
+//   .item:nth-child(4) {
+//     grid-column: 2;
+//     grid-row: 2;
+//     background: #ffffdd;
+//   }
+  
+//   .item:nth-child(5) {
+//     grid-column: 2;
+//     grid-row: 3;
+//     background: #ffddff;
+//   }
+  
+//   /* Третий ряд - меняем соотношение колонок */
+//   .item:nth-child(6) {
+//     grid-column: 1;
+//     grid-row: 4;
+//     background: #ddffff;
+//   }
+  
+//   .item:nth-child(7) {
+//     grid-column: 2;
+//     grid-row: 4;
+//     background: #f0d0ff;
+//   }
+//   @media (min-width: 600px) {
+//     .item:nth-child(6) {
+//       grid-column: 1;
+//       width: 33%;
+//     }
+//     .item:nth-child(7) {
+//       grid-column: 2;
+//       width: 67%;
+//     }
+//   }
+// .skills {
     
-    &__container {
-        margin-top: 45px;
-        font-family: 'MainFont';
-        font-size: 1vw;
-        // text-align: center;
-    }
+//     &__container {
+//         margin-top: 45px;
+//         font-family: 'MainFont';
+//         font-size: 1vw;
+//         // text-align: center;
+//     }
 
-    &__info{
-        // max-width: 50%;
-        margin: auto;
-        padding-top: 30px;
-    }
+//     &__info{
+//         // max-width: 50%;
+//         margin: auto;
+//         padding-top: 30px;
+//     }
 
-    &__list {
-        margin-top: 40px;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
+//     &__list {
+//         margin-top: 40px;
+//         display: flex;
+//         flex-direction: column;
+//         gap: 50px;
             
-            &__item, &__item-reverse {
-                display: flex;
-                // flex-direction: column;
-                gap: 30px;
-                // width: 100%;
-                // border: 1px solid var(--bg-color);
-                // border-radius: 10px;
-                // padding: 15px;
-                // height: 500px;
-                // justify-content: space-around;
-                // justify-content: center;
+//             &__item, &__item-reverse {
+//                 display: flex;
+//                 // flex-direction: column;
+//                 gap: 30px;
+//                 // width: 100%;
+//                 // border: 1px solid var(--bg-color);
+//                 // border-radius: 10px;
+//                 // padding: 15px;
+//                 // height: 500px;
+//                 // justify-content: space-around;
+//                 // justify-content: center;
 
-                &:before {
-                    display: none;
-                }
+//                 &:before {
+//                     display: none;
+//                 }
 
-                &-reverse{
-                    display: flex;
-                    flex-direction: row-reverse;
-                    // padding-left: 0;
+//                 &-reverse{
+//                     display: flex;
+//                     flex-direction: row-reverse;
+//                     // padding-left: 0;
 
-                }
+//                 }
 
-                &__img{
-                    width: 50%;
-                    padding: 10px 0;
-                    &__el{
-                        width: 100%;
-                        // height: 95%;
-                        background-size: cover; 
-                        border-radius: 10px;
-                    }
-                }
+//                 &__img{
+//                     width: 50%;
+//                     padding: 10px 0;
+//                     &__el{
+//                         width: 100%;
+//                         // height: 95%;
+//                         background-size: cover; 
+//                         border-radius: 10px;
+//                     }
+//                 }
 
-                &__el {
-                    display: flex;
-                    flex-direction: column;
-                    width: 50%;
-                    // align-items: flex-start;
-                    gap: 15px;
-                    margin: auto;
-                    // padding-left: 25px;
-                    &__title {
-                        font-weight: 800;
-                        text-align: left;
-                        font-size: 1vw;
-                        margin-bottom: 5px;
-                        text-transform: uppercase;
-                        text-decoration: underline;
-                        color: #50227c;
-                    }
-                    &__text {
-                        font-weight: 500;
-                        text-align: left;
-                        font-size: 1vw;
+//                 &__el {
+//                     display: flex;
+//                     flex-direction: column;
+//                     width: 50%;
+//                     // align-items: flex-start;
+//                     gap: 15px;
+//                     margin: auto;
+//                     // padding-left: 25px;
+//                     &__title {
+//                         font-weight: 800;
+//                         text-align: left;
+//                         font-size: 1vw;
+//                         margin-bottom: 5px;
+//                         text-transform: uppercase;
+//                         text-decoration: underline;
+//                         color: #50227c;
+//                     }
+//                     &__text {
+//                         font-weight: 500;
+//                         text-align: left;
+//                         font-size: 1vw;
     
-                        &:before {
-                            content: '-';
-                            margin-right: 5px;
-                        }
-                    }   
-                    &__why{
-                        font-size: 1.8rem;
-                    }
-                }
+//                         &:before {
+//                             content: '-';
+//                             margin-right: 5px;
+//                         }
+//                     }   
+//                     &__why{
+//                         font-size: 1.8rem;
+//                     }
+//                 }
 
 
 
  
-            }
-    }
-}
+//             }
+//     }
+// }
 

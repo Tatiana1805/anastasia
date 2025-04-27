@@ -2,7 +2,6 @@
     display: flex;
     margin-top: 76px;
     background-color: #FBFDFF;
-    // max-width: 70%;
     border-radius: 50px;
     border: 2px dashed #B1C0CF;
     padding: 32px;
@@ -10,14 +9,6 @@
     &__hero {
         max-width: 40%;
         margin: auto;
-        // height: 700px;
-        // &__img{
-        //     border-radius: 50%;
-        //     background-color: #fdf5db;
-        //     -webkit-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-        //     -moz-box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-        //     box-shadow: 27px -13px 15px 0px rgba(51, 107, 149, 0.2);
-        // }
     }
     &__heroInfo {
         font-family: 'MainFont';
@@ -29,6 +20,7 @@
             font-weight: 500;
             display: flex;
             gap: 25px;
+            margin-bottom: 10px;
         
         &__activity{
             position: relative;
@@ -38,7 +30,7 @@
                 background-image: url(../img/dot.svg);
                 position: absolute; 
                 left: 0; 
-                top: 27%;
+                top: 30%;
                 transform: translateY(-5%);
                 width: 11px; 
                 height: 11px; 
@@ -51,14 +43,14 @@
         font-size: 1.2vw;
         line-height: 25px;
         color: #63676C;
-        margin-top: 40px;
+        margin-top: 12px;
     }
 
 }
 
-p {
-    margin-bottom: 1.5rem;
-}
+// p {
+//     margin-bottom: 1.5rem;
+// }
 
 button {
     width: auto;
@@ -74,6 +66,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 42px;
 }
 button:hover{
     background-color: #276EB3;
