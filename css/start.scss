@@ -29,6 +29,22 @@
             font-weight: 500;
             display: flex;
             gap: 25px;
+        
+        &__activity{
+            position: relative;
+            padding-left: 30px;
+            &::before{
+                content: '';
+                background-image: url(../img/dot.svg);
+                position: absolute; 
+                left: 0; 
+                top: 15%;
+                transform: translateY(-6%);
+                width: 11px; 
+                height: 11px; 
+                background-repeat: no-repeat;
+            }
+        }
         }
     }
     &__info {

@@ -170,6 +170,19 @@ a {
       font-weight: 500;
       display: flex;
       gap: 25px; }
+      .start__container__heroInfo__base__activity {
+        position: relative;
+        padding-left: 30px; }
+        .start__container__heroInfo__base__activity::before {
+          content: '';
+          background-image: url(../img/dot.svg);
+          position: absolute;
+          left: 0;
+          top: 15%;
+          transform: translateY(-6%);
+          width: 11px;
+          height: 11px;
+          background-repeat: no-repeat; }
   .start__container__info {
     font-size: 1.2vw;
     line-height: 25px;
