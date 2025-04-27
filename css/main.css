@@ -392,8 +392,11 @@ h2 {
   height: 30px; }
 
 .problems__container__header {
-  width: 696px;
+  width: 705px;
   margin: auto; }
-
-.problems__container__h2 {
-  margin-bottom: 60px; }
+  .problems__container__header__h2 {
+    margin-bottom: 60px; }
+  .problems__container__header__img {
+    position: relative;
+    top: 165px;
+    z-index: -1; }

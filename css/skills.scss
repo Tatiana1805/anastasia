@@ -1,3 +1,71 @@
+// .grid-container {
+//     display: grid;
+//     grid-template-columns: 2fr 1fr; /* По умолчанию первая колонка шире */
+//     gap: 10px;
+//   }
+  
+//   .item {
+//     padding: 15px;
+//     background: #f0f0f0;
+//     border: 1px solid #ddd;
+//   }
+  
+//   /* Первый ряд */
+//   .big {
+//     grid-column: 1;
+//     grid-row: 1;
+//     background: #ffdddd;
+//   }
+  
+//   .small {
+//     grid-column: 2;
+//     grid-row: 1;
+//     background: #ddffdd;
+//   }
+  
+//   /* Второй ряд - первая колонка занимает два ряда */
+//   .tall {
+//     grid-column: 1;
+//     grid-row: 2 / span 2; /* Занимает ряды 2 и 3 */
+//     background: #ddddff;
+//     height: 100%; /* Занимает всю доступную высоту */
+//   }
+  
+//   /* Вторая колонка разделена на две части */
+//   .item:nth-child(4) {
+//     grid-column: 2;
+//     grid-row: 2;
+//     background: #ffffdd;
+//   }
+  
+//   .item:nth-child(5) {
+//     grid-column: 2;
+//     grid-row: 3;
+//     background: #ffddff;
+//   }
+  
+//   /* Третий ряд - меняем соотношение колонок */
+//   .item:nth-child(6) {
+//     grid-column: 1;
+//     grid-row: 4;
+//     background: #ddffff;
+//   }
+  
+//   .item:nth-child(7) {
+//     grid-column: 2;
+//     grid-row: 4;
+//     background: #f0d0ff;
+//   }
+//   @media (min-width: 600px) {
+//     .item:nth-child(6) {
+//       grid-column: 1;
+//       width: 33%;
+//     }
+//     .item:nth-child(7) {
+//       grid-column: 2;
+//       width: 67%;
+//     }
+//   }
 .skills {
     
     &__container {
