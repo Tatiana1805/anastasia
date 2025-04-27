@@ -44,6 +44,7 @@ b {
   font-size: 3rem; }
 
 img {
+  width: 100%;
   background-size: cover; }
 
 button {
@@ -156,7 +157,7 @@ a {
   background-color: #FBFDFF;
   border-radius: 50px;
   border: 2px dashed #B1C0CF;
-  padding: 50px; }
+  padding: 32px; }
   .start__container__hero {
     max-width: 40%;
     margin: auto; }
