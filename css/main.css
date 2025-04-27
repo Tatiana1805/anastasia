@@ -390,3 +390,6 @@ h2 {
 .quote {
   width: 30px;
   height: 30px; }
+
+.problems__container__h2 {
+  margin-bottom: 60px; }
