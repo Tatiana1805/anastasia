@@ -32,14 +32,14 @@
         
         &__activity{
             position: relative;
-            padding-left: 30px;
+            padding-left: 20px;
             &::before{
                 content: '';
                 background-image: url(../img/dot.svg);
                 position: absolute; 
                 left: 0; 
-                top: 15%;
-                transform: translateY(-6%);
+                top: 27%;
+                transform: translateY(-5%);
                 width: 11px; 
                 height: 11px; 
                 background-repeat: no-repeat;
