@@ -1,84 +1,82 @@
 .price__container {
-    margin-top: 40px;
-    &__h{
-        max-width: 663px;
-        margin: auto;
-        &__h2{
-            z-index: 1;
-            position: relative;
-            max-width: 657px;
-        }
+  margin-top: 40px;
+  &__h {
+    max-width: 663px;
+    margin: auto;
+    &__h2 {
+      z-index: 1;
+      position: relative;
+      max-width: 657px;
     }
-    &__el {
+  }
+  &__el {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    &__button {
+      width: 255px;
+      height: 54px;
+      border: 3px solid #1a5186;
+      background-color: #fbfdff;
+      color: #1a5186;
+      margin: auto 0;
+      &:hover {
+        background-color: #276eb3;
+        color: #ffffff;
+        border: none;
+      }
+    }
+    &__item,
+    &__item__border {
+      width: 1199px;
+      // display: flex;
+
+      background-color: #fbfdff;
+      border-radius: 25px;
+      padding: 62px 32px;
+      line-height: 1.6;
+      // & > ul {
+      //     text-align: left;
+      // }
+      &:focus {
+        box-shadow: -9px 8px 14px 2px rgba(0, 0, 0, 0.3);
+      }
+      &__border {
+        border: 2px dashed #b1c0cf;
+      }
+      &__info {
         display: flex;
-        flex-direction: column;
-        gap: 22px;
-        &__button{
-            width: 255px;
-            height: 54px;
-            border: 3px solid #1A5186;
-            background-color: #FBFDFF;
-            color: #1A5186;
-            margin: auto 0;
-            &:hover{
-                background-color: #276EB3;
-                color: #FFFFFF;
-                border: none;
-            }
+        // gap: 22px;
+        justify-content: space-between;
+        &__el__arrow {
+          width: 10px;
+          height: 13px;
         }
-        &__item, &__item__border{
-            width: 1199px;
-            // display: flex;
-
-            background-color: #FBFDFF;
-            border-radius: 25px;
-            padding: 62px 32px;
-            line-height: 1.6;
-                // & > ul {
-                //     text-align: left;
-                // }   
-                &:focus{
-                    box-shadow: -9px 8px 14px 2px rgba(0, 0, 0, 0.3); 
-                }
-                &__border{
-                    border: 2px dashed #B1C0CF;
-                }
-                &__info{
-                    display: flex;
-                    // gap: 22px;
-                    justify-content: space-between;
-                    &__el__arrow{
-                        width: 10px;
-                        height: 13px;
-                    }
-                    &__h{
-                        max-width: 381px;
-                        &::after{
-                            content: '';
-                            height: 2px;
-                            display: block;
-                            width: 89%;
-                            background-color: #1A5186;
-                        }
-                    }
-                    &__el{
-                        max-width: 304px;
-                    }
-                    &__many{
-                        width: 193px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        &__it{
-                            font-size: 36px;
-                            color: #1A5186;
-                            font-family: "MainFontH";
-                        }
-                    }
-                }
+        &__h {
+          max-width: 381px;
+          &::after {
+            content: "";
+            height: 2px;
+            display: block;
+            width: 89%;
+            background-color: #1a5186;
+          }
         }
+        &__el {
+          max-width: 304px;
         }
-
-
+        &__many {
+          width: 193px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &__it {
+            font-size: 36px;
+            color: #1a5186;
+            font-family: "MainFontH";
+          }
+        }
+      }
     }
-
+  }
+}
