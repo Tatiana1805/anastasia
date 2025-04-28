@@ -1,52 +1,108 @@
-.skills__container{
-    &__header{
-        width: 596px;
-        position: relative;
-        left: -55px;
-        &__img{
-            position: relative;
-            top: 130px;
-            z-index: -1;
-        }
-        &__h2{
-            margin-bottom: 60px;
-        }
-    }
-    &__grid{
-        &__row1{
-            &__head{
-
-            }
-        }
-    }
+.help__title {
+  width: 596px;
+  position: relative;
+  left: -55px;
+  &__img {
+    position: relative;
+    top: 102px;
+    z-index: -1;
+  }
+  &__text {
+    margin-bottom: 60px;
+  }
 }
 
+.help__list {
+  &__top {
+    display: flex;
+    // grid-template-columns: 738px 522px;
+    gap: 22px;
+    flex-direction: column;
+    // max-width: 738px + 522px + 22px + 34px * 2;
+    margin: 0 auto;
+
+    &__item {
+      padding: 44px 34px;
+      background-color: #fbfdff;
+      border-radius: 25px;
+    }
+  }
+  &__top > div:first-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 738px 522px;
+    gap: 22px;
+  }
+  &__top > div:last-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 738px 522px;
+    gap: 22px;
+  }
+  &__bottom__item {
+    display: grid;
+    grid-template-columns: 522px 738px;
+    gap: 22px;
+    max-width: 738px + 522px + 22px + 34px * 2;
+    margin: 0 auto;
+    gap: 22px;
+    &__el {
+      padding: 44px 34px;
+      background-color: #fbfdff;
+    }
+  }
+}
+
+// &__grid {
+//   &__row1 {
+//     display: grid;
+//     grid-template-columns: 738px 522px;
+//     gap: 22px;
+//     padding: 44px 34px;
+
+//     &__col1 {
+//       // background-color: #FBFDFF;
+//       &__head {
+//         display: flex;
+//         justify-content: space-between;
+//         &__h4 {
+//         }
+//         &__number {
+//         }
+//       }
+//     }
+//   }
+// }
+// &__grid * {
+//   background-color: #fbfdff;
+//   border-radius: 30px;
+// }
 
 // .grid-container {
 //     display: grid;
 //     grid-template-columns: 2fr 1fr; /* По умолчанию первая колонка шире */
 //     gap: 10px;
 //   }
-  
+
 //   .item {
 //     padding: 15px;
 //     background: #f0f0f0;
 //     border: 1px solid #ddd;
 //   }
-  
+
 //   /* Первый ряд */
 //   .big {
 //     grid-column: 1;
 //     grid-row: 1;
 //     background: #ffdddd;
 //   }
-  
+
 //   .small {
 //     grid-column: 2;
 //     grid-row: 1;
 //     background: #ddffdd;
 //   }
-  
+
 //   /* Второй ряд - первая колонка занимает два ряда */
 //   .tall {
 //     grid-column: 1;
@@ -54,27 +110,27 @@
 //     background: #ddddff;
 //     height: 100%; /* Занимает всю доступную высоту */
 //   }
-  
+
 //   /* Вторая колонка разделена на две части */
 //   .item:nth-child(4) {
 //     grid-column: 2;
 //     grid-row: 2;
 //     background: #ffffdd;
 //   }
-  
+
 //   .item:nth-child(5) {
 //     grid-column: 2;
 //     grid-row: 3;
 //     background: #ffddff;
 //   }
-  
+
 //   /* Третий ряд - меняем соотношение колонок */
 //   .item:nth-child(6) {
 //     grid-column: 1;
 //     grid-row: 4;
 //     background: #ddffff;
 //   }
-  
+
 //   .item:nth-child(7) {
 //     grid-column: 2;
 //     grid-row: 4;
@@ -91,7 +147,7 @@
 //     }
 //   }
 // .skills {
-    
+
 //     &__container {
 //         margin-top: 45px;
 //         font-family: 'MainFont';
@@ -110,7 +166,7 @@
 //         display: flex;
 //         flex-direction: column;
 //         gap: 50px;
-            
+
 //             &__item, &__item-reverse {
 //                 display: flex;
 //                 // flex-direction: column;
@@ -140,7 +196,7 @@
 //                     &__el{
 //                         width: 100%;
 //                         // height: 95%;
-//                         background-size: cover; 
+//                         background-size: cover;
 //                         border-radius: 10px;
 //                     }
 //                 }
@@ -166,21 +222,17 @@
 //                         font-weight: 500;
 //                         text-align: left;
 //                         font-size: 1vw;
-    
+
 //                         &:before {
 //                             content: '-';
 //                             margin-right: 5px;
 //                         }
-//                     }   
+//                     }
 //                     &__why{
 //                         font-size: 1.8rem;
 //                     }
 //                 }
 
-
-
- 
 //             }
 //     }
 // }
-

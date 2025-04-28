@@ -1,15 +1,14 @@
-.problems__container{
-    &__header{
-        width: 705px;
-        margin: auto;
-        &__h2{
-            margin-bottom: 60px;
-        }
-        &__img{
-            position: relative;
-            top: 165px;
-            z-index: -1;
-        }
+.problems {
+  &__header {
+    width: 705px;
+    margin: auto;
+    &__h2 {
+      margin-bottom: 60px;
     }
-    
+    &__img {
+      position: relative;
+      top: 165px;
+      z-index: -1;
+    }
+  }
 }
