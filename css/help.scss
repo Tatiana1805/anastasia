@@ -13,12 +13,14 @@
 }
 
 .help__list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
   &__top {
-    display: flex;
-    // grid-template-columns: 738px 522px;
+    display: grid;
+    grid-template-columns: 57.7% 1fr;
     gap: 22px;
-    flex-direction: column;
-    // max-width: 738px + 522px + 22px + 34px * 2;
     margin: 0 auto;
 
     &__item {
@@ -27,31 +29,20 @@
       border-radius: 25px;
     }
   }
-  &__top > div:first-child {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 738px 522px;
-    gap: 22px;
-  }
-  &__top > div:last-child {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 738px 522px;
-    gap: 22px;
-  }
+  
   &__bottom__item {
     display: grid;
-    grid-template-columns: 522px 738px;
+    grid-template-columns: 1fr 57.7%;
     gap: 22px;
-    max-width: 738px + 522px + 22px + 34px * 2;
-    margin: 0 auto;
-    gap: 22px;
+    
     &__el {
       padding: 44px 34px;
       background-color: #fbfdff;
+      border-radius: 25px;
     }
   }
 }
+
 
 // &__grid {
 //   &__row1 {

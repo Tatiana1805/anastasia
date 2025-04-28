@@ -231,35 +231,27 @@ button:hover {
   .help__title__text {
     margin-bottom: 60px; }
 
-.help__list__top {
+.help__list {
   display: flex;
-  gap: 22px;
   flex-direction: column;
-  margin: 0 auto; }
-  .help__list__top__item {
-    padding: 44px 34px;
-    background-color: #fbfdff;
-    border-radius: 25px; }
-.help__list__top > div:first-child {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 738px 522px;
   gap: 22px; }
-.help__list__top > div:last-child {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 738px 522px;
-  gap: 22px; }
-.help__list__bottom__item {
-  display: grid;
-  grid-template-columns: 522px 738px;
-  gap: 22px;
-  max-width: 1350px;
-  margin: 0 auto;
-  gap: 22px; }
-  .help__list__bottom__item__el {
-    padding: 44px 34px;
-    background-color: #fbfdff; }
+  .help__list__top {
+    display: grid;
+    grid-template-columns: 57.7% 1fr;
+    gap: 22px;
+    margin: 0 auto; }
+    .help__list__top__item {
+      padding: 44px 34px;
+      background-color: #fbfdff;
+      border-radius: 25px; }
+  .help__list__bottom__item {
+    display: grid;
+    grid-template-columns: 1fr 57.7%;
+    gap: 22px; }
+    .help__list__bottom__item__el {
+      padding: 44px 34px;
+      background-color: #fbfdff;
+      border-radius: 25px; }
 
 .advantages__container {
   margin-top: 40px; }
