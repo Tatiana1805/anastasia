@@ -225,9 +225,11 @@ button:hover {
   position: relative;
   left: -55px; }
   .help__title__img {
-    position: relative;
-    top: 102px;
-    z-index: -1; }
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .help__title__text {
     margin-bottom: 60px; }
 
@@ -416,10 +418,13 @@ h2 {
 
 .problems__header {
   width: 705px;
-  margin: auto; }
+  margin: auto;
+  position: relative; }
   .problems__header__h2 {
     margin-bottom: 60px; }
   .problems__header__img {
-    position: relative;
-    top: 165px;
-    z-index: -1; }
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }

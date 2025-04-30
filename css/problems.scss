@@ -2,13 +2,16 @@
   &__header {
     width: 705px;
     margin: auto;
+    position: relative;
     &__h2 {
       margin-bottom: 60px;
     }
     &__img {
-      position: relative;
-      top: 165px;
       z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
