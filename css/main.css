@@ -105,6 +105,7 @@ h4 {
   margin-bottom: 28px; }
 
 p {
+  font-family: "MainFont";
   font-size: 16px;
   color: #6f6f70; }
 
@@ -277,62 +278,72 @@ button:hover {
 h2 {
   text-align: center; }
 
-.price__container {
-  margin-top: 40px; }
-  .price__container__h {
+.price {
+  margin-top: 130px; }
+  .price__h {
     max-width: 663px;
     margin: auto; }
-    .price__container__h__h2 {
+    .price__h__h2 {
       z-index: 1;
       position: relative;
       max-width: 657px; }
-  .price__container__el {
+  .price__cloud {
+    margin-top: -150px;
+    width: 101%;
+    margin-left: -10px; }
+  .price__el {
     display: flex;
     flex-direction: column;
     gap: 22px; }
-    .price__container__el__button {
+    .price__el__button {
       width: 255px;
       height: 54px;
       border: 3px solid #1a5186;
       background-color: #fbfdff;
       color: #1a5186;
       margin: auto 0; }
-      .price__container__el__button:hover {
+      .price__el__button:hover {
         background-color: #276eb3;
         color: #ffffff;
         border: none; }
-    .price__container__el__item, .price__container__el__item__border {
-      width: 1199px;
+    .price__el__item, .price__el__item__border {
+      width: 100%;
       background-color: #fbfdff;
       border-radius: 25px;
       padding: 62px 32px;
       line-height: 1.6; }
-      .price__container__el__item:focus, .price__container__el__item__border:focus {
+      .price__el__item:hover, .price__el__item__border:hover {
         box-shadow: -9px 8px 14px 2px rgba(0, 0, 0, 0.3); }
-      .price__container__el__item__border, .price__container__el__item__border__border {
+      .price__el__item__border, .price__el__item__border__border {
         border: 2px dashed #b1c0cf; }
-      .price__container__el__item__info, .price__container__el__item__border__info {
+      .price__el__item__info, .price__el__item__border__info {
         display: flex;
         justify-content: space-between; }
-        .price__container__el__item__info__el__arrow, .price__container__el__item__border__info__el__arrow {
-          width: 10px;
-          height: 13px; }
-        .price__container__el__item__info__h, .price__container__el__item__border__info__h {
-          max-width: 381px; }
-          .price__container__el__item__info__h::after, .price__container__el__item__border__info__h::after {
+        .price__el__item__info__el__item, .price__el__item__border__info__el__item {
+          color: #1A5186; }
+          .price__el__item__info__el__item__arrow, .price__el__item__border__info__el__item__arrow {
+            width: 10px;
+            height: 13px;
+            padding-top: 5px; }
+        .price__el__item__info__h, .price__el__item__border__info__h {
+          width: 381px; }
+          .price__el__item__info__h::after, .price__el__item__border__info__h::after {
             content: "";
             height: 2px;
             display: block;
             width: 89%;
             background-color: #1a5186; }
-        .price__container__el__item__info__el, .price__container__el__item__border__info__el {
+        .price__el__item__info__el, .price__el__item__border__info__el {
+          font-family: "MainFont";
+          font-size: 16px;
+          color: #6f6f70;
           max-width: 304px; }
-        .price__container__el__item__info__many, .price__container__el__item__border__info__many {
+        .price__el__item__info__many, .price__el__item__border__info__many {
           width: 193px;
           display: flex;
           flex-direction: column;
           justify-content: space-between; }
-          .price__container__el__item__info__many__it, .price__container__el__item__border__info__many__it {
+          .price__el__item__info__many__it, .price__el__item__border__info__many__it {
             font-size: 36px;
             color: #1a5186;
             font-family: "MainFontH"; }
@@ -347,24 +358,24 @@ h2 {
   background: var(--bg-color);
   margin-top: 100px; }
 
-.about__container {
-  margin-top: 138px;
+.about {
+  margin-top: 70px;
   display: flex;
   gap: 24px; }
-  .about__container__cloud {
+  .about__cloud {
     margin-top: -120px;
     width: auto; }
-  .about__container__h2 {
+  .about__h2 {
     position: relative;
     text-align: left;
     z-index: 1;
     margin-left: 49px; }
-  .about__container__start {
+  .about__start {
     max-width: 522px; }
-    .about__container__start__about {
+    .about__start__about {
       max-width: 300px;
       margin-bottom: 33px; }
-    .about__container__start__quote__el {
+    .about__start__quote__el {
       padding: 32px 34px;
       display: flex;
       gap: 18px;
@@ -374,40 +385,40 @@ h2 {
       background-color: #fbfdff;
       border: 2px dashed #b1c0cf;
       border-radius: 20px; }
-    .about__container__start__quote__imgAbout {
+    .about__start__quote__imgAbout {
       border-radius: 64px;
       max-width: 522px;
       max-height: 386px;
       margin-bottom: 22px; }
-  .about__container__end {
+  .about__end {
     max-width: 734px; }
-    .about__container__end__rectangle {
+    .about__end__rectangle {
       background-color: #fbfdffff;
       padding: 32px 70px;
       border-radius: 20px;
       float: right;
       text-transform: uppercase;
       line-height: 150%; }
-      .about__container__end__rectangle__el {
+      .about__end__rectangle__el {
         max-width: 591px;
         height: 81px;
         display: flex;
         gap: 18px; }
-    .about__container__end__info {
+    .about__end__info {
       max-width: 593px;
       margin-top: 83px;
       padding-top: 65px; }
-      .about__container__end__info__el {
+      .about__end__info__el {
         text-transform: uppercase;
         margin-top: 50px;
         line-height: 150%; }
-        .about__container__end__info__el__item {
+        .about__end__info__el__item {
           text-transform: capitalize;
           color: #63676c;
           margin-bottom: 20px;
           position: relative;
           padding-left: 30px; }
-          .about__container__end__info__el__item::before {
+          .about__end__info__el__item::before {
             content: "";
             background-image: url(../img/dot.svg);
             position: absolute;
