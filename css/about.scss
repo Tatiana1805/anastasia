@@ -24,18 +24,19 @@
     }
     &__quote {
       // margin-top: -63px;
-      &__el {
+      &__el  {
         padding: 32px 34px;
         // margin: 33px 37px;
         display: flex;
         gap: 18px;
-        text-transform: uppercase;
         max-width: 520px;
         max-height: 145px;
         background-color: #fbfdff;
         border: 2px dashed #b1c0cf;
         border-radius: 20px;
+        text-transform: uppercase;
       }
+      
       &__imgAbout {
         border-radius: 64px;
         max-width: 522px;
@@ -71,7 +72,7 @@
         margin-top: 50px;
         line-height: 150%;
         &__item {
-          text-transform: capitalize;
+          text-transform: math-auto;
           color: #63676c;
           margin-bottom: 20px;
           position: relative;
