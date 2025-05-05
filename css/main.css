@@ -102,17 +102,30 @@ h4 {
   font-size: 24px;
   font-family: "MainFont";
   color: #0e0e0e;
-  margin-bottom: 28px; }
+  margin-bottom: 28px;
+  text-transform: uppercase; }
+
+h5 {
+  width: 329px;
+  height: 36px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #1A5186; }
 
 p {
   font-family: "MainFont";
   font-size: 16px;
+  font-weight: 400;
   color: #6f6f70; }
 
 span {
   font-family: "MainFont";
   color: #0e0e0e;
-  font-size: 18px; }
+  font-size: 20px;
+  font-weight: 400; }
 
 :root {
   --bg-color: #97b9cd; }
@@ -300,47 +313,65 @@ h2 {
         background-color: #276eb3;
         color: #ffffff;
         border: none; }
-    .price__el__item, .price__el__item__border {
+    .price__el__item {
       width: 100%;
       background-color: #fbfdff;
       border-radius: 25px;
       padding: 62px 32px;
-      line-height: 1.6; }
-      .price__el__item:hover, .price__el__item__border:hover {
-        box-shadow: -9px 8px 14px 2px rgba(0, 0, 0, 0.3); }
-      .price__el__item__border, .price__el__item__border__border {
-        border: 2px dashed #b1c0cf; }
-      .price__el__item__info, .price__el__item__border__info {
+      line-height: 1.6;
+      border: 2px dashed #b1c0cf; }
+      .price__el__item:hover {
+        border: none;
+        filter: drop-shadow(-51px 45px 27px rgba(0, 0, 0, 0.01)) drop-shadow(-29px 25px 23px rgba(0, 0, 0, 0.05)) drop-shadow(-13px 11px 17px rgba(0, 0, 0, 0.09)) drop-shadow(-3px 3px 9px rgba(0, 0, 0, 0.1)); }
+      .price__el__item__info {
         display: flex;
         justify-content: space-between; }
-        .price__el__item__info__el__item, .price__el__item__border__info__el__item {
-          color: #1A5186; }
-          .price__el__item__info__el__item__arrow, .price__el__item__border__info__el__item__arrow {
+        .price__el__item__info__el__item {
+          color: #1A5186;
+          font-weight: 600; }
+          .price__el__item__info__el__item__arrow {
             width: 10px;
             height: 13px;
             padding-top: 5px; }
-        .price__el__item__info__h, .price__el__item__border__info__h {
-          width: 381px; }
-          .price__el__item__info__h::after, .price__el__item__border__info__h::after {
+        .price__el__item__info__h {
+          width: 381px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around; }
+          .price__el__item__info__h::after {
             content: "";
             height: 2px;
             display: block;
-            width: 89%;
+            max-width: 352px;
             background-color: #1a5186; }
-        .price__el__item__info__el, .price__el__item__border__info__el {
+        .price__el__item__info__el {
           font-family: "MainFont";
           font-size: 16px;
           color: #6f6f70;
           max-width: 304px; }
-        .price__el__item__info__many, .price__el__item__border__info__many {
+        .price__el__item__info__many {
           width: 193px;
           display: flex;
           flex-direction: column;
           justify-content: space-between; }
-          .price__el__item__info__many__it, .price__el__item__border__info__many__it {
+          .price__el__item__info__many__it {
             font-size: 36px;
             color: #1a5186;
             font-family: "MainFontH"; }
+    .price__el__end {
+      max-width: 420px;
+      margin-top: 55px;
+      margin-left: auto; }
+      .price__el__end__arrow {
+        width: 14px;
+        height: 19px;
+        padding-top: 8px; }
+      .price__el__end__h {
+        position: relative;
+        margin-left: 61px;
+        cursor: pointer; }
+      .price__el__end__img {
+        margin-top: -85px; }
 
 .qualification__container__info {
   display: flex;
@@ -373,12 +404,12 @@ h2 {
       padding: 32px 34px;
       display: flex;
       gap: 18px;
-      text-transform: uppercase;
       max-width: 520px;
       max-height: 145px;
       background-color: #fbfdff;
       border: 2px dashed #b1c0cf;
-      border-radius: 20px; }
+      border-radius: 20px;
+      text-transform: uppercase; }
     .about__start__quote__imgAbout {
       border-radius: 64px;
       max-width: 522px;
@@ -407,7 +438,7 @@ h2 {
         margin-top: 50px;
         line-height: 150%; }
         .about__end__info__el__item {
-          text-transform: capitalize;
+          text-transform: math-auto;
           color: #63676c;
           margin-bottom: 20px;
           position: relative;

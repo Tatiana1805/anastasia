@@ -33,7 +33,7 @@ function scalePage() {
 }
 
 // Вызываем функцию при загрузке страницы и изменении размера окна
-$(window).on("resize load", scalePage);
+// $(window).on("resize load", scalePage);
 //скейлинг страницы при уменьшении экрана
 
 
