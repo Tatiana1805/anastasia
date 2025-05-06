@@ -99,7 +99,6 @@ h2 {
   color: #1a5186; }
 
 h3 {
-  width: 348px;
   font-weight: 600;
   font-size: 24px;
   font-family: "MainFont"; }
@@ -241,9 +240,9 @@ button:hover {
   background-color: #276eb3; }
 
 .help__title {
-  width: 596px;
+  width: 560px;
   position: relative;
-  left: -55px; }
+  left: -37px; }
   .help__title__img {
     z-index: -1;
     position: absolute;
@@ -251,7 +250,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%); }
   .help__title__text {
-    margin-bottom: 60px; }
+    margin: 168px auto 60px; }
 
 .help__list {
   display: flex;
@@ -278,11 +277,14 @@ button:hover {
           font-weight: 600;
           color: #4482bf; }
       .help__list__top__item__elem {
-        max-width: 535px; }
+        max-width: 535px;
+        margin-bottom: 28px; }
         .help__list__top__item__elem__grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          grid-gap: 10px; }
+          grid-gap: 10px;
+          max-width: 640px;
+          margin-bottom: 28px; }
         .help__list__top__item__elem__el {
           position: relative;
           padding-left: 30px;
@@ -294,14 +296,18 @@ button:hover {
             background-image: url(../img/dot.svg);
             position: absolute;
             left: 0;
-            top: 15%;
-            transform: translateY(-6%);
+            top: 32%;
+            transform: translateY(-17%);
             width: 11px;
             height: 11px;
             background-repeat: no-repeat; }
           .help__list__top__item__elem__el__thin {
             font-weight: 400;
             font-size: 16px; }
+      .help__list__top__item__p {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; }
     .help__list__top__itemp {
       gap: 22px;
       display: flex;
@@ -340,6 +346,26 @@ button:hover {
           font-size: 64px;
           font-weight: 600;
           color: #4482bf; }
+      .help__list__bottom__item__elem__el {
+        position: relative;
+        padding-left: 30px;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 12px; }
+        .help__list__bottom__item__elem__el::before {
+          content: "";
+          background-image: url(../img/dot.svg);
+          position: absolute;
+          left: 0;
+          top: 32%;
+          transform: translateY(-17%);
+          width: 11px;
+          height: 11px;
+          background-repeat: no-repeat; }
+      .help__list__bottom__item__p {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; }
 
 .advantages__container {
   margin-top: 40px; }
@@ -445,11 +471,30 @@ h2 {
       .price__el__end__img {
         margin-top: -85px; }
 
-.qualification__container__info {
+.qualification__title {
+  width: 476px;
+  position: relative;
+  margin: auto;
+  text-align: center; }
+  .qualification__title__img {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .qualification__title__text {
+    margin: 168px auto 0; }
+
+.qualification__info {
   display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-  line-height: 2; }
+  justify-content: space-between; }
+  .qualification__info__univer {
+    display: flex;
+    flex-direction: column; }
+    .qualification__info__univer__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px; }
 
 .footer {
   background: var(--bg-color);
@@ -472,7 +517,23 @@ h2 {
     .about__start__about {
       max-width: 300px;
       margin-bottom: 33px; }
-
+    .about__start__quote {
+      fill: #63676c; }
+      .about__start__quote__el {
+        padding: 32px 34px;
+        display: flex;
+        gap: 18px;
+        max-width: 520px;
+        max-height: 145px;
+        background-color: #fbfdff;
+        border: 2px dashed #b1c0cf;
+        border-radius: 20px;
+        text-transform: uppercase; }
+      .about__start__quote__imgAbout {
+        border-radius: 64px;
+        max-width: 522px;
+        max-height: 386px;
+        margin-bottom: 22px; }
   .about__end {
     max-width: 734px; }
     .about__end__rectangle {

@@ -1,8 +1,34 @@
-.qualification__container {
-  &__info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    line-height: 2;
+.qualification__title{
+  width: 476px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  &__img {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__text {
+    margin: 168px auto 0;
+  }
+
+}
+.qualification__info{
+  display: flex;
+  justify-content: space-between;
+  &__univer{
+    display: flex; 
+    flex-direction: column;
+    
+    &__list{
+      display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+    }
+  }
+  &__diploma{
+
   }
 }
