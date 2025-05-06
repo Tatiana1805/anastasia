@@ -24,208 +24,104 @@
     grid-template-columns: 57.7% 1fr;
     gap: 22px;
     margin: 0 auto;
-
     &__item {
       padding: 44px 34px;
       background-color: #fbfdff;
       border-radius: 25px;
+      &:first-child {
+        border: 2px dashed #b1c0cf;
+      }
+      &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        &__number {
+          font-size: 64px;
+          font-weight: 600;
+          color: #4482bf;
+        }
+      }
+      &__elem {
+        max-width: 535px;
+        &__grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+        }
+
+        &__el {
+          position: relative;
+          padding-left: 30px;
+          font-weight: 600;
+          font-size: 16px;
+          margin-bottom: 12px;
+
+          &::before {
+            content: "";
+            background-image: url(../img/dot.svg);
+            position: absolute;
+            left: 0;
+            top: 15%;
+            transform: translateY(-6%);
+            width: 11px;
+            height: 11px;
+            background-repeat: no-repeat;
+          }
+          &__thin {
+            font-weight: 400;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &__itemp {
+      gap: 22px;
+      display: flex;
+      flex-direction: column;
+      &__quote {
+        background-color: #1a5186;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 26px 42px 41px 34px;
+        border-radius: 25px;
+        &__svg {
+          width: 30px;
+        }
+        &__blockquote {
+          font-family: "MainFont";
+          color: #ffffff;
+          font-weight: 500;
+          max-width: 397px;
+          font-size: 20px;
+        }
+      }
     }
   }
-  
-  &__bottom__item {
+
+  &__bottom {
     display: grid;
     grid-template-columns: 1fr 57.7%;
     gap: 22px;
-    
-    &__el {
+    &__item {
       padding: 44px 34px;
       background-color: #fbfdff;
       border-radius: 25px;
+      &:last-child {
+        border: 2px dashed #b1c0cf;
+      }
+      &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        &__number {
+          font-size: 64px;
+          font-weight: 600;
+          color: #4482bf;
+        }
+      }
     }
   }
 }
-
-
-// &__grid {
-//   &__row1 {
-//     display: grid;
-//     grid-template-columns: 738px 522px;
-//     gap: 22px;
-//     padding: 44px 34px;
-
-//     &__col1 {
-//       // background-color: #FBFDFF;
-//       &__head {
-//         display: flex;
-//         justify-content: space-between;
-//         &__h4 {
-//         }
-//         &__number {
-//         }
-//       }
-//     }
-//   }
-// }
-// &__grid * {
-//   background-color: #fbfdff;
-//   border-radius: 30px;
-// }
-
-// .grid-container {
-//     display: grid;
-//     grid-template-columns: 2fr 1fr; /* По умолчанию первая колонка шире */
-//     gap: 10px;
-//   }
-
-//   .item {
-//     padding: 15px;
-//     background: #f0f0f0;
-//     border: 1px solid #ddd;
-//   }
-
-//   /* Первый ряд */
-//   .big {
-//     grid-column: 1;
-//     grid-row: 1;
-//     background: #ffdddd;
-//   }
-
-//   .small {
-//     grid-column: 2;
-//     grid-row: 1;
-//     background: #ddffdd;
-//   }
-
-//   /* Второй ряд - первая колонка занимает два ряда */
-//   .tall {
-//     grid-column: 1;
-//     grid-row: 2 / span 2; /* Занимает ряды 2 и 3 */
-//     background: #ddddff;
-//     height: 100%; /* Занимает всю доступную высоту */
-//   }
-
-//   /* Вторая колонка разделена на две части */
-//   .item:nth-child(4) {
-//     grid-column: 2;
-//     grid-row: 2;
-//     background: #ffffdd;
-//   }
-
-//   .item:nth-child(5) {
-//     grid-column: 2;
-//     grid-row: 3;
-//     background: #ffddff;
-//   }
-
-//   /* Третий ряд - меняем соотношение колонок */
-//   .item:nth-child(6) {
-//     grid-column: 1;
-//     grid-row: 4;
-//     background: #ddffff;
-//   }
-
-//   .item:nth-child(7) {
-//     grid-column: 2;
-//     grid-row: 4;
-//     background: #f0d0ff;
-//   }
-//   @media (min-width: 600px) {
-//     .item:nth-child(6) {
-//       grid-column: 1;
-//       width: 33%;
-//     }
-//     .item:nth-child(7) {
-//       grid-column: 2;
-//       width: 67%;
-//     }
-//   }
-// .skills {
-
-//     &__container {
-//         margin-top: 45px;
-//         font-family: 'MainFont';
-//         font-size: 1vw;
-//         // text-align: center;
-//     }
-
-//     &__info{
-//         // max-width: 50%;
-//         margin: auto;
-//         padding-top: 30px;
-//     }
-
-//     &__list {
-//         margin-top: 40px;
-//         display: flex;
-//         flex-direction: column;
-//         gap: 50px;
-
-//             &__item, &__item-reverse {
-//                 display: flex;
-//                 // flex-direction: column;
-//                 gap: 30px;
-//                 // width: 100%;
-//                 // border: 1px solid var(--bg-color);
-//                 // border-radius: 10px;
-//                 // padding: 15px;
-//                 // height: 500px;
-//                 // justify-content: space-around;
-//                 // justify-content: center;
-
-//                 &:before {
-//                     display: none;
-//                 }
-
-//                 &-reverse{
-//                     display: flex;
-//                     flex-direction: row-reverse;
-//                     // padding-left: 0;
-
-//                 }
-
-//                 &__img{
-//                     width: 50%;
-//                     padding: 10px 0;
-//                     &__el{
-//                         width: 100%;
-//                         // height: 95%;
-//                         background-size: cover;
-//                         border-radius: 10px;
-//                     }
-//                 }
-
-//                 &__el {
-//                     display: flex;
-//                     flex-direction: column;
-//                     width: 50%;
-//                     // align-items: flex-start;
-//                     gap: 15px;
-//                     margin: auto;
-//                     // padding-left: 25px;
-//                     &__title {
-//                         font-weight: 800;
-//                         text-align: left;
-//                         font-size: 1vw;
-//                         margin-bottom: 5px;
-//                         text-transform: uppercase;
-//                         text-decoration: underline;
-//                         color: #50227c;
-//                     }
-//                     &__text {
-//                         font-weight: 500;
-//                         text-align: left;
-//                         font-size: 1vw;
-
-//                         &:before {
-//                             content: '-';
-//                             margin-right: 5px;
-//                         }
-//                     }
-//                     &__why{
-//                         font-size: 1.8rem;
-//                     }
-//                 }
-
-//             }
-//     }
-// }

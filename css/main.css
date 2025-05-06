@@ -98,6 +98,12 @@ h2 {
   font-family: "MainFontH";
   color: #1a5186; }
 
+h3 {
+  width: 348px;
+  font-weight: 600;
+  font-size: 24px;
+  font-family: "MainFont"; }
+
 h4 {
   font-size: 24px;
   font-family: "MainFont";
@@ -247,14 +253,80 @@ button:hover {
       padding: 44px 34px;
       background-color: #fbfdff;
       border-radius: 25px; }
-  .help__list__bottom__item {
+      .help__list__top__item:first-child {
+        border: 2px dashed #b1c0cf; }
+      .help__list__top__item__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase; }
+        .help__list__top__item__head__number {
+          font-size: 64px;
+          font-weight: 600;
+          color: #4482bf; }
+      .help__list__top__item__elem {
+        max-width: 535px; }
+        .help__list__top__item__elem__grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px; }
+        .help__list__top__item__elem__el {
+          position: relative;
+          padding-left: 30px;
+          font-weight: 600;
+          font-size: 16px;
+          margin-bottom: 12px; }
+          .help__list__top__item__elem__el::before {
+            content: "";
+            background-image: url(../img/dot.svg);
+            position: absolute;
+            left: 0;
+            top: 15%;
+            transform: translateY(-6%);
+            width: 11px;
+            height: 11px;
+            background-repeat: no-repeat; }
+          .help__list__top__item__elem__el__thin {
+            font-weight: 400;
+            font-size: 16px; }
+    .help__list__top__itemp {
+      gap: 22px;
+      display: flex;
+      flex-direction: column; }
+      .help__list__top__itemp__quote {
+        background-color: #1a5186;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 26px 42px 41px 34px;
+        border-radius: 25px; }
+        .help__list__top__itemp__quote__svg {
+          width: 30px; }
+        .help__list__top__itemp__quote__blockquote {
+          font-family: "MainFont";
+          color: #ffffff;
+          font-weight: 500;
+          max-width: 397px;
+          font-size: 20px; }
+  .help__list__bottom {
     display: grid;
     grid-template-columns: 1fr 57.7%;
     gap: 22px; }
-    .help__list__bottom__item__el {
+    .help__list__bottom__item {
       padding: 44px 34px;
       background-color: #fbfdff;
       border-radius: 25px; }
+      .help__list__bottom__item:last-child {
+        border: 2px dashed #b1c0cf; }
+      .help__list__bottom__item__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase; }
+        .help__list__bottom__item__head__number {
+          font-size: 64px;
+          font-weight: 600;
+          color: #4482bf; }
 
 .advantages__container {
   margin-top: 40px; }
@@ -369,21 +441,23 @@ h2 {
     .about__start__about {
       max-width: 300px;
       margin-bottom: 33px; }
-    .about__start__quote__el {
-      padding: 32px 34px;
-      display: flex;
-      gap: 18px;
-      text-transform: uppercase;
-      max-width: 520px;
-      max-height: 145px;
-      background-color: #fbfdff;
-      border: 2px dashed #b1c0cf;
-      border-radius: 20px; }
-    .about__start__quote__imgAbout {
-      border-radius: 64px;
-      max-width: 522px;
-      max-height: 386px;
-      margin-bottom: 22px; }
+    .about__start__quote {
+      fill: #63676c; }
+      .about__start__quote__el {
+        padding: 32px 34px;
+        display: flex;
+        gap: 18px;
+        text-transform: uppercase;
+        max-width: 520px;
+        max-height: 145px;
+        background-color: #fbfdff;
+        border: 2px dashed #b1c0cf;
+        border-radius: 20px; }
+      .about__start__quote__imgAbout {
+        border-radius: 64px;
+        max-width: 522px;
+        max-height: 386px;
+        margin-bottom: 22px; }
   .about__end {
     max-width: 734px; }
     .about__end__rectangle {
