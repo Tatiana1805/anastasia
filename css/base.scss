@@ -123,16 +123,29 @@ h4 {
   font-family: "MainFont";
   color: #0e0e0e;
   margin-bottom: 28px;
+  text-transform: uppercase;
+}
+h5{
+  width: 329px;
+  height: 36px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #1A5186;
 }
 p {
   font-family: "MainFont";
   font-size: 16px;
+  font-weight: 400;
   color: #6f6f70;
 }
 span {
   font-family: "MainFont";
   color: #0e0e0e;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 :root {
