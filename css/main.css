@@ -99,7 +99,6 @@ h2 {
   color: #1a5186; }
 
 h3 {
-  width: 348px;
   font-weight: 600;
   font-size: 24px;
   font-family: "MainFont"; }
@@ -228,9 +227,9 @@ button:hover {
   background-color: #276eb3; }
 
 .help__title {
-  width: 596px;
+  width: 560px;
   position: relative;
-  left: -55px; }
+  left: -37px; }
   .help__title__img {
     z-index: -1;
     position: absolute;
@@ -238,7 +237,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%); }
   .help__title__text {
-    margin-bottom: 60px; }
+    margin: 168px auto 60px; }
 
 .help__list {
   display: flex;
@@ -265,11 +264,14 @@ button:hover {
           font-weight: 600;
           color: #4482bf; }
       .help__list__top__item__elem {
-        max-width: 535px; }
+        max-width: 535px;
+        margin-bottom: 28px; }
         .help__list__top__item__elem__grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          grid-gap: 10px; }
+          grid-gap: 10px;
+          max-width: 640px;
+          margin-bottom: 28px; }
         .help__list__top__item__elem__el {
           position: relative;
           padding-left: 30px;
@@ -281,14 +283,18 @@ button:hover {
             background-image: url(../img/dot.svg);
             position: absolute;
             left: 0;
-            top: 15%;
-            transform: translateY(-6%);
+            top: 32%;
+            transform: translateY(-17%);
             width: 11px;
             height: 11px;
             background-repeat: no-repeat; }
           .help__list__top__item__elem__el__thin {
             font-weight: 400;
             font-size: 16px; }
+      .help__list__top__item__p {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; }
     .help__list__top__itemp {
       gap: 22px;
       display: flex;
@@ -327,6 +333,26 @@ button:hover {
           font-size: 64px;
           font-weight: 600;
           color: #4482bf; }
+      .help__list__bottom__item__elem__el {
+        position: relative;
+        padding-left: 30px;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 12px; }
+        .help__list__bottom__item__elem__el::before {
+          content: "";
+          background-image: url(../img/dot.svg);
+          position: absolute;
+          left: 0;
+          top: 32%;
+          transform: translateY(-17%);
+          width: 11px;
+          height: 11px;
+          background-repeat: no-repeat; }
+      .help__list__bottom__item__p {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; }
 
 .advantages__container {
   margin-top: 40px; }
