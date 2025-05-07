@@ -38,27 +38,41 @@ function scalePage() {
 
 
 
-function toggleContainer(containerId) {
-  const container = document.getElementById(containerId);
-  const isVisible = container.style.display === 'block';
+// function toggleContainer(containerId) {
+//   const container = document.getElementById(containerId);
+//   const isVisible = container.style.display === 'block';
 
-  // Скрываем все контейнеры
-  const containers = document.querySelectorAll('.price__container__el__item');
-  containers.forEach((c) => {
-      c.style.display = 'none';
-  });
+//   // Скрываем все контейнеры
+//   const containers = document.querySelectorAll('.price__container__el__item');
+//   containers.forEach((c) => {
+//       c.style.display = 'none';
+//   });
 
-  // Показываем или скрываем выбранный контейнер
-  container.style.display = isVisible ? 'none' : 'block';
+//   // Показываем или скрываем выбранный контейнер
+//   container.style.display = isVisible ? 'none' : 'block';
+// }
+
+
+// Карусель для сертификатов
+let slideIndex = 1;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
 }
 
-// let header = document.querySelector(".header")
-// window.onscroll = function(){
-    
-// if(window.scrollY > 100){
-// header.style.background = "#E1EEF6"
-// }
-// else{
-// header.style.background = "#e1eef6ab" 
-// }
-// }
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("qualification__info__diploma__imgs")[0].children;
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}

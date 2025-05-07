@@ -241,16 +241,16 @@ button:hover {
 
 .help__title {
   width: 560px;
-  position: relative;
-  left: -37px; }
+  position: relative; }
   .help__title__img {
     z-index: -1;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%); }
   .help__title__text {
-    margin: 168px auto 60px; }
+    margin: 168px auto 60px;
+    text-align: left; }
 
 .help__list {
   display: flex;
@@ -474,7 +474,7 @@ h2 {
 .qualification__title {
   width: 476px;
   position: relative;
-  margin: auto;
+  margin: 0 auto 60px;
   text-align: center; }
   .qualification__title__img {
     z-index: -1;
@@ -494,7 +494,41 @@ h2 {
     .qualification__info__univer__list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 10px; }
+      grid-gap: 30px;
+      list-style-position: initial;
+      align-items: end; }
+      .qualification__info__univer__list__el {
+        border-bottom: 2px solid #c1c4c7;
+        padding-bottom: 8px;
+        position: relative;
+        padding-right: 120px; }
+        .qualification__info__univer__list__el__span {
+          font-family: "MainFontH";
+          color: #1a5186;
+          font-weight: 600;
+          font-size: 16px;
+          position: absolute;
+          right: 0; }
+        .qualification__info__univer__list__el.empty {
+          border-bottom: 0; }
+  .qualification__info__diploma {
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+    .qualification__info__diploma__arrow {
+      width: 20px; }
+    .qualification__info__diploma__imgs {
+      display: flex;
+      max-width: 484px;
+      max-height: 418px;
+      padding: 0 95px;
+      background: #fbfdff;
+      border: 2px dashed #b1c0cf;
+      border-radius: 25px; }
+      .qualification__info__diploma__imgs__el {
+        width: 100%;
+        object-fit: cover;
+        object-position: center; }
 
 .footer {
   background: var(--bg-color);
