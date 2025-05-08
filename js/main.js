@@ -107,15 +107,23 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //открытие доп текста в прайсе
-document.getElementById("toggleButton").addEventListener("click", function(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  const moreText = document.getElementById("more");
-  if (moreText.style.display === "none") {
-      moreText.style.display = "block";
-      this.textContent = "Скрыть"; // Изменяем текст кнопки
-  } else {
-      moreText.style.display = "none";
-      this.textContent = "Подробнее"; // Возвращаем текст кнопки
-  }
-});
+const buttons = document.querySelectorAll(".price__el__item__info__el__item");
+buttons.forEach(function(button) {
+  button.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const target = e.target; //узнаем таргет нажатой кнопки
+    console.log(target)
+    const moreText = target.closest(".price__el__item__info__el__more")
+    console.log(moreText)
+    // const moreText = document.querySelector(".price__el__item__info__el__more");
+    const buttonText = document.querySelector(".price__el__item__info__el__item__btn")
+    if (moreText.style.display === "none") {
+        moreText.style.display = "block";
+        buttonText.textContent = "Скрыть"; // Изменяем текст кнопки
+    } else {
+        moreText.style.display = "none";
+        buttonText.textContent = "Подробнее"; // Возвращаем текст кнопки
+    }
+  });
+})

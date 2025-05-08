@@ -429,13 +429,15 @@ h2 {
         justify-content: space-between; }
         .price__el__item__info__el__more {
           display: none; }
-        .price__el__item__info__el__item {
+        .price__el__item__info__el__item__btn {
           color: #1A5186;
-          font-weight: 600; }
-          .price__el__item__info__el__item__arrow {
-            width: 10px;
-            height: 13px;
-            padding-top: 5px; }
+          font-weight: 600;
+          font-family: "MainFont";
+          font-size: 16px; }
+        .price__el__item__info__el__item__arrow {
+          width: 10px;
+          height: 13px;
+          padding-top: 5px; }
         .price__el__item__info__h {
           width: 381px;
           display: flex;
