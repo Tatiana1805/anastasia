@@ -126,4 +126,15 @@ buttons.forEach(function(event) {
   });
 })
 
+//открытие доп курсов
+document.getElementById('addPrice').addEventListener('click', function(){
+  const containerAdd = document.getElementById('containerAdd')
+  if(containerAdd.style.display === 'none' || containerAdd.style.display === ""){
+    containerAdd.style.display = 'flex';
+    this.textContent = 'Скрыть все программы'
+  } else {
+    containerAdd.style.display = 'none'
+    this.textContent = 'Смотреть все программы'
+  }
+})
 

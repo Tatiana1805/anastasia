@@ -412,6 +412,10 @@ h2 {
         background-color: #276eb3;
         color: #ffffff;
         border: none; }
+    .price__el__containerAdd {
+      display: none;
+      flex-direction: column;
+      gap: 20px; }
     .price__el__item, .price__el__item__border {
       width: 100%;
       background-color: #fbfdff;
@@ -469,14 +473,17 @@ h2 {
       max-width: 420px;
       margin-top: 55px;
       margin-left: auto; }
-      .price__el__end__arrow {
-        width: 14px;
-        height: 19px;
-        padding-top: 8px; }
-      .price__el__end__h {
+      .price__el__end__button {
         position: relative;
-        margin-left: 61px;
-        cursor: pointer; }
+        display: flex;
+        gap: 10px; }
+        .price__el__end__button__h {
+          margin-left: 61px;
+          cursor: pointer; }
+        .price__el__end__button__arrow {
+          width: 14px;
+          height: 19px;
+          margin: auto 0; }
       .price__el__end__img {
         margin-top: -85px; }
 
