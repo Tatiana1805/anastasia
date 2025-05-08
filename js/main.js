@@ -108,17 +108,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //открытие доп текста в прайсе
 const buttons = document.querySelectorAll(".price__el__item__info__el__item");
-buttons.forEach(function(button) {
-  button.addEventListener("click", function(e) {
+buttons.forEach(function(event) {
+  event.addEventListener("click", function(e) {
     e.preventDefault();
     e.stopPropagation();
     const target = e.target; //узнаем таргет нажатой кнопки
-    console.log(target)
-    const moreText = target.closest(".price__el__item__info__el__more")
-    console.log(moreText)
-    // const moreText = document.querySelector(".price__el__item__info__el__more");
-    const buttonText = document.querySelector(".price__el__item__info__el__item__btn")
-    if (moreText.style.display === "none") {
+    const container = target.closest(".price__el__item__info__el") //доходим до родителя
+    const moreText = container.querySelector('.price__el__item__info__el__more') //обращаемся к скрытому тексту через родителя
+    const buttonText = container.querySelector(".price__el__item__info__el__item__btn")
+    if (moreText.style.display === "none" || moreText.style.display === "") {
         moreText.style.display = "block";
         buttonText.textContent = "Скрыть"; // Изменяем текст кнопки
     } else {
@@ -127,3 +125,5 @@ buttons.forEach(function(button) {
     }
   });
 })
+
+
