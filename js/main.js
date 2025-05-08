@@ -105,3 +105,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+//открытие доп текста в прайсе
+document.getElementById("toggleButton").addEventListener("click", function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  const moreText = document.getElementById("more");
+  if (moreText.style.display === "none") {
+      moreText.style.display = "block";
+      this.textContent = "Скрыть"; // Изменяем текст кнопки
+  } else {
+      moreText.style.display = "none";
+      this.textContent = "Подробнее"; // Возвращаем текст кнопки
+  }
+});

@@ -49,6 +49,9 @@
       &__info {
         display: flex;
         justify-content: space-between;
+        &__el__more{
+          display: none;
+        }
         &__el__item{
           color: #1A5186;
           // font-size: 18px;
