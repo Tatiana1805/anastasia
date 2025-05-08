@@ -38,27 +38,70 @@ function scalePage() {
 
 
 
-function toggleContainer(containerId) {
-  const container = document.getElementById(containerId);
-  const isVisible = container.style.display === 'block';
+// function toggleContainer(containerId) {
+//   const container = document.getElementById(containerId);
+//   const isVisible = container.style.display === 'block';
 
-  // Скрываем все контейнеры
-  const containers = document.querySelectorAll('.price__container__el__item');
-  containers.forEach((c) => {
-      c.style.display = 'none';
-  });
+//   // Скрываем все контейнеры
+//   const containers = document.querySelectorAll('.price__container__el__item');
+//   containers.forEach((c) => {
+//       c.style.display = 'none';
+//   });
 
-  // Показываем или скрываем выбранный контейнер
-  container.style.display = isVisible ? 'none' : 'block';
+//   // Показываем или скрываем выбранный контейнер
+//   container.style.display = isVisible ? 'none' : 'block';
+// }
+
+
+// Карусель для сертификатов
+let slideIndex = 1;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
 }
 
-// let header = document.querySelector(".header")
-// window.onscroll = function(){
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("qualification__info__diploma__imgs")[0].children;
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const reviewsSwiper = new Swiper('.reviews__swiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    // Настройки прокрутки:
+    grabCursor: true,
+    simulateTouch: true,
+    touchRatio: 1,
+    touchReleaseOnEdges: true, // Срабатывает при отпускании на краях
+    resistance: true, // Упругость при достижении конца
+    resistanceRatio: 0.5, // Сила упругости
     
-// if(window.scrollY > 100){
-// header.style.background = "#E1EEF6"
-// }
-// else{
-// header.style.background = "#e1eef6ab" 
-// }
-// }
+    navigation: {
+      nextEl: '.reviews__info__arrows .next',
+      prevEl: '.reviews__info__arrows .prev'
+    },
+    breakpoints: {
+      320: { 
+        slidesPerView: 1,
+        simulateTouch: true // Обязательно для мобилок
+      },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+});

@@ -1,16 +1,16 @@
 .help__title {
   width: 560px;
   position: relative;
-  left: -37px;
   &__img {
     z-index: -1;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
   }
   &__text {
     margin: 168px auto 60px;
+    text-align: left;
   }
 }
 
