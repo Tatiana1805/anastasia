@@ -106,9 +106,8 @@ h4 {
   text-transform: uppercase; }
 
 h5 {
-  width: 329px;
   height: 36px;
-  font-family: 'Montserrat';
+  font-family: 'MainFont';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -296,7 +295,7 @@ h2 {
       max-width: 657px; }
   .price__cloud {
     margin-top: -150px;
-    width: 101%;
+    width: 115%;
     margin-left: -10px; }
   .price__el {
     display: flex;
@@ -308,7 +307,8 @@ h2 {
       border: 3px solid #1a5186;
       background-color: #fbfdff;
       color: #1a5186;
-      margin: auto 0; }
+      margin: auto 0;
+      transition: 0.3s; }
       .price__el__button:hover {
         background-color: #276eb3;
         color: #ffffff;
@@ -319,9 +319,11 @@ h2 {
       border-radius: 25px;
       padding: 62px 32px;
       line-height: 1.6;
-      border: 2px dashed #b1c0cf; }
+      border: 2px dashed #b1c0cf;
+      cursor: pointer; }
       .price__el__item:hover {
-        border: none;
+        transition: 0.3s;
+        border: 2px solid transparent;
         filter: drop-shadow(-51px 45px 27px rgba(0, 0, 0, 0.01)) drop-shadow(-29px 25px 23px rgba(0, 0, 0, 0.05)) drop-shadow(-13px 11px 17px rgba(0, 0, 0, 0.09)) drop-shadow(-3px 3px 9px rgba(0, 0, 0, 0.1)); }
       .price__el__item__info {
         display: flex;
@@ -371,7 +373,8 @@ h2 {
         margin-left: 61px;
         cursor: pointer; }
       .price__el__end__img {
-        margin-top: -85px; }
+        margin-top: -85px;
+        margin-left: 20px; }
 
 .qualification__container__info {
   display: flex;
@@ -431,11 +434,11 @@ h2 {
         gap: 18px; }
     .about__end__info {
       max-width: 593px;
-      margin-top: 83px;
+      margin-top: 130px;
       padding-top: 65px; }
       .about__end__info__el {
         text-transform: uppercase;
-        margin-top: 50px;
+        margin-top: 30px;
         line-height: 150%; }
         .about__end__info__el__item {
           text-transform: math-auto;

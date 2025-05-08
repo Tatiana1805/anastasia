@@ -11,7 +11,7 @@
   }
   &__cloud{
     margin-top: -150px;
-    width: 101%;
+    width: 115%;
     margin-left: -10px;
     }
   &__el {
@@ -25,6 +25,7 @@
       background-color: #fbfdff;
       color: #1a5186;
       margin: auto 0;
+      transition: 0.3s;
       &:hover {
         background-color: #276eb3;
         color: #ffffff;
@@ -38,9 +39,11 @@
       padding: 62px 32px;
       line-height: 1.6;
       border: 2px dashed #b1c0cf;
+      cursor: pointer;
 
       &:hover {
-        border: none;
+        transition: 0.3s;
+        border: 2px solid transparent;
         filter: drop-shadow(-51px 45px 27px rgba(0, 0, 0, 0.01)) drop-shadow(-29px 25px 23px rgba(0, 0, 0, 0.05)) drop-shadow(-13px 11px 17px rgba(0, 0, 0, 0.09)) drop-shadow(-3px 3px 9px rgba(0, 0, 0, 0.1));
       }
 
@@ -106,6 +109,7 @@
       }
       &__img{
         margin-top: -85px;
+        margin-left: 20px;
       }
     }
   }
