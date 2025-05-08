@@ -59,6 +59,9 @@
       &__info {
         display: flex;
         justify-content: space-between;
+        &__el__li {
+          list-style: inside;
+        }
         &__el__more{
           display: none;
         }

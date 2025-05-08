@@ -433,6 +433,8 @@ h2 {
       .price__el__item__info, .price__el__item__border__info {
         display: flex;
         justify-content: space-between; }
+        .price__el__item__info__el__li, .price__el__item__border__info__el__li {
+          list-style: inside; }
         .price__el__item__info__el__more, .price__el__item__border__info__el__more {
           display: none; }
         .price__el__item__info__el__item__btn, .price__el__item__border__info__el__item__btn {
