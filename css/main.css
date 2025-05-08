@@ -427,6 +427,8 @@ h2 {
       .price__el__item__info {
         display: flex;
         justify-content: space-between; }
+        .price__el__item__info__el__more {
+          display: none; }
         .price__el__item__info__el__item {
           color: #1A5186;
           font-weight: 600; }
