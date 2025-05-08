@@ -107,34 +107,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //открытие доп текста в прайсе
-const buttons = document.querySelectorAll(".price__el__item__info__el__item");
-buttons.forEach(function(event) {
-  event.addEventListener("click", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    const target = e.target; //узнаем таргет нажатой кнопки
-    const container = target.closest(".price__el__item__info__el") //доходим до родителя
+document.querySelectorAll('.price__el__item__info__el__item').forEach(item => {
+  item.addEventListener('click', function (e) {
+
+    const container = e.target.closest(".price__el__item__info__el") //доходим до родителя
     const moreText = container.querySelector('.price__el__item__info__el__more') //обращаемся к скрытому тексту через родителя
     const buttonText = container.querySelector(".price__el__item__info__el__item__btn")
-    if (moreText.style.display === "none" || moreText.style.display === "") {
-        moreText.style.display = "block";
-        buttonText.textContent = "Скрыть"; // Изменяем текст кнопки
+
+    if (moreText.style.display === "block") {
+      moreText.style.display = "none";
+      buttonText.textContent = "Подробнее";
     } else {
-        moreText.style.display = "none";
-        buttonText.textContent = "Подробнее"; // Возвращаем текст кнопки
+      moreText.style.display = "block";
+      buttonText.textContent = "Скрыть";
     }
   });
-})
+});
 
 //открытие доп курсов
 document.getElementById('addPrice').addEventListener('click', function(){
-  const containerAdd = document.getElementById('containerAdd')
-  if(containerAdd.style.display === 'none' || containerAdd.style.display === ""){
-    containerAdd.style.display = 'flex';
-    this.textContent = 'Скрыть все программы'
-  } else {
-    containerAdd.style.display = 'none'
+  const containerAdd = document.getElementById("containerAdd")
+  if(containerAdd.style.display === 'flex'){
+    containerAdd.style.display = 'none';
     this.textContent = 'Смотреть все программы'
+  } else {
+    containerAdd.style.display = 'flex'
+    this.textContent = 'Скрыть все программы'
   }
 })
 
