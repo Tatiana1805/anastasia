@@ -53,9 +53,15 @@
           display: none;
         }
         &__el__item{
-          color: #1A5186;
+          // color: #1A5186;
           // font-size: 18px;
-          font-weight: 600;
+          // font-weight: 600;
+          &__btn{
+            color: #1A5186;
+            font-weight: 600;
+            font-family: "MainFont";
+            font-size: 16px;
+          }
           &__arrow {
             width: 10px;
             height: 13px;
