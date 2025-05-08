@@ -1,0 +1,79 @@
+.reviews__title {
+  width: 619px;
+  position: relative;
+  margin: 0 auto 60px;
+  text-align: center;
+  &__img {
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__text {
+    margin: 168px auto 0;
+  }
+}
+.reviews__swiper {
+  width: 100%;
+  overflow: hidden;
+  z-index: -1 !important;
+}
+
+.reviews__info {
+  &__arrows {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 42px 52px;
+    &__el {
+      width: 24px;
+    }
+  }
+  &__list {
+    display: flex; /* Swiper сам управляет этим */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &__el {
+      width: 300px; /* или любая другая ширина */
+      margin-right: 20px; /* отступ между слайдами */
+      // padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      flex-shrink: 0;
+      background-image: url(/img/stars.svg);
+      background-position: 50% 20px;
+      background-size: 88px;
+      background-repeat: no-repeat;
+      max-width: 412px;
+      background-color: #ffffff;
+      border-radius: 25px;
+      padding: 98px 43px 42px 34px;
+
+      &__p {
+        color: #000;
+      }
+      &__list {
+        color: #000;
+        &__li {
+          list-style: square;
+          &::marker {
+            color: #d9d9d9;
+          }
+        }
+      }
+      &__link {
+        display: flex;
+        gap: 11px;
+        margin-top: 30px;
+        font-family: "MainFontH";
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a5186;
+        &__img {
+          width: 15px;
+        }
+      }
+    }
+  }
+}

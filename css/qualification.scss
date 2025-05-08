@@ -20,7 +20,9 @@
   &__univer {
     display: flex;
     flex-direction: column;
-
+    &__h3 {
+      text-transform: uppercase;
+    }
     &__list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

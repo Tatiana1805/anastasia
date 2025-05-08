@@ -76,3 +76,32 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const reviewsSwiper = new Swiper('.reviews__swiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    // Настройки прокрутки:
+    grabCursor: true,
+    simulateTouch: true,
+    touchRatio: 1,
+    touchReleaseOnEdges: true, // Срабатывает при отпускании на краях
+    resistance: true, // Упругость при достижении конца
+    resistanceRatio: 0.5, // Сила упругости
+    
+    navigation: {
+      nextEl: '.reviews__info__arrows .next',
+      prevEl: '.reviews__info__arrows .prev'
+    },
+    breakpoints: {
+      320: { 
+        slidesPerView: 1,
+        simulateTouch: true // Обязательно для мобилок
+      },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+});
