@@ -111,21 +111,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //открытие доп текста в прайсе
-const buttons = document.querySelectorAll(".price__el__item__info__el__item");
-console.log(buttons)
-buttons.forEach(function(button) {
-  button.addEventListener("click", function(e) {
+document.querySelectorAll('.price__el__item__info__el__item').forEach(item => {
+  item.addEventListener('click', function (e) {
     e.preventDefault();
-    e.stopPropagation();
-    const target = e.target; //узнаем таргет нажатой кнопки
-    console.log(target)
-    const moreText = target.closest(".price__el__item__info__el__more")
-    console.log(moreText)
-    // const moreText = document.querySelector(".price__el__item__info__el__more");
-    const buttonText = document.querySelector(".price__el__item__info__el__item__btn")
-    if (moreText.style.display === "none") {
-        moreText.style.display = "block";
-        buttonText.textContent = "Скрыть"; // Изменяем текст кнопки
+
+    const container = e.target.closest(".price__el__item__info__el") //доходим до родителя
+    const moreText = container.querySelector('.price__el__item__info__el__more') //обращаемся к скрытому тексту через родителя
+    const buttonText = container.querySelector(".price__el__item__info__el__item__btn")
+
+    if (moreText.style.display === "block") {
+      moreText.style.display = "none";
+      buttonText.textContent = "Подробнее";
     } else {
       moreText.style.display = "block";
       buttonText.textContent = "Скрыть";
@@ -134,7 +130,8 @@ buttons.forEach(function(button) {
 });
 
 //открытие доп курсов
-document.getElementById('addPrice').addEventListener('click', function(){
+document.getElementById('addPrice').addEventListener('click', function(e){
+  e.preventDefault();
   const containerAdd = document.getElementById("containerAdd")
   if(containerAdd.style.display === 'flex'){
     containerAdd.style.display = 'none';
