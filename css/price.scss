@@ -32,23 +32,36 @@
         border: none;
       }
     }
-    &__item {
+    &__containerAdd{
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__item, &__item__border {
       width: 100%;
       background-color: #fbfdff;
       border-radius: 25px;
       padding: 62px 32px;
       line-height: 1.6;
-      border: 2px dashed #b1c0cf;
       cursor: pointer;
       transition: 0.3s;
       &:hover {
-        border: 2px solid transparent;
         filter: drop-shadow(-51px 45px 27px rgba(0, 0, 0, 0.01)) drop-shadow(-29px 25px 23px rgba(0, 0, 0, 0.05)) drop-shadow(-13px 11px 17px rgba(0, 0, 0, 0.09)) drop-shadow(-3px 3px 9px rgba(0, 0, 0, 0.1));
+      }
+
+      &__border{
+        border: 2px dashed #b1c0cf;
+        &:hover{
+          border: 2px solid transparent;
+        }
       }
 
       &__info {
         display: flex;
         justify-content: space-between;
+        &__el__li {
+          list-style: inside;
+        }
         &__el__more{
           display: none;
         }
@@ -71,15 +84,15 @@
 
         &__h {
           width: 381px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
+          position: relative;
           &::after {
             content: "";
+            position: absolute;
             height: 2px;
             display: block;
-            max-width: 352px;
+            width: 352px;
             background-color: #1a5186;
+            bottom: 0;
           }
         }
         &__el {
@@ -105,16 +118,21 @@
       max-width: 420px;
       margin-top: 55px;
       margin-left: auto;
-      &__arrow{
-        width: 14px;
-        height: 19px;
-        padding-top: 8px;
-      }
-      &__h{
+      &__button{
         position: relative;
-        margin-left: 61px;
-        cursor: pointer;
+          display: flex;
+          gap: 10px;
+        &__h{
+          margin-left: 61px;
+          cursor: pointer;
+        }
+        &__arrow{
+          width: 14px;
+          height: 19px;
+          margin: auto 0;
+        }
       }
+
       &__img{
         margin-top: -85px;
       }

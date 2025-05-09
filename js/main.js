@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //открытие доп текста в прайсе
+<<<<<<< HEAD
 const buttons = document.querySelectorAll(".price__el__item__info__el__item");
 console.log(buttons)
 buttons.forEach(function(button) {
@@ -120,9 +121,34 @@ buttons.forEach(function(button) {
     if (moreText.style.display === "none") {
         moreText.style.display = "block";
         buttonText.textContent = "Скрыть"; // Изменяем текст кнопки
+=======
+document.querySelectorAll('.price__el__item__info__el__item').forEach(item => {
+  item.addEventListener('click', function (e) {
+
+    const container = e.target.closest(".price__el__item__info__el") //доходим до родителя
+    const moreText = container.querySelector('.price__el__item__info__el__more') //обращаемся к скрытому тексту через родителя
+    const buttonText = container.querySelector(".price__el__item__info__el__item__btn")
+
+    if (moreText.style.display === "block") {
+      moreText.style.display = "none";
+      buttonText.textContent = "Подробнее";
+>>>>>>> 0ba8e56d57b16e5d326c344dfe29dfe157d6e9b8
     } else {
-        moreText.style.display = "none";
-        buttonText.textContent = "Подробнее"; // Возвращаем текст кнопки
+      moreText.style.display = "block";
+      buttonText.textContent = "Скрыть";
     }
   });
+});
+
+//открытие доп курсов
+document.getElementById('addPrice').addEventListener('click', function(){
+  const containerAdd = document.getElementById("containerAdd")
+  if(containerAdd.style.display === 'flex'){
+    containerAdd.style.display = 'none';
+    this.textContent = 'Смотреть все программы'
+  } else {
+    containerAdd.style.display = 'flex'
+    this.textContent = 'Скрыть все программы'
+  }
 })
+
