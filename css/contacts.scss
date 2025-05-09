@@ -1,0 +1,92 @@
+.contacts__container {
+  margin-top: 40px;
+  &__h{
+    max-width: 648px;
+    position: relative;
+    margin: 0 auto;
+  
+  &__img{
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 113%;
+  }
+    }
+    &__info{
+        background-color: #FBFDFF;
+        width: 100%;
+        margin-top: 100px;
+        border-radius: 25px;
+        padding: 41px 60px;
+        display: flex;
+        justify-content: space-between;
+        &__start{
+            max-width: 222px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &__messeger{
+                &__p{
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+            &__href__el{
+                margin-right: 12px;
+            }
+        }
+            &__tel{
+                &__icon{
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 5px;
+                }
+                &__el{
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-decoration: underline;
+                    color: black;
+                    display: flex;
+                    align-items: center;
+                }
+                &__p{
+                    font-size: 20px;
+                }
+            }
+        }
+        &__img{
+            max-width: 423px;
+        }
+        &__end {
+            max-width: 350px;
+            margin-top: 101px;
+            &__span{
+                padding: 33px 20px;
+                display: flex;
+                gap: 18px;
+                max-width: 350px;
+                max-height: 148px;
+                background-color: #fbfdff;
+                border: 2px dashed #b1c0cf;
+                border-radius: 20px;
+                text-transform: uppercase;
+                margin-top: 88px;
+                &__el{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    &__svg{
+        width: 215px;
+        height: 227px;
+        position: absolute;
+        left: 78%;
+        top: 60px;
+    }
+}
+
+h2 {
+  text-align: center;
+}
