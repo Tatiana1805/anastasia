@@ -79,27 +79,25 @@ function showSlides(n) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Проверяем существование элемента
+  const sliderElement = document.querySelector('.reviews__swiper');
+  if (!sliderElement) {
+    console.error('Swiper container not found!');
+    return;
+  }
+
   const reviewsSwiper = new Swiper('.reviews__swiper', {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
-    // Настройки прокрутки:
     grabCursor: true,
     simulateTouch: true,
-    touchRatio: 1,
-    touchReleaseOnEdges: true, // Срабатывает при отпускании на краях
-    resistance: true, // Упругость при достижении конца
-    resistanceRatio: 0.5, // Сила упругости
-    
     navigation: {
       nextEl: '.reviews__info__arrows .next',
-      prevEl: '.reviews__info__arrows .prev'
+      prevEl: '.reviews__info__arrows .prev',
     },
     breakpoints: {
-      320: { 
-        slidesPerView: 1,
-        simulateTouch: true // Обязательно для мобилок
-      },
+      320: { slidesPerView: 1 },
       768: { slidesPerView: 2 },
       1024: { slidesPerView: 3 }
     }
@@ -108,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //открытие доп текста в прайсе
 const buttons = document.querySelectorAll(".price__el__item__info__el__item");
+console.log(buttons)
 buttons.forEach(function(button) {
   button.addEventListener("click", function(e) {
     e.preventDefault();
