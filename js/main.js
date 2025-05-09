@@ -79,44 +79,53 @@ function showSlides(n) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Инициализация слайдера отзывов
   const reviewsSwiper = new Swiper('.reviews__swiper', {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
-    // Настройки прокрутки:
     grabCursor: true,
-    simulateTouch: true,
-    touchRatio: 1,
-    touchReleaseOnEdges: true, // Срабатывает при отпускании на краях
-    resistance: true, // Упругость при достижении конца
-    resistanceRatio: 0.5, // Сила упругости
-    
     navigation: {
       nextEl: '.reviews__info__arrows .next',
-      prevEl: '.reviews__info__arrows .prev'
+      prevEl: '.reviews__info__arrows .prev',
     },
+    noSwiping: true, // Отключает перетаскивание по всему слайдеру
+    noSwipingClass: 'reviews__info__list__el__link', // Разрешает клики по этому классу
+    preventInteractionOnTransition: true, // Фикс для плавности
+    
     breakpoints: {
-      320: { 
+      320: {
         slidesPerView: 1,
-        simulateTouch: true // Обязательно для мобилок
+        spaceBetween: 10
       },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 }
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
     }
   });
 });
 
 //открытие доп текста в прайсе
-document.querySelectorAll('.price__el__item__info__el__item').forEach(item => {
-  item.addEventListener('click', function (e) {
-
-    const container = e.target.closest(".price__el__item__info__el") //доходим до родителя
-    const moreText = container.querySelector('.price__el__item__info__el__more') //обращаемся к скрытому тексту через родителя
-    const buttonText = container.querySelector(".price__el__item__info__el__item__btn")
-
-    if (moreText.style.display === "block") {
-      moreText.style.display = "none";
-      buttonText.textContent = "Подробнее";
+const buttons = document.querySelectorAll(".price__el__item__info__el__item");
+console.log(buttons)
+buttons.forEach(function(button) {
+  button.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const target = e.target; //узнаем таргет нажатой кнопки
+    console.log(target)
+    const moreText = target.closest(".price__el__item__info__el__more")
+    console.log(moreText)
+    // const moreText = document.querySelector(".price__el__item__info__el__more");
+    const buttonText = document.querySelector(".price__el__item__info__el__item__btn")
+    if (moreText.style.display === "none") {
+        moreText.style.display = "block";
+        buttonText.textContent = "Скрыть"; // Изменяем текст кнопки
     } else {
       moreText.style.display = "block";
       buttonText.textContent = "Скрыть";
