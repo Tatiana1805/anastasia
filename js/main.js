@@ -79,27 +79,33 @@ function showSlides(n) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Проверяем существование элемента
-  const sliderElement = document.querySelector('.reviews__swiper');
-  if (!sliderElement) {
-    console.error('Swiper container not found!');
-    return;
-  }
-
+  // Инициализация слайдера отзывов
   const reviewsSwiper = new Swiper('.reviews__swiper', {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
     grabCursor: true,
-    simulateTouch: true,
     navigation: {
       nextEl: '.reviews__info__arrows .next',
       prevEl: '.reviews__info__arrows .prev',
     },
+    noSwiping: true, // Отключает перетаскивание по всему слайдеру
+    noSwipingClass: 'reviews__info__list__el__link', // Разрешает клики по этому классу
+    preventInteractionOnTransition: true, // Фикс для плавности
+    
     breakpoints: {
-      320: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 }
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
     }
   });
 });
