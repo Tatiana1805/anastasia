@@ -54,28 +54,27 @@ function scalePage() {
 
 
 // Карусель для сертификатов
-let slideIndex = 1;
-
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-function showSlides(n) {
-  let i;
-  const slides = document.getElementsByClassName("qualification__info__diploma__imgs")[0].children;
-  if (n > slides.length) {
-    slideIndex = 1;
+const diplomaSwiper = new Swiper('.qualification__info__diploma__imgs', {
+  slidesPerView: 1,
+  loop: true,
+  effect: 'fade',
+  fadeEffect: { crossFade: true },
+  navigation: {
+    nextEl: '.diploma-next',
+    prevEl: '.diploma-prev',
+  },
+  // Критически важные параметры:
+  injectStyles: false, // Отключаем встроенные стили
+  updateOnWindowResize: true,
+  resizeObserver: true,
+  // Отключаем все внутренние отступы:
+  on: {
+    init: function() {
+      this.wrapperEl.style.padding = '0';
+      this.slides.forEach(slide => slide.style.padding = '0');
+    }
   }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
-}
+});
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     noSwiping: true, // Отключает перетаскивание по всему слайдеру
     noSwipingClass: 'reviews__info__list__el__link', // Разрешает клики по этому классу
     preventInteractionOnTransition: true, // Фикс для плавности
-    
+
     breakpoints: {
       320: {
         slidesPerView: 1,

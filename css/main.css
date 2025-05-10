@@ -8,6 +8,9 @@
 @font-face {
   font-family: "MainFontH";
   src: url("../fonts/Montserrat/static/Montserrat-SemiBold.ttf"); }
+@font-face {
+  font-family: "DMSans";
+  src: url("../fonts/DMSans_18pt-Regular.ttf"); }
 * {
   box-sizing: border-box; }
 
@@ -610,20 +613,40 @@ button:hover {
     align-items: center;
     gap: 20px; }
     .qualification__info__diploma__arrow {
-      width: 20px; }
+      width: 20px;
+      cursor: pointer;
+      transition: opacity 0.3s; }
+      .qualification__info__diploma__arrow:hover {
+        opacity: 0.8; }
     .qualification__info__diploma__imgs {
-      display: flex;
       max-width: 484px;
       max-height: 418px;
-      padding: 0 95px;
       background: #fbfdff;
       border: 2px dashed #b1c0cf;
       border-radius: 25px; }
+      .qualification__info__diploma__imgs.swiper {
+        padding: 0 95px !important;
+        overflow: visible; }
+        .qualification__info__diploma__imgs.swiper .swiper-wrapper {
+          padding: 0;
+          box-sizing: border-box; }
+        .qualification__info__diploma__imgs.swiper .swiper-slide {
+          padding: 10px;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
       .qualification__info__diploma__imgs__el {
         width: 100%;
+        height: 100%;
         object-fit: cover;
-        object-position: center; }
+        border-radius: 22px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
 
+@media (max-width: 768px) {
+  .qualification__info__diploma__imgs {
+    padding: 0 40px;
+    max-height: 350px; } }
 .reviews__title {
   width: 619px;
   position: relative;
@@ -689,20 +712,20 @@ button:hover {
       .reviews__info__list__el__link__img {
         width: 15px; }
 
-.contacts__container {
+.contacts {
   margin-top: 40px; }
-  .contacts__container__h {
+  .contacts__h {
     max-width: 648px;
     position: relative;
     margin: 0 auto; }
-    .contacts__container__h__img {
+    .contacts__h__img {
       z-index: -1;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 113%; }
-  .contacts__container__info {
+  .contacts__info {
     background-color: #FBFDFF;
     width: 100%;
     margin-top: 100px;
@@ -710,35 +733,36 @@ button:hover {
     padding: 41px 60px;
     display: flex;
     justify-content: space-between; }
-    .contacts__container__info__start {
+    .contacts__info__start {
       max-width: 222px;
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
-      .contacts__container__info__start__messeger__p {
+      .contacts__info__start__messeger__p {
         font-size: 20px;
         margin-bottom: 12px; }
-      .contacts__container__info__start__messeger__href__el {
+      .contacts__info__start__messeger__href__el {
         margin-right: 12px; }
-      .contacts__container__info__start__tel__icon {
+      .contacts__info__start__tel__icon {
         width: 18px;
         height: 18px;
         margin-right: 5px; }
-      .contacts__container__info__start__tel__el {
+      .contacts__info__start__tel__el {
+        font-family: "MainFontH";
         font-size: 18px;
         font-weight: 600;
         text-decoration: underline;
         color: black;
         display: flex;
         align-items: center; }
-      .contacts__container__info__start__tel__p {
+      .contacts__info__start__tel__p {
         font-size: 20px; }
-    .contacts__container__info__img {
+    .contacts__info__img {
       max-width: 423px; }
-    .contacts__container__info__end {
+    .contacts__info__end {
       max-width: 350px;
       margin-top: 101px; }
-      .contacts__container__info__end__span {
+      .contacts__info__end__span {
         padding: 33px 20px;
         display: flex;
         gap: 18px;
@@ -749,14 +773,14 @@ button:hover {
         border-radius: 20px;
         text-transform: uppercase;
         margin-top: 88px; }
-        .contacts__container__info__end__span__el {
+        .contacts__info__end__span__el {
           font-size: 18px; }
-  .contacts__container__svg {
-    width: 215px;
-    height: 227px;
+  .contacts__svg {
+    width: 237px;
     position: absolute;
-    left: 78%;
-    top: 60px; }
+    left: 77%;
+    top: 50px;
+    transform: rotate(7.47deg); }
 
 h2 {
   text-align: center; }
@@ -774,23 +798,25 @@ h2 {
     .footer__nav__logo {
       font-family: "Logo";
       font-size: 40px;
-      color: #E1EEF6 !important; }
+      color: #e1eef6 !important; }
     .footer__nav__list {
       display: flex;
       gap: 60px; }
       .footer__nav__list__item__link {
-        color: #E1EEF6 !important;
+        color: #e1eef6 !important;
         font-size: 16px; }
   .footer__info {
     display: flex;
     justify-content: space-between; }
     .footer__info__p {
-      color: #E1EEF6 !important;
+      color: #e1eef6 !important;
       font-size: 20px; }
     .footer__info__tel {
-      color: #E1EEF6 !important;
+      color: #e1eef6 !important;
       font-weight: 700;
-      font-family: "MainFontH"; }
+      font-family: "MainFontH";
+      display: flex;
+      align-items: center; }
     .footer__info__icon {
       max-width: 24px; }
   .footer__contacts {
@@ -799,10 +825,11 @@ h2 {
     justify-content: center;
     margin-bottom: 18px; }
     .footer__contacts__href {
-      color: #E1EEF6 !important; }
+      color: #e1eef6 !important; }
     .footer__contacts__icon {
       max-width: 24px; }
   .footer__co {
     text-align: center;
     font-size: 12px;
-    color: #EFEFEF; }
+    color: #efefef;
+    font-family: "DMSans"; }
