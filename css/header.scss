@@ -55,6 +55,9 @@
 
     &__item {
       color: #6f6f70;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }
