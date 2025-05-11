@@ -53,21 +53,64 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
     &__arrow {
       width: 20px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
+
     &__imgs {
-      display: flex;
+
       max-width: 484px;
       max-height: 418px;
-      padding: 0 95px;
       background: #fbfdff;
       border: 2px dashed #b1c0cf;
       border-radius: 25px;
+
+      // Переопределение стилей Swiper
+      &.swiper {
+        padding: 0 95px !important; // Важно переопределить
+        overflow: visible; // Чтобы не обрезало тени
+
+        .swiper-wrapper {
+          padding: 0; // Сбрасываем внутренние отступы
+          box-sizing: border-box;
+        }
+
+        .swiper-slide {
+          padding: 10px; // Отступы внутри слайда
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
       &__el {
         width: 100%;
+        height: 100%;
         object-fit: cover;
-        object-position: center;
+        border-radius: 22px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .qualification {
+    &__info {
+      &__diploma {
+        &__imgs {
+          padding: 0 40px;
+          max-height: 350px;
+        }
       }
     }
   }

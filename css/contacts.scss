@@ -1,4 +1,4 @@
-.contacts__container {
+.contacts {
   margin-top: 40px;
   &__h{
     max-width: 648px;
@@ -31,6 +31,7 @@
                 &__p{
                 font-size: 20px;
                 margin-bottom: 12px;
+                line-height: 1.2;
             }
             &__href__el{
                 margin-right: 12px;
@@ -43,6 +44,7 @@
                     margin-right: 5px;
                 }
                 &__el{
+                    font-family: "MainFontH";
                     font-size: 18px;
                     font-weight: 600;
                     text-decoration: underline;
@@ -79,11 +81,11 @@
         }
     }
     &__svg{
-        width: 215px;
-        height: 227px;
+        width: 237px;
         position: absolute;
-        left: 78%;
-        top: 60px;
+        left: 77%;
+        top: 50px;
+        transform: rotate(7.47deg);
     }
 }
 

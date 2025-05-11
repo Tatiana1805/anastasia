@@ -68,7 +68,7 @@
                 Викторовна Тимохина
               </h1>
               <div class="start__info">
-                <p>
+                <p class="start__info__p">
                   Помогаю решать конфликты внутри семьи <br />и на работе, у
                   детей и взрослых
                 </p>
@@ -319,7 +319,7 @@
                               </div>
                               <div class="price__el__item__info__many">
                                   <span class="price__el__item__info__many__it">2 500 ₽</span>
-                                  <p>Семейная терапия</p>
+                                  <p>Индивидуальная работа</p>
                               </div>
                               <button class="price__el__button">записаться</button>
                           </div>
@@ -374,8 +374,8 @@
                         <div class="price__el__item" id="container5">
                             <div class="price__el__item__info">
                                 <div class="price__el__item__info__h">
-                                    <h4>10-недельная глубокая проработка проблемы</h4>
-                                    <p>для взрослых, онлайн</p>
+                                    <h4>10-недельная глубокая проработка психосоматики, проблемы</h4>
+                                    <p>для взрослых и детей</p>
                                 </div>
                                 <div class="price__el__item__info__el">
                                     <p><strong>10 онлайн-встреч,</strong> между встречами разбор диалогов внутри семьи, ежедневные техники, индивидуальные медитации.
@@ -409,7 +409,7 @@
                               <div class="price__el__item__info__el">
                               <p> 
                                 10 онлайн-встреч, между встречами разбор диалогов внутри семьи, ежедневные техники, индивидуальные медитации.<br>
-                                Я покажу как устроена психика, вам станет понятно, как связаны мысли и чувства, как формируются симптомы, чувство тревоги, страха.
+                                Помощь в решении сложных жизненных ситуаций и укреплении семейных отношений. Развитие коммуникативных навыков у всех членов семьи.
                                 <div class="price__el__item__info__el__more" id="more">
                                   <li> Заниматься в мини-группе с практическими заданиями, которые легко применять в жизни</li>
                                 </div>
@@ -465,23 +465,43 @@
                         </div>
                         <div class="qualification__info__diploma">
                           <div class="qualification__info__diploma__arrow">
-                            <a class="prev" onclick="plusSlides(-1)">
+                            <a class="diploma-prev">
                               <img src="./img/to-left.svg" alt="листать влево">
                             </a>
                           </div>
-                          <div class="qualification__info__diploma__imgs">
-                            <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip1.jpg" alt="сертификат">
-                            <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip2.jpg" alt="сертификат">
-                            <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip3.jpg" alt="сертификат">
-                            <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip4.jpg" alt="сертификат">
-                            <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip5.jpg" alt="сертификат">
-                            <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip6.jpg" alt="сертификат">
-                            <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip7.jpg" alt="сертификат">
-                            <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip8.jpg" alt="сертификат">
+                          
+                          <div class="swiper qualification__info__diploma__imgs">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip1.jpg" alt="Сертификат">
+                              </div>
+                              <div class="swiper-slide">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip2.jpg" alt="Сертификат">
+                              </div>
+                              <div class="swiper-slide">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip3.jpg" alt="Сертификат">
+                              </div>
+                              <div class="swiper-slide">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip4.jpg" alt="Сертификат">
+                              </div>
+                              <div class="swiper-slide">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip5.jpg" alt="Сертификат">
+                              </div>
+                              <div class="swiper-slide">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip6.jpg" alt="Сертификат">
+                              </div>
+                              <div class="swiper-slide">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip7.jpg" alt="Сертификат">
+                              </div>
+                              <div class="swiper-slide">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip8.jpg" alt="Сертификат">
+                              </div>
+                            </div>
                           </div>
+                          
                           <div class="qualification__info__diploma__arrow">
-                            <a class="next" onclick="plusSlides(1)">
-                            <img src="./img/to-right.svg" alt="листать вправо">
+                            <a class="diploma-next">
+                              <img src="./img/to-right.svg" alt="листать вправо">
                             </a>
                           </div>
                         </div>
@@ -627,38 +647,38 @@
 
             <section class="contacts" id="contacts">
                 <div class="container contacts__container">
-                  <div class="contacts__container__h">
-                    <img class="contacts__container__h__img" src="./img/help__cloud.svg" alt="" />
+                  <div class="contacts__h">
+                    <img class="contacts__h__img" src="./img/help__cloud.svg" alt="" />
                     <h2>У вас остались вопросы?</h2>
                   </div>
-                  <div class="contacts__container__svg">
+                  <div class="contacts__svg">
                     <img src="./img/arrowContacts.svg"/>
                   </div>
-                  <div class="contacts__container__info">
-                    <div class="contacts__container__info__start">
-                      <div class="contacts__container__info__start__messeger">
-                        <p class="contacts__container__info__start__messeger__p">Напишите мне на удобный для Вас мессенжер</p>
-                        <div class="contacts__container__info__start__messeger__href">
-                          <a class="contacts__container__info__start__messeger__href__el" href="https://t.me/Ya_Timohina"><img class="footer__contacts__icon" src="./img/telegram.svg"/></a>
-                          <a class="contacts__container__info__start__messeger__href__el" href="https://wa.me/+79029217670"><img class="footer__contacts__icon" src="./img/whatsapp.svg"/></a>
-                          <a class="contacts__container__info__start__messeger__href__el" href="https://vk.com/ya_timohina"><img class="footer__contacts__icon" src="./img/vk.svg"/></a>
+                  <div class="contacts__info">
+                    <div class="contacts__info__start">
+                      <div class="contacts__info__start__messeger">
+                        <p class="contacts__info__start__messeger__p">Напишите мне на удобный для Вас мессенжер</p>
+                        <div class="contacts__info__start__messeger__href">
+                          <a class="contacts__info__start__messeger__href__el" href="https://t.me/Ya_Timohina"><img class="footer__contacts__icon" src="./img/telegram.svg"/></a>
+                          <a class="contacts__info__start__messeger__href__el" href="https://wa.me/+79029217670"><img class="footer__contacts__icon" src="./img/whatsapp.svg"/></a>
+                          <a class="contacts__info__start__messeger__href__el" href="https://vk.com/ya_timohina"><img class="footer__contacts__icon" src="./img/vk.svg"/></a>
                         </div>
                       </div>
-                      <div class="contacts__container__info__start__tel">
+                      <div class="contacts__info__start__tel">
                         <h4>Контакты</h4>
-                        <p class="contacts__container__info__start__tel__p">г. Красноярск</p><br>
-                        <a class="contacts__container__info__start__tel__el" href="tel: +79029217670">
-                          <img class="contacts__container__info__start__tel__icon" src="./img/tel.svg"/>+7 902 921 76 70</a>
+                        <p class="contacts__info__start__tel__p">г. Красноярск</p><br>
+                        <a class="contacts__info__start__tel__el" href="tel: +79029217670">
+                          <img class="contacts__info__start__tel__icon" src="./img/tel.svg"/>+7 902 921 76 70</a>
                       </div>
                     </div>
-                    <div class="contacts__container__info__img">
+                    <div class="contacts__info__img">
                       <img src="./img/heroContacts.png" alt="фотография психолога"/>
                     </div> 
-                    <div class="contacts__container__info__end">
+                    <div class="contacts__info__end">
                       <button>Записаться</button>
-                      <div class="contacts__container__info__end__span">
+                      <div class="contacts__info__end__span">
                         <img class="quote" src="./img/quote.svg" alt="кавычки">
-                        <span class="contacts__container__info__end__span__el">Улучшить свою жизнь можно уже сейчас — сделайте первый шаг!</span>
+                        <span class="contacts__info__end__span__el">Улучшить свою жизнь можно уже сейчас — сделайте первый шаг!</span>
                       </div>
                     </div> 
                   </div>
@@ -696,6 +716,76 @@
                       © 2025. Анастасия Тимохина
                     </div>
             </footer>
+            <!-- <div class="overlay" style="display: block;">
+              <div class="loader">
+                  <div class="lds-hourglass"></div>
+              </div>
+              <div class="popup popup__success">
+                  <div class="popup__container">
+                      <div class="popup__close">
+                          <img src="assets/img/svg/popup-cross.svg" class="popup__close__cross" alt="popup close picture">
+                      </div>
+                      <div class="popup__wrap">
+                          <img src="assets/img/request/request-ok.webp" alt="success picture" class="popup__success__pic">
+                          <div class="popup__success__text">
+                              <div class="popup__success__text__title">Заявка принята!</div>
+                              <div class="popup__success__text__desc">Наш менеджер свяжется с вами в ближайшее время</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="popup popup__message">
+                  <div class="popup__container">
+                      <div class="popup__close">
+                          <img src="assets/img/svg/popup-cross.svg" class="popup__close__cross" alt="popup close picture">
+                      </div>
+                      <div class="popup__wrap">
+                          <div class="popup__success__text">
+                              <div class="popup__success__text__title popup__message__title"></div>
+                              <div class="popup__success__text__desc popup__message__text"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="popup popup__consult" style="display: block;">
+                  <div class="popup__container">
+                      <div class="popup__close">
+                          <img src="assets/img/svg/popup-cross.svg" class="popup__close__cross" alt="popup close picture">
+                      </div>
+                      <div class="popup__wrap">
+                          <div class="popup__title">Получить<br>консультацию</div>
+                          <form class="popup__form popup__form--consult">
+                              <ul class="popup__form__list">
+                                  <li class="popup__form__list__item">
+                                      <input type="text" name="name" class="popup__form__list__item__input" placeholder="Ваше имя" required="">
+                                  </li>
+                                  <li class="popup__form__list__item">
+                                      <input type="tel" name="tel" class="popup__form__list__item__input" placeholder="+7" required="">
+                                  </li>
+                                  <li class="popup__form__list__item">
+                                      <input type="text" name="comment" class="popup__form__list__item__input" placeholder="Ваш вопрос/комментарий" required="">
+                                  </li>
+                              </ul>
+                              <div class="popup__form__col">
+                                  <label class="popup__form__check">
+                                      <input type="checkbox" class="popup__form__check__input accept-ppd-popup">
+                                      <div class="popup__form__check__fake"></div>
+                                      <div class="popup__form__check__text">Согласен на обработку&nbsp; <a href="privacy-policy" class="request__form__list__item__check__link"> персональных данных</a></div>
+                                  </label>
+                                  <label class="popup__form__check">
+                                      <input type="checkbox" class="popup__form__check__input accept-ads-popup">
+                                      <div class="popup__form__check__fake"></div>
+                                      <div class="popup__form__check__text">Согласен на получение рекламных материалов</div>
+                                  </label>
+                              </div>
+                              <button class="popup__btn btn btn-submit__popup-consult" type="submit">заказать звонок</button>
+                          
+                  <input type="text" value="https://sales-solution.dev/" class="location__href" name="href" hidden="">
+              </form> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
