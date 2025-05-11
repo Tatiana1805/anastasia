@@ -42,9 +42,12 @@
   }
   &__info {
     font-size: 1.2vw;
-    line-height: 25px;
+    // line-height: 25px;
     color: #63676c;
     margin-top: 12px;
+    &__p{
+      font-size: 20px;
+    }
   }
 }
 
@@ -58,7 +61,7 @@ button {
   border-radius: 25px;
   background-color: #1a5186;
   color: #ffffff;
-  line-height: 150%;
+  line-height: 1.5;
   padding: 28px 55px;
   font-size: 24px;
   font-weight: 500;

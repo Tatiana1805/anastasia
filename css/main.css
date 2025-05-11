@@ -45,7 +45,8 @@ ul {
 
 li {
   font-family: "MainFont";
-  position: relative; }
+  position: relative;
+  line-height: 1.5; }
 
 a {
   text-decoration: none;
@@ -95,7 +96,8 @@ fieldset {
 h1 {
   color: #1a5186;
   font-size: 60px;
-  font-family: "MainFontH"; }
+  font-family: "MainFontH";
+  line-height: 1.2; }
 
 h2 {
   font-size: 48px;
@@ -105,14 +107,16 @@ h2 {
 h3 {
   font-weight: 600;
   font-size: 24px;
-  font-family: "MainFontH"; }
+  font-family: "MainFontH";
+  line-height: 1.5; }
 
 h4 {
   font-size: 24px;
   font-family: "MainFont";
   color: #0e0e0e;
   margin-bottom: 28px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.5; }
 
 h5 {
   height: 36px;
@@ -120,21 +124,23 @@ h5 {
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
-  line-height: 150%;
+  line-height: 1.5;
   color: #1A5186; }
 
 p {
   font-family: "MainFont";
   font-size: 16px;
   font-weight: 400;
-  color: #6f6f70; }
+  color: #6f6f70;
+  line-height: 1.5; }
 
 span {
   font-family: "MainFont";
   color: #0e0e0e;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 150%; }
+  line-height: 1.5;
+  letter-spacing: -0.01em; }
 
 :root {
   --bg-color: #97b9cd; }
@@ -220,9 +226,10 @@ a {
         background-repeat: no-repeat; }
 .start__info {
   font-size: 1.2vw;
-  line-height: 25px;
   color: #63676c;
   margin-top: 12px; }
+  .start__info__p {
+    font-size: 20px; }
 
 button {
   width: auto;
@@ -230,7 +237,7 @@ button {
   border-radius: 25px;
   background-color: #1a5186;
   color: #ffffff;
-  line-height: 150%;
+  line-height: 1.5;
   padding: 28px 55px;
   font-size: 24px;
   font-weight: 500;
@@ -246,7 +253,7 @@ button:hover {
 .about {
   margin-top: 70px;
   display: flex;
-  gap: 24px; }
+  gap: 40px; }
   .about__cloud {
     margin-top: -120px;
     width: auto; }
@@ -274,7 +281,7 @@ button:hover {
         text-transform: uppercase; }
       .about__start__quote__imgAbout {
         border-radius: 64px;
-        max-width: 522px;
+        max-width: 630px;
         max-height: 386px;
         margin-bottom: 22px; }
   .about__end {
@@ -285,7 +292,7 @@ button:hover {
       border-radius: 20px;
       float: right;
       text-transform: uppercase;
-      line-height: 150%; }
+      line-height: 1.5; }
       .about__end__rectangle__el {
         max-width: 591px;
         display: flex;
@@ -303,7 +310,8 @@ button:hover {
           color: #63676c;
           margin-bottom: 20px;
           position: relative;
-          padding-left: 30px; }
+          padding-left: 30px;
+          line-height: 150%; }
           .about__end__info__el__item::before {
             content: "";
             background-image: url(../img/dot.svg);
@@ -400,7 +408,8 @@ button:hover {
       .help__list__top__item__p {
         display: flex;
         flex-direction: column;
-        gap: 20px; }
+        gap: 20px;
+        color: #1B1A1A; }
     .help__list__top__itemp {
       gap: 22px;
       display: flex;
@@ -458,7 +467,8 @@ button:hover {
       .help__list__bottom__item__p {
         display: flex;
         flex-direction: column;
-        gap: 20px; }
+        gap: 20px;
+        color: #1B1A1A; }
 
 .price {
   margin-top: 130px; }
@@ -740,7 +750,8 @@ button:hover {
       justify-content: space-between; }
       .contacts__info__start__messeger__p {
         font-size: 20px;
-        margin-bottom: 12px; }
+        margin-bottom: 12px;
+        line-height: 1.2; }
       .contacts__info__start__messeger__href__el {
         margin-right: 12px; }
       .contacts__info__start__tel__icon {
