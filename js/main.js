@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //открытие доп текста в прайсе
-document.querySelectorAll('.price__el__item__info__el__item').forEach(item => {
+/* document.querySelectorAll('.price__el__item__info__el__item').forEach(item => {
   item.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -126,10 +126,24 @@ document.querySelectorAll('.price__el__item__info__el__item').forEach(item => {
       buttonText.textContent = "Скрыть";
     }
   });
+}); */
+
+//открытие доп текста в прайсе на jquery с анимацией
+$('.price__el__item__info__el__item').on('click', function(e) {
+  e.preventDefault();
+
+  if ($(this).prev('.price__el__item__info__el__more').css('display') === 'block') {
+    $(this).prev('.price__el__item__info__el__more').slideUp();
+    $(this).find('.price__el__item__info__el__item__btn').text('Подробнее');
+  } else {
+    $(this).prev('.price__el__item__info__el__more').slideDown();
+    $(this).find('.price__el__item__info__el__item__btn').text('Скрыть');
+  }
 });
+//открытие доп текста в прайсе на jquery с анимацией
 
 //открытие доп курсов
-document.getElementById('addPrice').addEventListener('click', function(e){
+/* document.getElementById('addPrice').addEventListener('click', function(e){
   e.preventDefault();
   const containerAdd = document.getElementById("containerAdd")
   if(containerAdd.style.display === 'flex'){
@@ -139,7 +153,22 @@ document.getElementById('addPrice').addEventListener('click', function(e){
     containerAdd.style.display = 'flex'
     this.textContent = 'Скрыть все программы'
   }
-})
+}) */
+
+  //открытие доп курсов на jquery с анимацией
+$('#addPrice').on('click', function(e) {
+  e.preventDefault();
+  console.log('add trigger');
+  
+  if ($('#containerAdd').css('display') != 'none') {
+    $('#containerAdd').slideUp();
+    console.log('add true');
+  } else {
+    $('#containerAdd').slideDown();
+    $('#containerAdd').css('display', 'flex');
+    console.log('add false');
+  }
+});
 
 //popup
 const overlay = document.querySelector('.overlay');
