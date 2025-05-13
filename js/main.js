@@ -141,3 +141,38 @@ document.getElementById('addPrice').addEventListener('click', function(e){
   }
 })
 
+//popup
+const overlay = document.querySelector('.overlay');
+const popup = document.querySelector('.popup');
+
+document.querySelectorAll('.open__popup').forEach(button =>{
+  button.addEventListener('click', toggleForm)
+})
+
+function toggleForm(e){
+  e.preventDefault()
+    const formContainer = document.querySelector('.overlay')
+    formContainer.style.display = formContainer.style.display === 'block' ? 'none' : 'block'
+}
+
+//получаем данные из формы, как и куда их я хз. Пока будет так
+const userName = document.getElementById('name').value
+const tel = document.getElementById('tel').value
+const comment = document.getElementById('comment').value
+
+console.log({userName, tel, comment})
+
+//выведение отправки ???????
+const popupWrap = document.querySelector('.popup__wrap')
+popupWrap.style.display = 'block'
+
+//закрытие 
+const closeButtons = document.querySelectorAll('.popup__close');
+function closePopup() {
+        overlay.style.display = 'none'; // Скрываем оверлей
+        popup.style.display = 'none'; // Скрываем все попапы
+    }
+// Обработчики событий для закрытия попапов
+    closeButtons.forEach(button => {
+        button.addEventListener('click', closePopup);
+    });
