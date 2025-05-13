@@ -72,7 +72,7 @@
                   Помогаю решать конфликты внутри семьи и на работе, у <br> детей и взрослых. Работаю с психосоматикой.
                 </p>
               </div>
-              <button type="button">Записаться</button>
+              <button type="button" class="open__popup">Записаться</button>
             </div>
             <div class="start__hero">
               <img
@@ -303,7 +303,7 @@
                                     <span class="price__el__item__info__many__it">800 ₽</span>
                                 </div>
                                 
-                                <button class="price__el__button">записаться</button>
+                                <button class="price__el__button open__popup">записаться</button>
                             </div>
                         </div>
                         <div class="price__el__item" id="container2">
@@ -321,7 +321,7 @@
                                   <span class="price__el__item__info__many__it">2 500 ₽</span>
                                   <p>Индивидуальная работа</p>
                               </div>
-                              <button class="price__el__button">записаться</button>
+                              <button class="price__el__button open__popup">записаться</button>
                           </div>
                           </div>  
                         <div class="price__el__item__border" id="container3">
@@ -351,7 +351,7 @@
                                   <span class="price__el__item__info__many__it">10 000 ₽</span>
                                   <p>Семейная терапия</p>
                               </div>
-                              <button class="price__el__button">записаться</button>
+                              <button class="price__el__button open__popup">записаться</button>
                           </div>
                           </div> 
                         <div id="containerAdd" class="price__el__containerAdd">
@@ -368,7 +368,7 @@
                                     <span class="price__el__item__info__many__it">15 000 ₽</span>
                                     <p>Групповая работа</p>                                    
                                 </div> 
-                                <button class="price__el__button">записаться</button>
+                                <button class="price__el__button open__popup">записаться</button>
                             </div>
                         </div>
                         <div class="price__el__item" id="container5">
@@ -397,7 +397,7 @@
                                     <span class="price__el__item__info__many__it">40 000 ₽</span>  
                                     <p>Индивидуальная работа</p>
                                 </div>
-                                <button class="price__el__button">записаться</button>
+                                <button class="price__el__button open__popup">записаться</button>
                             </div>
                         </div>
                         <div class="price__el__item__border" id="container6">
@@ -422,7 +422,7 @@
                                   <span class="price__el__item__info__many__it">40 000 ₽</span>
                                   <p>Индивидуальная работа</p>
                               </div>
-                              <button class="price__el__button">записаться</button>
+                              <button class="price__el__button open__popup">записаться</button>
                           </div>
                         </div> 
                       </div> 
@@ -675,7 +675,7 @@
                       <img src="./img/heroContacts.png" alt="фотография психолога"/>
                     </div> 
                     <div class="contacts__info__end">
-                      <button>Записаться</button>
+                      <button class="open__popup">Записаться</button>
                       <div class="contacts__info__end__span">
                         <img class="quote" src="./img/quote.svg" alt="кавычки">
                         <span class="contacts__info__end__span__el">Улучшить свою жизнь можно уже сейчас — сделайте первый шаг!</span>
@@ -716,17 +716,17 @@
                       © 2025. Анастасия Тимохина
                     </div>
             </footer>
-            <!-- <div class="overlay" style="display: block;">
+            <div class="overlay">
               <div class="loader">
                   <div class="lds-hourglass"></div>
               </div>
               <div class="popup popup__success">
                   <div class="popup__container">
                       <div class="popup__close">
-                          <img src="assets/img/svg/popup-cross.svg" class="popup__close__cross" alt="popup close picture">
+                          <img src="./img/popup-cross.svg" class="popup__close__cross" alt="popup close picture">
                       </div>
                       <div class="popup__wrap">
-                          <img src="assets/img/request/request-ok.webp" alt="success picture" class="popup__success__pic">
+                          <!-- <img src="assets/img/request/request-ok.webp" alt="success picture" class="popup__success__pic"> -->
                           <div class="popup__success__text">
                               <div class="popup__success__text__title">Заявка принята!</div>
                               <div class="popup__success__text__desc">Наш менеджер свяжется с вами в ближайшее время</div>
@@ -737,7 +737,7 @@
               <div class="popup popup__message">
                   <div class="popup__container">
                       <div class="popup__close">
-                          <img src="assets/img/svg/popup-cross.svg" class="popup__close__cross" alt="popup close picture">
+                          <img src="./img/popup-cross.svg" class="popup__close__cross" alt="popup close picture">
                       </div>
                       <div class="popup__wrap">
                           <div class="popup__success__text">
@@ -750,20 +750,20 @@
               <div class="popup popup__consult" style="display: block;">
                   <div class="popup__container">
                       <div class="popup__close">
-                          <img src="assets/img/svg/popup-cross.svg" class="popup__close__cross" alt="popup close picture">
+                          <img src="./img/popup-cross.svg" class="popup__close__cross" alt="popup close picture">
                       </div>
                       <div class="popup__wrap">
-                          <div class="popup__title">Получить<br>консультацию</div>
+                          <div class="popup__title"><h5>Получить консультацию</h5></div>
                           <form class="popup__form popup__form--consult">
                               <ul class="popup__form__list">
                                   <li class="popup__form__list__item">
-                                      <input type="text" name="name" class="popup__form__list__item__input" placeholder="Ваше имя" required="">
+                                      <input type="text" name="name" id="name" class="popup__form__list__item__input" placeholder="Ваше имя" required="">
                                   </li>
                                   <li class="popup__form__list__item">
-                                      <input type="tel" name="tel" class="popup__form__list__item__input" placeholder="+7" required="">
+                                      <input type="tel" name="tel" id="tel" class="popup__form__list__item__input" placeholder="+7" required="">
                                   </li>
                                   <li class="popup__form__list__item">
-                                      <input type="text" name="comment" class="popup__form__list__item__input" placeholder="Ваш вопрос/комментарий" required="">
+                                      <input type="text" name="comment" id="comment" class="popup__form__list__item__input" placeholder="Ваш вопрос" required="">
                                   </li>
                               </ul>
                               <div class="popup__form__col">
@@ -772,16 +772,11 @@
                                       <div class="popup__form__check__fake"></div>
                                       <div class="popup__form__check__text">Согласен на обработку&nbsp; <a href="privacy-policy" class="request__form__list__item__check__link"> персональных данных</a></div>
                                   </label>
-                                  <label class="popup__form__check">
-                                      <input type="checkbox" class="popup__form__check__input accept-ads-popup">
-                                      <div class="popup__form__check__fake"></div>
-                                      <div class="popup__form__check__text">Согласен на получение рекламных материалов</div>
-                                  </label>
                               </div>
-                              <button class="popup__btn btn btn-submit__popup-consult" type="submit">заказать звонок</button>
+                              <button class="popup__btn btn btn-submit__popup-consult" type="submit">Отправить</button>
                           
                   <input type="text" value="https://sales-solution.dev/" class="location__href" name="href" hidden="">
-              </form> -->
+              </form>
                       </div>
                   </div>
               </div>
