@@ -171,37 +171,68 @@ $('#addPrice').on('click', function(e) {
 });
 
 //popup
-const overlay = document.querySelector('.overlay');
-const popup = document.querySelector('.popup');
 
-document.querySelectorAll('.open__popup').forEach(button =>{
-  button.addEventListener('click', toggleForm)
-})
+$('.open__popup').on('click', function(e) {
+  e.preventDefault();
 
-function toggleForm(e){
-  e.preventDefault()
-    const formContainer = document.querySelector('.overlay')
-    formContainer.style.display = formContainer.style.display === 'block' ? 'none' : 'block'
-}
+  $('.overlay, .popup__consult').fadeIn();
+  $('body').css('overflow', 'hidden');
+});
 
-//получаем данные из формы, как и куда их я хз. Пока будет так
-const userName = document.getElementById('name').value
-const tel = document.getElementById('tel').value
-const comment = document.getElementById('comment').value
+$('.popup__close').on('click', function(e) {
+  e.preventDefault();
 
-console.log({userName, tel, comment})
+  $('.overlay, .popup__consult').fadeOut();
+  $('body').css('overflow', 'auto');
+});
 
-//выведение отправки ???????
-const popupWrap = document.querySelector('.popup__wrap')
-popupWrap.style.display = 'block'
+$('.popup__form--consult').on('submit', function(e) {
+  e.preventDefault();
 
-//закрытие 
-const closeButtons = document.querySelectorAll('.popup__close');
-function closePopup() {
-        overlay.style.display = 'none'; // Скрываем оверлей
-        popup.style.display = 'none'; // Скрываем все попапы
-    }
-// Обработчики событий для закрытия попапов
-    closeButtons.forEach(button => {
-        button.addEventListener('click', closePopup);
+  let inputsValid = false;
+  let checkboxValid = false;
+  let allValid = false;
+
+  function checkInputs() {
+    const inputs = $('.popup-input');
+    
+    inputs.each(function() {
+        if ($(this).val().trim() === '') {
+          inputsValid = false;
+        } else {
+          inputsValid = true;
+        }
     });
+    
+    return inputsValid;
+  }
+
+  function checkPrivacy() {
+
+    if ($('.accept-ppd-popup').prop('checked')) {
+      checkboxValid = true;
+      $('.popup__form__check__fake').css('outline', 'none');
+    } else {
+      checkboxValid = false;
+      $('.popup__form__check__fake').css('outline', '1px dashed red');
+    }
+    
+  }
+
+  function checkValidity() {
+    if(inputsValid && checkboxValid) {
+      allValid = true;
+    } else {
+      allValid = false;
+    }
+
+    console.log(allValid);
+    
+  }
+
+  checkInputs();
+  checkPrivacy();
+  checkValidity();
+
+  
+});

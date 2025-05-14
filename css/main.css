@@ -1051,7 +1051,7 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000322}}
 .popup {
   display: none;
   position: absolute;
@@ -1064,46 +1064,46 @@ h2 {
   transform: translate(-50%, -50%);
   overflow: hidden;
   z-index: 100; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000335}}
   .popup__title {
     margin-bottom: 34px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000339}}
   .popup__consult {
     max-width: 478px;
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000344}}
   .popup__container {
     position: relative;
     width: 100%;
     height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000350}}
   .popup__close {
     position: absolute;
     right: -19px;
     top: -21px;
     cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000357}}
   .popup__form__col {
     margin: 20px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000361}}
   .popup__form__list {
     display: flex;
     flex-direction: column;
     gap: 16px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000366}}
     .popup__form__list__item {
       width: 100%;
       padding: 18px 22px;
       background: #FFFFFF;
       border-radius: 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000374}}
   .popup__form__check {
     display: flex;
     align-items: center;
     cursor: pointer;
     gap: 10px;
     margin-bottom: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000381}}
     .popup__form__check__fake {
       position: relative;
       display: flex;
@@ -1114,7 +1114,7 @@ h2 {
       height: 27px;
       background: #FFFFFF;
       border-radius: 8px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000393}}
     .popup__form__check__text {
       display: inline-block;
       font-family: 'MainFont';
@@ -1123,19 +1123,20 @@ h2 {
       font-size: 14px;
       line-height: 17px;
       color: #252525; }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003104}}
   .popup__btn {
     margin: auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003109}}
 .request__form__list__item__check__link {
   text-decoration: underline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003101}}
-input[type="checkbox"], input[type="radio"] {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003113}}
+input[type="checkbox"],
+input[type="radio"] {
   display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003118}}
 .popup__form__check__input:checked + .popup__form__check__fake:after {
   content: '';
   position: absolute;
