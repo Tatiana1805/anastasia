@@ -47,7 +47,7 @@
         height: 100%;
     }
 
-    &__close {
+    &__close, &__close--msg {
         position: absolute;
         right: -19px;
         top: -21px;
@@ -103,6 +103,18 @@
 
     &__btn {
         margin: auto;
+    }
+
+    &__message {
+
+        &__text {
+            font-family: 'MainFont';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #252525;
+        }
     }
 }
 
