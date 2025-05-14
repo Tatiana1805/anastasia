@@ -234,5 +234,24 @@ $('.popup__form--consult').on('submit', function(e) {
   checkPrivacy();
   checkValidity();
 
-  
+  if(!allValid) {
+    e.preventDefault();
+
+    $('.popup').fadeOut();
+    $('.popup__message__title').text('Валидация не пройдена. Необходимо заполнить все поля формы и дать согласие на обработку персональных данных');
+    $('.overlay, .popup__message').fadeIn();
+    $('body').css('overflow', 'hidden');
+
+    $('.popup__close--msg').on('click', function(e) {
+      e.preventDefault();
+
+      $('.popup__message').fadeOut();
+      $('.popup__consult').fadeIn();
+    });
+  } else {
+    $('.popup__message__text').text('Валидация не пройдена. Необходимо заполнить все поля формы и дать согласие на обработку персональных данных');
+    console.log('валидация пройдена');
+    
+    //код для отправки формы
+  }
 });

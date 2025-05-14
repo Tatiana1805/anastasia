@@ -1077,7 +1077,7 @@ h2 {
     width: 100%;
     height: 100%; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\0000350}}
-  .popup__close {
+  .popup__close, .popup__close--msg {
     position: absolute;
     right: -19px;
     top: -21px;
@@ -1126,17 +1126,25 @@ h2 {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003104}}
   .popup__btn {
     margin: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003110}}
+  .popup__message__text {
+    font-family: 'MainFont';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #252525; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003121}}
 .request__form__list__item__check__link {
   text-decoration: underline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003125}}
 input[type="checkbox"],
 input[type="radio"] {
   display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/WORK\/Anastasia\/anastasia\/css\/popup\.scss}line{font-family:\00003130}}
 .popup__form__check__input:checked + .popup__form__check__fake:after {
   content: '';
   position: absolute;
