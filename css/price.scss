@@ -46,7 +46,7 @@
       cursor: pointer;
       transition: 0.3s;
       &:hover {
-        filter: drop-shadow(-51px 45px 27px rgba(0, 0, 0, 0.01)) drop-shadow(-29px 25px 23px rgba(0, 0, 0, 0.05)) drop-shadow(-13px 11px 17px rgba(0, 0, 0, 0.09)) drop-shadow(-3px 3px 9px rgba(0, 0, 0, 0.1));
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
       }
 
       &__border{
