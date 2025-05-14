@@ -99,7 +99,12 @@ fieldset {
   // max-width: 70%; //ширина контейнера
   // width: 100%;
   width: 1278px;
-  margin: 40px auto;
+  margin: 0 auto;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  gap: 148px;
 }
 h1 {
   color: #1a5186;
