@@ -164,3 +164,9 @@ span {
   --bg-color: #97b9cd;
   // --color: #f0f8ff; //нежно-голубой, на всякий
 }
+
+@media(max-width: 1024px) {
+  .container{
+    width: 95%;
+  }
+}

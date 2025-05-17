@@ -163,9 +163,12 @@ $('#addPrice').on('click', function(e) {
   if ($('#containerAdd').css('display') != 'none') {
     $('#containerAdd').slideUp();
     console.log('add true');
+    $(this).text('Смотреть все программы')
   } else {
     $('#containerAdd').slideDown();
     $('#containerAdd').css('display', 'flex');
+    $(this).text('Скрыть все программы')
+
     console.log('add false');
   }
 });

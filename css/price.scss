@@ -98,7 +98,7 @@
           font-family: "MainFont";
           font-size: 16px;
           color: #6f6f70;
-          max-width: 304px;
+          width: 304px;
         }
         &__many {
           width: 193px;
@@ -137,4 +137,34 @@
       }
     }
   }
+}
+
+@media(max-width: 1024px){
+  .price__el{
+    &__item__info{
+      // flex-direction: column;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+  &__item__info__el, 
+  &__item__border__info__el {
+    width: 100%;
+  }
+  &__item__info__h, 
+  &__item__border__info__h {
+    width: 100%;
+    &::after{
+    content: none;
+
+  }
+  }
+  &__item__info__many, &__item__border__info__many {
+      width: 53%;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+  }
+
+  }
+
 }
