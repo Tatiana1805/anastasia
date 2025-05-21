@@ -137,9 +137,47 @@
       }
     }
   }
+  .mobile{
+    display: none;
+  }
 }
 
-@media(max-width: 1024px){
+@media(max-width: 1200px){
+  .price__h__h2{
+    font-size: 41px;
+  }
+  .price__el__item__info{
+  &__h{
+    width: 25%;
+    &::after{
+      width: 100%;
+    }
+  }
+  &__many{
+    width: 22%;
+    align-items: center;
+  }
+  }
+  .price__el__item__info__el,
+   .price__el__item__border__info__el{
+    width: 23%;
+    font-size: 14px;
+   }
+   .price__el__button{
+    max-width: 210px;
+    font-size: 22px;
+   }
+   .price__el__item__info__many__it, 
+   .price__el__item__border__info__many__it {
+    font-size: 34px;
+   }
+   .price__el__item__info__el__item__btn, 
+   .price__el__item__border__info__el__item__btn {
+    font-size: 14px;
+   }
+}
+
+@media(max-width: 900px){
   .price__el{
     &__item__info{
       // flex-direction: column;
@@ -159,12 +197,87 @@
   }
   }
   &__item__info__many, &__item__border__info__many {
-      width: 53%;
+      width: 64%;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-direction: row;
   }
-
+  &__button{
+    width: 31%;
+    font-size: 20px;
+    padding: 24px 0px;
   }
 
+  }
+  .price__h__h2{
+    font-size: 28px;
+  }
+  .price__cloud {
+    margin-top: -101px;
+    width: 77%;
+    margin-left: 76px;
+}
+   .price__el__item__info__many__it, 
+   .price__el__item__border__info__many__it {
+    font-size: 28px;
+   }
+
+}
+@media(max-width: 600px){
+  .desctop{
+    display: none;
+  }
+  .mobile{
+    display: block !important; 
+    color: #B0B0B0;
+    font-size: 16px;
+  }
+  .price__el__item, .price__el__item__border {
+    padding: 31px 23px;
+    &__info {
+      justify-content: center;
+    }
+  }
+  .price__el__item__info__many, 
+  .price__el__item__border__info__many {
+    width: 100%;
+  }
+  .price__el__item__info__h, 
+  .price__el__item__border__info__h {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .price__el__item__info__h, .price__el__item__info__el{
+      text-align: center;
+    }
+    .price__el__button {
+      width: 48%;
+      font-weight: 600;
+    }
+    .price__cloud {
+        margin-top: -84px;
+    }
+    .price__el__end {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 25px;
+    }
+}
+
+@media(max-width: 380px){
+  .price__el__end__button__h{
+    font-size: 16px;
+  }
+  .price__el__end__button__arrow{
+    margin-top: 5px;
+  }
+  .price__cloud {
+    width: 92%;
+    margin-left: 0px;
+    height: 129px;
+    margin-top: -94px;
+  }
 }
