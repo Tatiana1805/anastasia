@@ -165,8 +165,43 @@ span {
   // --color: #f0f8ff; //нежно-голубой, на всякий
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1300px) {
   .container{
-    width: 95%;
+    width: 100%;
+    padding: 2%;
+  }
+}
+
+@media(max-width: 1200px) {
+  span{
+    font-size: 15px;
+  }
+  h4{
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+  p{
+    font-size: 14px;
+  }
+  h5{
+    font-size: 22px;
+  }
+}
+
+@media(max-width: 900px){
+  h2{
+    font-size: 41px;
+  }
+  h4{
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 340px){
+  h4{
+    max-width: 227px;
+  }
+  p{
+    font-size: 16px;
   }
 }
