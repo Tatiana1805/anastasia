@@ -186,22 +186,32 @@ span {
   h5{
     font-size: 22px;
   }
+  h2{
+    font-size: 40px;
+  }
 }
 
 @media(max-width: 900px){
   h2{
-    font-size: 41px;
+    font-size: 28px;
   }
   h4{
     font-size: 18px;
+  }
+  .main{
+    gap: 57px;
   }
 }
 
 @media(max-width: 340px){
   h4{
     max-width: 227px;
+    font-size: 20px;
   }
   p{
     font-size: 16px;
+  }
+  .main{
+    gap: 0;
   }
 }
