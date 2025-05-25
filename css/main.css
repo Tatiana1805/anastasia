@@ -166,19 +166,29 @@ span {
     font-size: 14px; }
 
   h5 {
-    font-size: 22px; } }
+    font-size: 22px; }
+
+  h2 {
+    font-size: 40px; } }
 @media (max-width: 900px) {
   h2 {
-    font-size: 41px; }
+    font-size: 28px; }
 
   h4 {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  .main {
+    gap: 57px; } }
 @media (max-width: 340px) {
   h4 {
-    max-width: 227px; }
+    max-width: 227px;
+    font-size: 20px; }
 
   p {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  .main {
+    gap: 0; } }
 .header {
   width: 100%;
   background: #e1eef6ab;
@@ -407,8 +417,7 @@ button:hover {
             height: 8px;
             background-size: cover; }
     .about__h2 {
-      margin-left: 60px;
-      font-size: 28px; }
+      margin-left: 60px; }
     .about__cloud {
       margin-top: -98px;
       width: 89%; } }
@@ -946,6 +955,8 @@ button:hover {
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
+      .contacts__info__start__mobile {
+        display: none; }
       .contacts__info__start__messeger__p {
         font-size: 20px;
         margin-bottom: 12px;
@@ -970,7 +981,10 @@ button:hover {
       max-width: 423px; }
     .contacts__info__end {
       max-width: 350px;
-      margin-top: 101px; }
+      margin-top: 101px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
       .contacts__info__end__span {
         padding: 33px 20px;
         display: flex;
@@ -980,8 +994,7 @@ button:hover {
         background-color: #fbfdff;
         border: 2px dashed #b1c0cf;
         border-radius: 20px;
-        text-transform: uppercase;
-        margin-top: 88px; }
+        text-transform: uppercase; }
         .contacts__info__end__span__el {
           font-size: 18px; }
   .contacts__svg {
@@ -994,6 +1007,83 @@ button:hover {
 h2 {
   text-align: center; }
 
+@media (max-width: 1200px) {
+  .contacts__h__img {
+    width: 100%; }
+
+  .contacts__svg {
+    width: 19%;
+    top: 68px; }
+
+  .contacts__info {
+    padding: 32px 31px; }
+    .contacts__info__end {
+      margin-top: 45px; }
+      .contacts__info__end__button {
+        margin: auto;
+        width: 87%; }
+      .contacts__info__end__span {
+        padding: 28px 15px;
+        width: 90%;
+        gap: 7px;
+        margin: 0 auto; }
+        .contacts__info__end__span__el {
+          font-size: 14px; }
+    .contacts__info__start__messeger__p {
+      font-size: 18px; }
+    .contacts__info__start__tel__p {
+      font-size: 18px; }
+    .contacts__info__start__tel__el {
+      font-size: 16px; } }
+@media (max-width: 900px) {
+  .contacts__svg, .contacts__info__end__span {
+    display: none; }
+  .contacts__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    margin-top: 64px; }
+    .contacts__info__start {
+      max-width: 100%; }
+      .contacts__info__start__messeger__href {
+        display: flex;
+        justify-content: center; }
+      .contacts__info__start__tel {
+        display: none; }
+      .contacts__info__start__mobile {
+        display: block; }
+    .contacts__info__end {
+      margin: 0;
+      width: 70%; }
+  .contacts__h__img {
+    width: 88%; } }
+@media (max-width: 380px) {
+  .contacts__container {
+    padding: 0; }
+  .contacts__info {
+    border-radius: 0;
+    padding: 30px 30px;
+    margin-top: 22px; }
+    .contacts__info__start__messeger__href__el {
+      width: 30px;
+      height: 30px; }
+    .contacts__info__start__messeger__p {
+      font-size: 20px;
+      text-align: center; }
+    .contacts__info__start__tel {
+      text-align: center; }
+      .contacts__info__start__tel__p {
+        font-size: 20px; }
+      .contacts__info__start__tel__el {
+        font-size: 18px; }
+    .contacts__info__end {
+      width: 100%; }
+      .contacts__info__end__button {
+        width: 100%;
+        font-size: 20px; }
+  .contacts__h__img {
+    width: 96%; } }
 .footer {
   height: 311px;
   background: #1a5186;

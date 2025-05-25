@@ -27,6 +27,9 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            &__mobile{
+                display: none;
+            }
             &__messeger{
                 &__p{
                 font-size: 20px;
@@ -63,6 +66,9 @@
         &__end {
             max-width: 350px;
             margin-top: 101px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             &__span{
                 padding: 33px 20px;
                 display: flex;
@@ -73,7 +79,7 @@
                 border: 2px dashed #b1c0cf;
                 border-radius: 20px;
                 text-transform: uppercase;
-                margin-top: 88px;
+                // margin-top: 88px;
                 &__el{
                     font-size: 18px;
                 }
@@ -91,4 +97,121 @@
 
 h2 {
   text-align: center;
+}
+
+@media(max-width: 1200px){
+    .contacts__h__img {
+        width: 100%;
+    }
+    .contacts__svg {
+    width: 19%;
+    top: 68px;
+    }
+    .contacts {
+        &__info {
+            padding: 32px 31px;
+            &__end {
+                margin-top: 45px;
+                &__button{
+                    margin: auto;
+                    width: 87%;
+                }
+                &__span {
+                    padding: 28px 15px;;
+                    width: 90%;
+                    gap: 7px;
+                    margin: 0 auto;
+                    &__el {
+                        font-size: 14px;
+                    }
+                }
+        }
+        &__start{
+            &__messeger__p {
+            font-size: 18px;
+        }
+        &__tel__p {
+            font-size: 18px;
+        }
+        &__tel__el {
+            font-size: 16px;
+        }
+        }
+    }
+
+    }
+}
+@media(max-width: 900px){
+    .contacts{
+        &__svg, &__info__end__span{
+            display: none;
+        }
+        &__info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 22px;
+            margin-top: 64px;
+            &__start{
+                max-width: 100%;
+                &__messeger__href{
+                    display: flex;
+                    justify-content: center;
+                }
+                &__tel{
+                    display: none;
+                }
+                &__mobile{
+                    display: block;
+                }
+            }
+            &__end{
+                margin: 0;
+                width: 70%;
+            }
+        }
+        &__h__img {
+            width: 88%;
+        }
+    }
+}
+@media(max-width: 380px){
+    .contacts {
+    &__container{
+        padding: 0;
+    }
+    &__info{
+        border-radius: 0;
+        padding: 30px 30px;
+        margin-top: 22px;
+    &__start__messeger__href__el{
+        width: 30px;
+        height: 30px;
+    }
+    &__start__messeger__p {
+        font-size: 20px;
+        text-align: center;
+    }
+    &__start__tel {
+        text-align: center;
+        &__p {
+        font-size: 20px;
+    }
+    &__el{
+        font-size: 18px;
+    }
+    }
+        &__end{
+            width: 100%;
+            &__button{
+                width: 100%;
+                font-size: 20px;
+            }
+        }
+
+    }
+    &__h__img{
+        width: 96%;
+    }
+    }
 }
