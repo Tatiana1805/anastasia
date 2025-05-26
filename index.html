@@ -4,52 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="libs/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="container header__container">
-          <nav class="header__nav nav">
-            <div href="#start" class="nav__logo">Анастасия Тимохина</div>
-            <div class="nav__contacts">
-              <!-- nav__list__contacts -->
-              <!-- <a href="tel: +79029217670"><img class="nav__list__contacts__icon" src="./img/call.svg"/></a>                 -->
-              <a href="https://t.me/Ya_Timohina"
-                ><img class="nav__contacts__icon" src="./img/telegram.svg"
-              /></a>
-              <a href="https://wa.me/+79029217670"
-                ><img class="nav__contacts__icon" src="./img/whatsapp.svg"
-              /></a>
-              <a href="https://vk.com/ya_timohina"
-                ><img class="nav__contacts__icon" src="./img/vk.svg"
-              /></a>
-            </div>
-            <ul class="nav__list">
-              <!-- <li class="nav__list__item">
-                            <img src="./img/" alt="">
-                            <a href="#start" class="nav__list__item__link">Главная</a>
-                        </li> -->
-              <li class="nav__list__item">
-                <a href="#about" class="nav__list__item__link">Обо мне</a>
-              </li>
-              <li class="nav__list__item">
-                <a href="#price" class="nav__list__item__link">Программы</a>
-              </li>
-              <li class="nav__list__item">
-                <a href="#qualification" class="nav__list__item__link"
-                  >Квалификация</a
-                >
-              </li>
-              <li class="nav__list__item">
-                <a href="#contacts" class="nav__list__item__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+        <header class="header">
+          <div class="container header__container">
+            <nav class="header__nav nav">
+              <div class="nav__logo">Анастасия Тимохина</div>
+              
+
+              
+                <div class="nav__contacts">
+                  <a href="https://t.me/Ya_Timohina"><img src="./img/telegram.svg" alt="Telegram"></a>
+                  <a href="https://wa.me/+79029217670"><img src="./img/whatsapp.svg" alt="WhatsApp"></a>
+                  <a href="https://vk.com/ya_timohina"><img src="./img/vk.svg" alt="VK"></a>
+                </div>
+                
+                <ul class="nav__list">
+                  <li><a href="#about">Обо мне</a></li>
+                  <li><a href="#price">Программы</a></li>
+                  <li><a href="#qualification">Квалификация</a></li>
+                  <li><a href="#contacts">Контакты</a></li>
+                </ul>
+    
+            </nav>
+          </div>
+        </header>
       <main class="main">
         <section class="start" id="start">
           <div class="container start__container">
@@ -80,6 +64,7 @@
                 src="./img/hero.png"
                 alt="фотография психолога"
               />
+              
             </div>
           </div>
         </section>
@@ -88,7 +73,7 @@
             <div class="about__start">
               <div class="about__start__about">
                 <h2 class="about__h2">Обо мне</h2>
-                <img class="about__cloud" src="./img/cloud.png" />
+                <img class="about__cloud" src="./img/cloud.png" alt="фоновое облако"/>
               </div>
               <div class="about__start__quote">
                 <img
@@ -142,7 +127,7 @@
               <img
                 class="problems__header__img"
                 src="./img/cloud.svg"
-                alt=""
+                alt="фоновое облако"
               />
               <h2 class="problems__header__h2">
                 Проблемы, с которыми <br />
@@ -156,7 +141,7 @@
         <section class="help" id="help">
           <div class="container help__container">
           <div class="help__title">
-            <img class="help__title__img" src="./img/help__cloud.svg" alt="" />
+            <img class="help__title__img" src="./img/help__cloud.svg" alt="фоновое облако" />
             <h2 class="help__title__text">С чем могу помочь</h2>
           </div>
           <div class="help__list">
@@ -288,7 +273,7 @@
                 <div class="container price">
                     <div class="price__h">
                         <h2  class="price__h__h2">Мои услуги и программы</h2>
-                        <img class="price__cloud" src="./img/help__cloud.svg">    
+                        <img class="price__cloud" src="./img/help__cloud.svg" alt="фоновое облако">    
                     </div>
                     <div class="price__el">
                         <div class="price__el__item__border" id="container1">
@@ -461,7 +446,7 @@
             <section class="qualification" id="qualification">
                 <div class="container qualification__container">
                   <div class="qualification__title">
-                    <img class="qualification__title__img" src="./img/cloud.svg" alt="" />
+                    <img class="qualification__title__img" src="./img/cloud.svg" alt="фоновое облако" />
                     <h2 class="qualification__title__text">Квалификация</h2>
                     <p>Институт профессионального развития и коммуникации (г. Санкт-Петербург)</p>
                   </div>
@@ -490,28 +475,28 @@
                           <div class="swiper qualification__info__diploma__imgs">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip1.jpg" alt="Сертификат">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip1.jpg" alt="Сертификат" loading="lazy">
                               </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip2.jpg" alt="Сертификат">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip2.jpg" alt="Сертификат" loading="lazy">
                               </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip3.jpg" alt="Сертификат">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip3.jpg" alt="Сертификат" loading="lazy">
                               </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip4.jpg" alt="Сертификат">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip4.jpg" alt="Сертификат" loading="lazy">
                               </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip5.jpg" alt="Сертификат">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip5.jpg" alt="Сертификат" loading="lazy">
                               </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip6.jpg" alt="Сертификат">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip6.jpg" alt="Сертификат" loading="lazy">
                               </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip7.jpg" alt="Сертификат">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip7.jpg" alt="Сертификат" loading="lazy">
                               </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip8.jpg" alt="Сертификат">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip8.jpg" alt="Сертификат" loading="lazy">
                               </div>
                             </div>
                           </div>
@@ -528,7 +513,7 @@
             <section class="reviews" id="reviews">
               <div class="container reviews__container">
                 <div class="reviews__title">
-                  <img class="reviews__title__img" src="./img/cloud.svg" alt="" />
+                  <img class="reviews__title__img" src="./img/cloud.svg" alt="фоновое облако" />
                   <h2 class="reviews__title__text">Отзывы и реальные кейсы</h2>
                 </div>
                 <div class="reviews__info">
@@ -665,7 +650,7 @@
             <section class="contacts" id="contacts">
                 <div class="container contacts__container">
                   <div class="contacts__h">
-                    <img class="contacts__h__img" src="./img/help__cloud.svg" alt="" />
+                    <img class="contacts__h__img" src="./img/help__cloud.svg" alt="фоновое облако" />
                     <h2>У вас остались вопросы?</h2>
                   </div>
                   <div class="contacts__svg">

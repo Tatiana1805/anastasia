@@ -153,7 +153,8 @@ span {
 @media (max-width: 1300px) {
   .container {
     width: 100%;
-    padding: 2%; } }
+    padding-left: 2%;
+    padding-right: 2%; } }
 @media (max-width: 1200px) {
   span {
     font-size: 15px; }
@@ -191,14 +192,14 @@ span {
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    margin-bottom: 0;
-    padding: 22px 0; }
+    margin-bottom: 0; }
 
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  padding: 22px 0; }
   .nav__logo {
     font-family: "Logo";
     font-size: 24px;
@@ -814,8 +815,6 @@ button:hover {
           font-size: 16px;
           position: absolute;
           right: 0; }
-        .qualification__info__univer__list__el.empty {
-          border-bottom: 0; }
   .qualification__info__diploma {
     display: flex;
     align-items: center;
@@ -852,9 +851,11 @@ button:hover {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
 
 @media (max-width: 768px) {
-  .qualification__info__diploma__imgs {
-    padding: 0 40px;
-    max-height: 350px; } }
+  .qualification__info {
+    flex-direction: column; }
+    .qualification__info__diploma__imgs {
+      padding: 0 40px;
+      max-height: 350px; } }
 .reviews__title {
   width: 619px;
   position: relative;
@@ -870,9 +871,24 @@ button:hover {
     margin: 0 auto 0; }
 
 .reviews__swiper {
-  width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
 
+.swiper-wrapper {
+  display: flex;
+  width: max-content; }
+
+.reviews__info__list__el {
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box; }
+
+@media (min-width: 768px) {
+  .reviews__info__list__el {
+    width: calc(50% - 10px); } }
+@media (min-width: 1024px) {
+  .reviews__info__list__el {
+    width: calc(33.333% - 15px); } }
 .reviews__info__arrows {
   display: flex;
   justify-content: space-between;
@@ -886,8 +902,6 @@ button:hover {
   padding: 0;
   margin: 0; }
   .reviews__info__list__el {
-    width: 300px;
-    /* или любая другая ширина */
     margin-right: 20px;
     /* отступ между слайдами */
     background: #fff;
@@ -897,7 +911,6 @@ button:hover {
     background-position: 50% 20px;
     background-size: 88px;
     background-repeat: no-repeat;
-    max-width: 412px;
     background-color: #ffffff;
     border-radius: 25px;
     padding: 98px 43px 42px 34px; }

@@ -43,9 +43,6 @@
           position: absolute;
           right: 0;
         }
-        &.empty {
-          border-bottom: 0;
-        }
       }
     }
   }
@@ -106,6 +103,7 @@
 @media (max-width: 768px) {
   .qualification {
     &__info {
+      flex-direction: column;
       &__diploma {
         &__imgs {
           padding: 0 40px;

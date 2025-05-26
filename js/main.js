@@ -77,6 +77,7 @@ const diplomaSwiper = new Swiper('.qualification__info__diploma__imgs', {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
   // Инициализация слайдера отзывов
   const reviewsSwiper = new Swiper('.reviews__swiper', {
