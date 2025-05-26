@@ -21,6 +21,8 @@
         &__link {
           color: #e1eef6 !important;
           font-size: 16px;
+          position: relative;
+          top: 7px;
         }
       }
     }
@@ -59,6 +61,6 @@
     text-align: center;
     font-size: 12px;
     color: #efefef;
-    font-family: "DMSans";
+    font-family: "MainFont";
   }
 }

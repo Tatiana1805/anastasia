@@ -1,52 +1,52 @@
-.start__container {
-  display: flex;
-  margin-top: 76px;
-  background-color: #fbfdff;
-  border-radius: 50px;
-  border: 2px dashed #b1c0cf;
-  padding: 32px;
-}
 .start {
-  &__hero {
-    max-width: 40%;
-    margin: auto;
-  }
-  &__heroInfo {
-    font-family: "MainFont";
-    max-width: 60%;
-    margin: auto;
-    &__base {
-      font-size: 24px;
-      color: #0e0e0e;
-      font-weight: 500;
-      display: flex;
-      gap: 25px;
-      margin-bottom: 10px;
+  &__wrapper {
+    display: flex;
+    margin-top: 76px;
+    background-color: #fbfdff;
+    border-radius: 50px;
+    border: 2px dashed #b1c0cf;
+    padding: 32px;
+    &__hero {
+      max-width: 40%;
+      margin: auto;
+    }
+    &__heroInfo {
+      font-family: "MainFont";
+      max-width: 60%;
+      margin: auto;
+      &__base {
+        font-size: 24px;
+        color: #0e0e0e;
+        font-weight: 500;
+        display: flex;
+        gap: 25px;
+        margin-bottom: 10px;
 
-      &__activity {
-        position: relative;
-        padding-left: 20px;
-        &::before {
-          content: "";
-          background-image: url(../img/dot.svg);
-          position: absolute;
-          left: 0;
-          top: 30%;
-          transform: translateY(-5%);
-          width: 11px;
-          height: 11px;
-          background-repeat: no-repeat;
+        &__activity {
+          position: relative;
+          padding-left: 20px;
+          &::before {
+            content: "";
+            background-image: url(../img/dot.svg);
+            position: absolute;
+            left: 0;
+            top: 30%;
+            transform: translateY(-5%);
+            width: 11px;
+            height: 11px;
+            background-repeat: no-repeat;
+          }
         }
       }
     }
-  }
-  &__info {
-    font-size: 1.2vw;
-    // line-height: 25px;
-    color: #63676c;
-    margin-top: 12px;
-    &__p{
-      font-size: 20px;
+    &__info {
+      font-size: 1.2vw;
+      // line-height: 25px;
+      color: #63676c;
+      margin-top: 12px;
+      &__p {
+        font-size: 20px;
+      }
     }
   }
 }
@@ -73,4 +73,18 @@ button {
 }
 button:hover {
   background-color: #276eb3;
+}
+@media (max-width: 1300px) {
+  .h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .h1 {
+    font-size: 32px;
+  }
+  .start__wrapper__info__p{
+    font-size: 16px;
+  }
 }

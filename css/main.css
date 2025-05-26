@@ -8,9 +8,6 @@
 @font-face {
   font-family: "MainFontH";
   src: url("../fonts/Montserrat/static/Montserrat-SemiBold.ttf"); }
-@font-face {
-  font-family: "DMSans";
-  src: url("../fonts/DMSans_18pt-Regular.ttf"); }
 * {
   box-sizing: border-box; }
 
@@ -236,47 +233,75 @@ span {
 a {
   color: #393652; }
 
-.start__container {
+.hidden__logo {
+  display: none; }
+
+.nav__mobile__btn__menu {
+  display: none; }
+.nav__mobile__btn__close {
+  display: none; }
+
+.nav__list__desktop {
+  display: none; }
+
+.nav__mobile {
+  display: none; }
+
+@media (max-width: 1040px) {
+  .nav__list {
+    display: none; }
+
+  .nav__mobile__btn__menu {
+    display: block; } }
+@media (max-width: 500px) {
+  .nav__contacts {
+    display: none; }
+
+  .nav__logo {
+    display: none; }
+
+  .hidden__logo {
+    display: block; } }
+.start__wrapper {
   display: flex;
   margin-top: 76px;
   background-color: #fbfdff;
   border-radius: 50px;
   border: 2px dashed #b1c0cf;
   padding: 32px; }
-
-.start__hero {
-  max-width: 40%;
-  margin: auto; }
-.start__heroInfo {
-  font-family: "MainFont";
-  max-width: 60%;
-  margin: auto; }
-  .start__heroInfo__base {
-    font-size: 24px;
-    color: #0e0e0e;
-    font-weight: 500;
-    display: flex;
-    gap: 25px;
-    margin-bottom: 10px; }
-    .start__heroInfo__base__activity {
-      position: relative;
-      padding-left: 20px; }
-      .start__heroInfo__base__activity::before {
-        content: "";
-        background-image: url(../img/dot.svg);
-        position: absolute;
-        left: 0;
-        top: 30%;
-        transform: translateY(-5%);
-        width: 11px;
-        height: 11px;
-        background-repeat: no-repeat; }
-.start__info {
-  font-size: 1.2vw;
-  color: #63676c;
-  margin-top: 12px; }
-  .start__info__p {
-    font-size: 20px; }
+  .start__wrapper__hero {
+    max-width: 40%;
+    margin: auto; }
+  .start__wrapper__heroInfo {
+    font-family: "MainFont";
+    max-width: 60%;
+    margin: auto; }
+    .start__wrapper__heroInfo__base {
+      font-size: 24px;
+      color: #0e0e0e;
+      font-weight: 500;
+      display: flex;
+      gap: 25px;
+      margin-bottom: 10px; }
+      .start__wrapper__heroInfo__base__activity {
+        position: relative;
+        padding-left: 20px; }
+        .start__wrapper__heroInfo__base__activity::before {
+          content: "";
+          background-image: url(../img/dot.svg);
+          position: absolute;
+          left: 0;
+          top: 30%;
+          transform: translateY(-5%);
+          width: 11px;
+          height: 11px;
+          background-repeat: no-repeat; }
+  .start__wrapper__info {
+    font-size: 1.2vw;
+    color: #63676c;
+    margin-top: 12px; }
+    .start__wrapper__info__p {
+      font-size: 20px; }
 
 button {
   width: auto;
@@ -297,6 +322,15 @@ button {
 button:hover {
   background-color: #276eb3; }
 
+@media (max-width: 1300px) {
+  .h1 {
+    font-size: 40px; } }
+@media (max-width: 1000px) {
+  .h1 {
+    font-size: 32px; }
+
+  .start__wrapper__info__p {
+    font-size: 16px; } }
 .about {
   display: flex;
   gap: 20px;
@@ -343,7 +377,7 @@ button:hover {
         display: flex;
         gap: 18px; }
     .about__end__info {
-      width: 593px;
+      max-width: 593px;
       margin-top: 130px;
       padding-top: 65px; }
       .about__end__info__el {
@@ -423,7 +457,7 @@ button:hover {
       margin-top: -98px;
       width: 89%; } }
 .problems__header {
-  width: 705px;
+  max-width: 705px;
   margin: auto;
   position: relative; }
   .problems__header__h2 {
@@ -499,16 +533,18 @@ button:hover {
           .help__list__top__item__elem__el__thin {
             font-weight: 400;
             font-size: 16px;
-            color: #1B1A1A; }
+            color: #1b1a1a; }
       .help__list__top__item__p {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        color: #1B1A1A; }
+        color: #1b1a1a; }
     .help__list__top__itemp {
       gap: 22px;
       display: flex;
       flex-direction: column; }
+      .help__list__top__itemp__img {
+        border-radius: 25px; }
       .help__list__top__itemp__quote {
         background-color: #1a5186;
         display: flex;
@@ -563,10 +599,27 @@ button:hover {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        color: #1B1A1A; }
+        color: #1b1a1a; }
     .help__list__bottom__itemp {
-      width: max-content; }
+      width: 100%;
+      height: 100%; }
+      .help__list__bottom__itemp__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px; }
 
+@media (max-width: 1300px) {
+  .help__img, .help__list__bottom__itemp__img {
+    height: 100%;
+    object-fit: cover; } }
+@media (max-width: 1000px) {
+  .help__list__top {
+    display: flex;
+    flex-direction: column; }
+
+  .help__list__bottom {
+    display: flex;
+    flex-direction: column; } }
 .price__h {
   max-width: 663px;
   margin: auto; }
@@ -841,8 +894,7 @@ button:hover {
       border: 2px dashed #b1c0cf;
       border-radius: 25px; }
       .qualification__info__diploma__imgs.swiper {
-        padding: 0 95px !important;
-        overflow: visible; }
+        padding: 0 95px; }
         .qualification__info__diploma__imgs.swiper .swiper-wrapper {
           padding: 0;
           box-sizing: border-box; }
@@ -859,7 +911,16 @@ button:hover {
         border-radius: 22px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
+  .qualification__info {
+    justify-content: space-around; }
+
+  .qualification__info__univer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch; } }
+@media (max-width: 900px) {
   .qualification__info {
     flex-direction: column; }
     .qualification__info__diploma__imgs {
@@ -1116,7 +1177,9 @@ h2 {
       gap: 60px; }
       .footer__nav__list__item__link {
         color: #e1eef6 !important;
-        font-size: 16px; }
+        font-size: 16px;
+        position: relative;
+        top: 7px; }
   .footer__info {
     display: flex;
     justify-content: space-between; }
@@ -1144,7 +1207,7 @@ h2 {
     text-align: center;
     font-size: 12px;
     color: #efefef;
-    font-family: "DMSans"; }
+    font-family: "MainFont"; }
 
 .overlay {
   display: none;

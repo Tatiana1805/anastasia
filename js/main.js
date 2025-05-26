@@ -32,6 +32,35 @@ function scalePage() {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  // Открытие/закрытие меню
+  burger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+  });
+  
+  // Закрытие при клике на ссылку
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    });
+  });
+  
+  // Закрытие при клике вне меню
+  document.addEventListener('click', function(e) {
+    if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
+      burger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    }
+  });
+});
 // Вызываем функцию при загрузке страницы и изменении размера окна
 // $(window).on("resize load", scalePage);
 //скейлинг страницы при уменьшении экрана

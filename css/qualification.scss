@@ -62,7 +62,6 @@
     }
 
     &__imgs {
-
       max-width: 484px;
       max-height: 418px;
       background: #fbfdff;
@@ -71,8 +70,8 @@
 
       // Переопределение стилей Swiper
       &.swiper {
-        padding: 0 95px !important; // Важно переопределить
-        overflow: visible; // Чтобы не обрезало тени
+        padding: 0 95px; // Важно переопределить
+        // overflow: visible; // Чтобы не обрезало тени
 
         .swiper-wrapper {
           padding: 0; // Сбрасываем внутренние отступы
@@ -98,9 +97,20 @@
     }
   }
 }
+@media (max-width: 1300px) {
+  .qualification__info{
+    justify-content: space-around;
+  }
+  .qualification__info__univer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+}
 
 // Адаптивность
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .qualification {
     &__info {
       flex-direction: column;
