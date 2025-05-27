@@ -1,6 +1,6 @@
 .problems {
   &__header {
-    width: 705px;
+    max-width: 705px;
     margin: auto;
     position: relative;
     &__h2 {
@@ -13,5 +13,20 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+}
+.problems__hint__img{
+  display: none;
+}
+
+@media(max-width: 320px){
+  .problems__container{
+    padding: 0;
+  }
+  .problems__hint__img{
+    display: block;
+  }
+  .problems__img{
+    display: none;
   }
 }
