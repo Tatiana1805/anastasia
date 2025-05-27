@@ -1,6 +1,4 @@
 .footer {
-  height: 311px;
-  // width: 100%;
   background: #1a5186;
   margin-top: 100px;
   padding: 64px 63px 31px;
@@ -63,4 +61,31 @@
     color: #efefef;
     font-family: "MainFont";
   }
+}
+
+@media (max-width: 1150px){
+// .footer__nav__list {
+//     gap: 42px;
+// }
+.footer__nav {
+  flex-direction: column;
+}
+.footer__nav__logo{
+  margin-bottom: 45px;
+}
+}
+@media (max-width: 710px){
+.footer__nav__list{
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;
+
+}
+
+.footer__info {
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 30px;
+}
 }

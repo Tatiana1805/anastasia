@@ -10,7 +10,7 @@
     &__hero {
       max-width: 40%;
       margin: auto;
-      &__hint{
+      &__hint {
         display: none;
       }
     }
@@ -79,6 +79,9 @@ button {
 button:hover {
   background-color: #276eb3;
 }
+.hint__h1 {
+  display: none;
+}
 @media (max-width: 1300px) {
   .start__wrapper {
     gap: 15px;
@@ -103,9 +106,10 @@ button:hover {
   .h1 {
     display: none;
   }
-  .h1__hint {
+  .hint__h1 {
     display: block;
-    font-size: 40px;
+    font-size: 44px;
+    margin-bottom: 30px;
   }
   .start__wrapper__hero {
     max-width: 500px;
@@ -116,13 +120,13 @@ button:hover {
     flex-direction: column;
     max-width: 100%;
   }
-  .start__wrapper__hero__hint{
+  .start__wrapper__hero__hint {
     display: block;
   }
-  .start__wrapper__hero{
+  .start__wrapper__hero {
     display: none;
   }
-  .container{
+  .start__container {
     padding: 0;
   }
 }

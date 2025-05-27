@@ -326,6 +326,9 @@ button {
 button:hover {
   background-color: #276eb3; }
 
+.hint__h1 {
+  display: none; }
+
 @media (max-width: 1300px) {
   .start__wrapper {
     gap: 15px; } }
@@ -343,9 +346,10 @@ button:hover {
   .h1 {
     display: none; }
 
-  .h1__hint {
+  .hint__h1 {
     display: block;
-    font-size: 40px; }
+    font-size: 44px;
+    margin-bottom: 30px; }
 
   .start__wrapper__hero {
     max-width: 500px; }
@@ -362,7 +366,7 @@ button:hover {
   .start__wrapper__hero {
     display: none; }
 
-  .container {
+  .start__container {
     padding: 0; } }
 .about {
   display: flex;
@@ -502,8 +506,20 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%); }
 
+.problems__hint__img {
+  display: none; }
+
+@media (max-width: 320px) {
+  .problems__container {
+    padding: 0; }
+
+  .problems__hint__img {
+    display: block; }
+
+  .problems__img {
+    display: none; } }
 .help__title {
-  width: 560px;
+  max-width: 560px;
   position: relative; }
   .help__title__img {
     z-index: -1;
@@ -960,7 +976,7 @@ button:hover {
       padding: 0 40px;
       max-height: 350px; } }
 .reviews__title {
-  width: 619px;
+  max-width: 619px;
   position: relative;
   margin: 0 auto 60px;
   text-align: center; }
@@ -1192,7 +1208,6 @@ h2 {
   .contacts__h__img {
     width: 96%; } }
 .footer {
-  height: 311px;
   background: #1a5186;
   margin-top: 100px;
   padding: 64px 63px 31px; }
@@ -1242,6 +1257,23 @@ h2 {
     color: #efefef;
     font-family: "MainFont"; }
 
+@media (max-width: 1150px) {
+  .footer__nav {
+    flex-direction: column; }
+
+  .footer__nav__logo {
+    margin-bottom: 45px; } }
+@media (max-width: 710px) {
+  .footer__nav__list {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px; }
+
+  .footer__info {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 30px; } }
 .overlay {
   display: none;
   position: fixed;

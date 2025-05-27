@@ -15,3 +15,18 @@
     }
   }
 }
+.problems__hint__img{
+  display: none;
+}
+
+@media(max-width: 320px){
+  .problems__container{
+    padding: 0;
+  }
+  .problems__hint__img{
+    display: block;
+  }
+  .problems__img{
+    display: none;
+  }
+}
