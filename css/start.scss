@@ -6,9 +6,13 @@
     border-radius: 50px;
     border: 2px dashed #b1c0cf;
     padding: 32px;
+    gap: 5px;
     &__hero {
       max-width: 40%;
       margin: auto;
+      &__hint{
+        display: none;
+      }
     }
     &__heroInfo {
       font-family: "MainFont";
@@ -46,6 +50,7 @@
       margin-top: 12px;
       &__p {
         font-size: 20px;
+        max-width: 600px;
       }
     }
   }
@@ -75,16 +80,49 @@ button:hover {
   background-color: #276eb3;
 }
 @media (max-width: 1300px) {
-  .h1 {
-    font-size: 40px;
+  .start__wrapper {
+    gap: 15px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1140px) {
   .h1 {
-    font-size: 32px;
+    font-size: 40px;
   }
-  .start__wrapper__info__p{
-    font-size: 16px;
+  .start__wrapper__info__p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .start__wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .h1 {
+    display: none;
+  }
+  .h1__hint {
+    display: block;
+    font-size: 40px;
+  }
+  .start__wrapper__hero {
+    max-width: 500px;
+  }
+  .start__wrapper__heroInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .start__wrapper__hero__hint{
+    display: block;
+  }
+  .start__wrapper__hero{
+    display: none;
+  }
+  .container{
+    padding: 0;
   }
 }
