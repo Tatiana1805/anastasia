@@ -100,12 +100,18 @@
 @media (max-width: 1300px) {
   .qualification__info{
     justify-content: space-around;
+    &__diploma{
+      margin-top: auto;
+    }
   }
   .qualification__info__univer__list {
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: stretch;
+    &__el{
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -115,11 +121,31 @@
     &__info {
       flex-direction: column;
       &__diploma {
+        margin: 30px auto;
         &__imgs {
           padding: 0 40px;
-          max-height: 350px;
+          max-height: 422px;
+        }
+        &__imgs.swiper {
+            padding: 0 117px;
+        }
+      }
+      &__univer__h3{
+        text-align: center;
+      }
+      &__univer__list{
+        align-self: center;
+        max-width: 480px;
+        // margin-bottom: 30px;
+        // display: flex;
+        width: 100%;
+        // flex-wrap: wrap;
+        // max-height: 240px;
+        &__el{
+          padding-right: 80px;
         }
       }
     }
   }
+      
 }

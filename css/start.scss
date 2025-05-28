@@ -96,8 +96,23 @@ button:hover {
     font-size: 18px;
   }
 }
+@media (max-width: 900px){
+    .h1 {
+        font-size: 32px;
+    }
+    .start__wrapper__info__p {
+        font-size: 14px;
+    }
+    .button{
+      margin-top: 37px;
+    }
+    .start__wrapper__heroInfo__base {
+    font-size: 22px;
+    }
+    
+}
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
   .start__wrapper {
     flex-direction: column;
     text-align: center;
