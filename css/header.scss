@@ -56,6 +56,9 @@
       }
     }
   }
+  &__mobile__btn{
+    display: none;
+  }
 }
 
 a {
@@ -65,9 +68,9 @@ a {
   display: none;
 }
 .nav__mobile__btn {
-  &__menu {
-    display: none;
-  }
+  // &__menu {
+  //   display: none;
+  // }
   &__close {
     display: none;
   }
@@ -82,7 +85,7 @@ a {
   .nav__list {
     display: none;
   }
-  .nav__mobile__btn__menu {
+  .nav__mobile__btn {
     display: block;
   }
 }
