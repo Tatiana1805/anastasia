@@ -19,11 +19,16 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   padding: 22px 0;
   &__logo {
     font-family: "Logo";
     font-size: 24px;
+    font-weight: 400;
+  }
+  .hidden__logo {
+    font-family: "Logo";
+    font-size: 18px;
     font-weight: 400;
   }
   &__contacts {
@@ -72,9 +77,6 @@ a {
     display: none;
   }
 }
-.nav__list__desktop {
-  display: none;
-}
 .nav__mobile {
   display: none;
 }
@@ -84,16 +86,20 @@ a {
   }
   .nav__mobile__btn__menu {
     display: block;
+    width: 28px;
   }
-}
-@media (max-width: 500px) {
   .nav__contacts {
     display: none;
   }
+}
+@media (max-width: 500px) {
   .nav__logo {
     display: none;
   }
   .hidden__logo {
     display: block;
+  }
+  .nav__mobile__btn__menu {
+    width: 24px;
   }
 }

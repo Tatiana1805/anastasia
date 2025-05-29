@@ -1,5 +1,5 @@
 .qualification__title {
-  width: 476px;
+  max-width: 476px;
   position: relative;
   margin: 0 auto 60px;
   text-align: center;
@@ -68,10 +68,8 @@
       border: 2px dashed #b1c0cf;
       border-radius: 25px;
 
-      // Переопределение стилей Swiper
       &.swiper {
-        padding: 0 95px; // Важно переопределить
-        // overflow: visible; // Чтобы не обрезало тени
+        padding: 0 95px; 
 
         .swiper-wrapper {
           padding: 0; // Сбрасываем внутренние отступы
@@ -98,10 +96,20 @@
   }
 }
 @media (max-width: 1300px) {
-  .qualification__info{
+  .qualification__info__diploma__imgs.swiper {
+    padding: 0px 10%;
+  }
+
+  .qualification__info__diploma__imgs {
+    max-height: 100%;
+  }
+  .qualification__info {
+    align-items: flex-end;
     justify-content: space-around;
   }
   .qualification__info__univer__list {
+    max-width: 480px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -109,17 +117,51 @@
   }
 }
 
-// Адаптивность
+@media (max-width: 980px) {
+  .qualification__info__diploma__imgs.swiper {
+    padding: 0 30px;
+  }
+  .qualification__info__diploma__imgs {
+    max-width: 400px;
+  }
+}
 @media (max-width: 900px) {
   .qualification {
     &__info {
       flex-direction: column;
+      align-items: center;
       &__diploma {
         &__imgs {
           padding: 0 40px;
-          max-height: 350px;
+          // max-height: 350px;
         }
       }
+    }
+    .qualification__info__univer__h3{
+      text-align: center;
+    }
+    .qualification__info__univer__list__el:last-child {
+      margin-bottom: 20px;
+    }
+  }
+  .qualification__info__univer__list {
+    width: 468px;
+  }
+}
+@media (max-width: 500px) {
+  .qualification__info__univer__list__el {
+    padding-right: 0;
+  }
+
+  .qualification__info__univer__list {
+    width: auto;
+  }
+  .qualification__info__diploma__imgs {
+    max-width: 340px;
+  }
+  .qualification__info__diploma__imgs {
+    .swiper-slide {
+      max-width: 276px;
     }
   }
 }

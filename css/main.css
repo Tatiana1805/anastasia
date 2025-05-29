@@ -176,7 +176,7 @@ span {
     font-size: 18px; }
 
   .main {
-    gap: 57px; } }
+    gap: 150px; } }
 @media (max-width: 340px) {
   h4 {
     max-width: 227px;
@@ -205,11 +205,15 @@ span {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   padding: 22px 0; }
   .nav__logo {
     font-family: "Logo";
     font-size: 24px;
+    font-weight: 400; }
+  .nav .hidden__logo {
+    font-family: "Logo";
+    font-size: 18px;
     font-weight: 400; }
   .nav__contacts {
     gap: 30px;
@@ -241,9 +245,6 @@ a {
 .nav__mobile__btn__close {
   display: none; }
 
-.nav__list__desktop {
-  display: none; }
-
 .nav__mobile {
   display: none; }
 
@@ -252,16 +253,20 @@ a {
     display: none; }
 
   .nav__mobile__btn__menu {
-    display: block; } }
-@media (max-width: 500px) {
-  .nav__contacts {
-    display: none; }
+    display: block;
+    width: 28px; }
 
+  .nav__contacts {
+    display: none; } }
+@media (max-width: 500px) {
   .nav__logo {
     display: none; }
 
   .hidden__logo {
-    display: block; } }
+    display: block; }
+
+  .nav__mobile__btn__menu {
+    width: 24px; } }
 .start__wrapper {
   display: flex;
   margin-top: 76px;
@@ -506,18 +511,36 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%); }
 
-.problems__hint__img {
+.problems__hint__mobile {
   display: none; }
 
-@media (max-width: 320px) {
-  .problems__container {
-    padding: 0; }
+.problems__hint__mobile__600 {
+  display: none; }
 
-  .problems__hint__img {
+.problems__hint__desk {
+  display: none; }
+
+@media (max-width: 900px) {
+  .problems__hint__desk {
     display: block; }
 
   .problems__img {
     display: none; } }
+@media (max-width: 650px) {
+  .problems__container {
+    padding: 0; }
+
+  .problems__hint__desk {
+    display: none; }
+
+  .problems__hint__mobile__600 {
+    display: block; } }
+@media (max-width: 320px) {
+  .problems__hint__mobile__600 {
+    display: none; }
+
+  .problems__hint__mobile {
+    display: block; } }
 .help__title {
   max-width: 560px;
   position: relative; }
@@ -609,6 +632,8 @@ button:hover {
           font-weight: 500;
           max-width: 397px;
           font-size: 20px; }
+  .help__list .hint__img {
+    display: none; }
   .help__list__bottom {
     display: grid;
     grid-template-columns: 1fr 57.7%;
@@ -658,10 +683,24 @@ button:hover {
         border-radius: 25px; }
 
 @media (max-width: 1300px) {
-  .help__img, .help__list__bottom__itemp__img {
+  .help__img,
+  .help__list__bottom__itemp__img {
     height: 100%;
     object-fit: cover; } }
 @media (max-width: 1000px) {
+  .hint__img {
+    display: block;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: top; }
+
+  .help__list__bottom__itemp__img {
+    max-height: 500px;
+    object-fit: cover; }
+
+  .help__list__top__itemp {
+    display: none; }
+
   .help__list__top {
     display: flex;
     flex-direction: column; }
@@ -887,7 +926,7 @@ button:hover {
     height: 129px;
     margin-top: -94px; } }
 .qualification__title {
-  width: 476px;
+  max-width: 476px;
   position: relative;
   margin: 0 auto 60px;
   text-align: center; }
@@ -961,20 +1000,54 @@ button:hover {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
 
 @media (max-width: 1300px) {
+  .qualification__info__diploma__imgs.swiper {
+    padding: 0px 10%; }
+
+  .qualification__info__diploma__imgs {
+    max-height: 100%; }
+
   .qualification__info {
+    align-items: flex-end;
     justify-content: space-around; }
 
   .qualification__info__univer__list {
+    max-width: 480px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: stretch; } }
+@media (max-width: 980px) {
+  .qualification__info__diploma__imgs.swiper {
+    padding: 0 30px; }
+
+  .qualification__info__diploma__imgs {
+    max-width: 400px; } }
 @media (max-width: 900px) {
   .qualification__info {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
     .qualification__info__diploma__imgs {
-      padding: 0 40px;
-      max-height: 350px; } }
+      padding: 0 40px; }
+  .qualification .qualification__info__univer__h3 {
+    text-align: center; }
+  .qualification .qualification__info__univer__list__el:last-child {
+    margin-bottom: 20px; }
+
+  .qualification__info__univer__list {
+    width: 468px; } }
+@media (max-width: 500px) {
+  .qualification__info__univer__list__el {
+    padding-right: 0; }
+
+  .qualification__info__univer__list {
+    width: auto; }
+
+  .qualification__info__diploma__imgs {
+    max-width: 340px; }
+
+  .qualification__info__diploma__imgs .swiper-slide {
+    max-width: 276px; } }
 .reviews__title {
   max-width: 619px;
   position: relative;

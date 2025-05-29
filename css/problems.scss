@@ -15,18 +15,42 @@
     }
   }
 }
-.problems__hint__img{
+.problems__hint__mobile{
+  display: none;
+}
+.problems__hint__mobile__600{
+  display: none;
+}
+.problems__hint__desk{
   display: none;
 }
 
-@media(max-width: 320px){
-  .problems__container{
-    padding: 0;
-  }
-  .problems__hint__img{
+@media(max-width: 900px){
+
+  .problems__hint__desk{
     display: block;
   }
   .problems__img{
     display: none;
+  }
+}
+@media(max-width: 650px){
+  .problems__container{
+    padding: 0;
+  }
+  .problems__hint__desk{
+    display: none;
+  }
+  .problems__hint__mobile__600{
+    display: block;
+  }
+}
+
+@media(max-width: 320px){
+  .problems__hint__mobile__600{
+    display: none;
+  }
+  .problems__hint__mobile{
+    display: block;
   }
 }
