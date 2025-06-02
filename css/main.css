@@ -207,6 +207,8 @@ span {
   justify-content: space-between;
   align-items: baseline;
   padding: 22px 0; }
+  .nav__mobile {
+    display: none; }
   .nav__logo {
     font-family: "Logo";
     font-size: 24px;
@@ -240,24 +242,61 @@ a {
 .hidden__logo {
   display: none; }
 
-.nav__mobile__btn__menu {
+.nav__mobile__btn {
   display: none; }
-.nav__mobile__btn__close {
-  display: none; }
-
-.nav__mobile {
-  display: none; }
+  .nav__mobile__btn__menu {
+    display: none; }
+  .nav__mobile__btn__close {
+    display: none; }
+    .nav__mobile__btn__close__img {
+      width: 28px;
+      height: 28px; }
 
 @media (max-width: 1040px) {
   .nav__list {
     display: none; }
 
+  .nav__mobile {
+    display: block;
+    width: 100%;
+    background: #e1eef6ab; }
+
+  .nav__mobile__el {
+    display: flex;
+    padding: 3%;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: space-between; }
+
+  .nav__mobile__btn {
+    display: block; }
+
   .nav__mobile__btn__menu {
     display: block;
-    width: 28px; }
+    width: 28px;
+    transition: 0.3s;
+    cursor: pointer; }
+
+  .nav__mobile__contacts {
+    display: flex;
+    gap: 10px;
+    padding-top: 20px; }
 
   .nav__contacts {
-    display: none; } }
+    display: none; }
+
+  .nav__mobile__btn__menu__el {
+    display: none;
+    margin: 0 auto; }
+
+  .nav__mobile__btn__close {
+    margin-top: -94px; }
+
+  .nav__mobile__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px; } }
 @media (max-width: 500px) {
   .nav__logo {
     display: none; }

@@ -32,35 +32,35 @@ function scalePage() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const burger = document.getElementById('burger');
-  const mobileMenu = document.getElementById('mobileMenu');
+// document.addEventListener('DOMContentLoaded', function() {
+//   const burger = document.getElementById('burger');
+//   const mobileMenu = document.getElementById('mobileMenu');
   
-  // Открытие/закрытие меню
-  burger.addEventListener('click', function() {
-    this.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    document.body.classList.toggle('no-scroll');
-  });
+//   // Открытие/закрытие меню
+//   burger.addEventListener('click', function() {
+//     this.classList.toggle('active');
+//     mobileMenu.classList.toggle('active');
+//     document.body.classList.toggle('no-scroll');
+//   });
   
-  // Закрытие при клике на ссылку
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      burger.classList.remove('active');
-      mobileMenu.classList.remove('active');
-      document.body.classList.remove('no-scroll');
-    });
-  });
+//   // Закрытие при клике на ссылку
+//   mobileMenu.querySelectorAll('a').forEach(link => {
+//     link.addEventListener('click', () => {
+//       burger.classList.remove('active');
+//       mobileMenu.classList.remove('active');
+//       document.body.classList.remove('no-scroll');
+//     });
+//   });
   
-  // Закрытие при клике вне меню
-  document.addEventListener('click', function(e) {
-    if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
-      burger.classList.remove('active');
-      mobileMenu.classList.remove('active');
-      document.body.classList.remove('no-scroll');
-    }
-  });
-});
+//   // Закрытие при клике вне меню
+//   document.addEventListener('click', function(e) {
+//     if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
+//       burger.classList.remove('active');
+//       mobileMenu.classList.remove('active');
+//       document.body.classList.remove('no-scroll');
+//     }
+//   });
+// });
 // Вызываем функцию при загрузке страницы и изменении размера окна
 // $(window).on("resize load", scalePage);
 //скейлинг страницы при уменьшении экрана
@@ -288,3 +288,36 @@ $('.popup__form--consult').on('submit', function(e) {
     //код для отправки формы
   }
 });
+
+
+//бургер
+const container = document.querySelector('.nav__mobile__btn') //контейнер при клике
+const burger = document.querySelector('.nav__mobile__btn__menu') //кнопка бургера
+const burgerClose = document.querySelector('.nav__mobile__btn__close') //крестик
+const menu = document.querySelector('.nav__mobile__btn__menu__el') //меню бургера
+const nav = document.querySelector('.nav') //хейдер
+const navItems = document.querySelectorAll('.nav__mobile__list li a'); // все элементы списка 
+
+container.addEventListener('click', function(){
+  if(burgerClose.style.display === 'block'){
+    burgerClose.style.display = 'none'
+    menu.style.display = 'none'
+    nav.style.display = 'flex'
+    burger.style.display = 'block'
+  } else {
+    burgerClose.style.display = 'block'
+    menu.style.display = 'block'
+    nav.style.display = 'none'
+    burger.style.display = 'none'
+  }
+})
+//закрытие при клике на элемент списка
+navItems.forEach(item => {
+  item.addEventListener('click', function() {
+    burgerClose.style.display = 'none';
+    menu.style.display = 'none';
+    nav.style.display = 'flex';
+    burger.style.display = 'block';
+  });
+});
+
