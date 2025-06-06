@@ -35,6 +35,8 @@
       display: none;
       flex-direction: column;
       gap: 20px;
+      transition: display 0.3s ease;
+
     }
     &__item, &__item__border {
       width: 100%;
