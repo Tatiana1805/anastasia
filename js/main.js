@@ -22,7 +22,6 @@ function scalePage() {
     }
 
     heightCorrection();
-
   } else {
     $(".main").css({
       transform: "none",
@@ -35,14 +34,14 @@ function scalePage() {
 // document.addEventListener('DOMContentLoaded', function() {
 //   const burger = document.getElementById('burger');
 //   const mobileMenu = document.getElementById('mobileMenu');
-  
+
 //   // Открытие/закрытие меню
 //   burger.addEventListener('click', function() {
 //     this.classList.toggle('active');
 //     mobileMenu.classList.toggle('active');
 //     document.body.classList.toggle('no-scroll');
 //   });
-  
+
 //   // Закрытие при клике на ссылку
 //   mobileMenu.querySelectorAll('a').forEach(link => {
 //     link.addEventListener('click', () => {
@@ -51,7 +50,7 @@ function scalePage() {
 //       document.body.classList.remove('no-scroll');
 //     });
 //   });
-  
+
 //   // Закрытие при клике вне меню
 //   document.addEventListener('click', function(e) {
 //     if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
@@ -64,8 +63,6 @@ function scalePage() {
 // Вызываем функцию при загрузке страницы и изменении размера окна
 // $(window).on("resize load", scalePage);
 //скейлинг страницы при уменьшении экрана
-
-
 
 // function toggleContainer(containerId) {
 //   const container = document.getElementById(containerId);
@@ -81,16 +78,15 @@ function scalePage() {
 //   container.style.display = isVisible ? 'none' : 'block';
 // }
 
-
 // Карусель для сертификатов
-const diplomaSwiper = new Swiper('.qualification__info__diploma__imgs', {
+const diplomaSwiper = new Swiper(".qualification__info__diploma__imgs", {
   slidesPerView: 1,
   loop: true,
-  effect: 'fade',
+  effect: "fade",
   fadeEffect: { crossFade: true },
   navigation: {
-    nextEl: '.diploma-next',
-    prevEl: '.diploma-prev',
+    nextEl: ".diploma-next",
+    prevEl: ".diploma-prev",
   },
   // Критически важные параметры:
   injectStyles: false, // Отключаем встроенные стили
@@ -98,43 +94,78 @@ const diplomaSwiper = new Swiper('.qualification__info__diploma__imgs', {
   resizeObserver: true,
   // Отключаем все внутренние отступы:
   on: {
-    init: function() {
-      this.wrapperEl.style.padding = '0';
-      this.slides.forEach(slide => slide.style.padding = '0');
-    }
-  }
+    init: function () {
+      this.wrapperEl.style.padding = "0";
+      this.slides.forEach((slide) => (slide.style.padding = "0"));
+    },
+  },
 });
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Инициализация слайдера отзывов
-  const reviewsSwiper = new Swiper('.reviews__swiper', {
+  const reviewsSwiper = new Swiper(".reviews__swiper", {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
     grabCursor: true,
     navigation: {
-      nextEl: '.reviews__info__arrows .next',
-      prevEl: '.reviews__info__arrows .prev',
+      nextEl: ".reviews__info__arrows .next",
+      prevEl: ".reviews__info__arrows .prev",
     },
     noSwiping: true, // Отключает перетаскивание по всему слайдеру
-    noSwipingClass: 'reviews__info__list__el__link', // Разрешает клики по этому классу
+    noSwipingClass: "reviews__info__list__el__link", // Разрешает клики по этому классу
     preventInteractionOnTransition: true, // Фикс для плавности
 
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 10
+        spaceBetween: 10,
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 15
+        spaceBetween: 15,
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 20
-      }
+        spaceBetween: 20,
+      },
+    },
+  });
+  const reviewLinks = document.querySelectorAll(
+    ".reviews__info__list__el__link"
+  );
+  const popup = document.querySelector(".review-popup");
+  const popupText = document.querySelector(".review-popup__text");
+  const popupClose = document.querySelector(".review-popup__close");
+
+  reviewLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const reviewEl = this.closest(".reviews__info__list__el");
+      const reviewContent = reviewEl.innerHTML;
+
+      // Удаляем кнопку из контента попапа
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = reviewContent;
+      tempDiv.querySelector(".reviews__info__list__el__link").remove();
+
+      popupText.innerHTML = tempDiv.innerHTML;
+      popup.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  // Закрытие попапа
+  popupClose.addEventListener("click", () => {
+    popup.style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+
+  // Закрытие по клику на оверлей
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+      document.body.style.overflow = "auto";
     }
   });
 });
@@ -159,15 +190,17 @@ document.addEventListener('DOMContentLoaded', function() {
 }); */
 
 //открытие доп текста в прайсе на jquery с анимацией
-$('.price__el__item__info__el__item').on('click', function(e) {
+$(".price__el__item__info__el__item").on("click", function (e) {
   e.preventDefault();
 
-  if ($(this).prev('.price__el__item__info__el__more').css('display') === 'block') {
-    $(this).prev('.price__el__item__info__el__more').slideUp();
-    $(this).find('.price__el__item__info__el__item__btn').text('Подробнее');
+  if (
+    $(this).prev(".price__el__item__info__el__more").css("display") === "block"
+  ) {
+    $(this).prev(".price__el__item__info__el__more").slideUp();
+    $(this).find(".price__el__item__info__el__item__btn").text("Подробнее");
   } else {
-    $(this).prev('.price__el__item__info__el__more').slideDown();
-    $(this).find('.price__el__item__info__el__item__btn').text('Скрыть');
+    $(this).prev(".price__el__item__info__el__more").slideDown();
+    $(this).find(".price__el__item__info__el__item__btn").text("Скрыть");
   }
 });
 //открытие доп текста в прайсе на jquery с анимацией
@@ -185,41 +218,41 @@ $('.price__el__item__info__el__item').on('click', function(e) {
   }
 }) */
 
-  //открытие доп курсов на jquery с анимацией
-$('#addPrice').on('click', function(e) {
+//открытие доп курсов на jquery с анимацией
+$("#addPrice").on("click", function (e) {
   e.preventDefault();
-  console.log('add trigger');
-  
-  if ($('#containerAdd').css('display') != 'none') {
-    $('#containerAdd').slideUp();
-    console.log('add true');
-    $(this).text('Смотреть все программы')
-  } else {
-    $('#containerAdd').slideDown();
-    $('#containerAdd').css('display', 'flex');
-    $(this).text('Скрыть все программы')
+  console.log("add trigger");
 
-    console.log('add false');
+  if ($("#containerAdd").css("display") != "none") {
+    $("#containerAdd").slideUp();
+    console.log("add true");
+    $(this).text("Смотреть все программы");
+  } else {
+    $("#containerAdd").slideDown();
+    $("#containerAdd").css("display", "flex");
+    $(this).text("Скрыть все программы");
+
+    console.log("add false");
   }
 });
 
 //popup
 
-$('.open__popup').on('click', function(e) {
+$(".open__popup").on("click", function (e) {
   e.preventDefault();
 
-  $('.overlay, .popup__consult').fadeIn();
-  $('body').css('overflow', 'hidden');
+  $(".overlay, .popup__consult").fadeIn();
+  $("body").css("overflow", "hidden");
 });
 
-$('.popup__close').on('click', function(e) {
+$(".popup__close").on("click", function (e) {
   e.preventDefault();
 
-  $('.overlay, .popup__consult').fadeOut();
-  $('body').css('overflow', 'auto');
+  $(".overlay, .popup__consult").fadeOut();
+  $("body").css("overflow", "auto");
 });
 
-$('.popup__form--consult').on('submit', function(e) {
+$(".popup__form--consult").on("submit", function (e) {
   e.preventDefault();
 
   let inputsValid = false;
@@ -227,97 +260,96 @@ $('.popup__form--consult').on('submit', function(e) {
   let allValid = false;
 
   function checkInputs() {
-    const inputs = $('.popup-input');
-    
-    inputs.each(function() {
-        if ($(this).val().trim() === '') {
-          inputsValid = false;
-        } else {
-          inputsValid = true;
-        }
+    const inputs = $(".popup-input");
+
+    inputs.each(function () {
+      if ($(this).val().trim() === "") {
+        inputsValid = false;
+      } else {
+        inputsValid = true;
+      }
     });
-    
+
     return inputsValid;
   }
 
   function checkPrivacy() {
-
-    if ($('.accept-ppd-popup').prop('checked')) {
+    if ($(".accept-ppd-popup").prop("checked")) {
       checkboxValid = true;
-      $('.popup__form__check__fake').css('outline', 'none');
+      $(".popup__form__check__fake").css("outline", "none");
     } else {
       checkboxValid = false;
-      $('.popup__form__check__fake').css('outline', '1px dashed red');
+      $(".popup__form__check__fake").css("outline", "1px dashed red");
     }
-    
   }
 
   function checkValidity() {
-    if(inputsValid && checkboxValid) {
+    if (inputsValid && checkboxValid) {
       allValid = true;
     } else {
       allValid = false;
     }
 
     console.log(allValid);
-    
   }
 
   checkInputs();
   checkPrivacy();
   checkValidity();
 
-  if(!allValid) {
+  if (!allValid) {
     e.preventDefault();
 
-    $('.popup').fadeOut();
-    $('.popup__message__title').text('Валидация не пройдена. Необходимо заполнить все поля формы и дать согласие на обработку персональных данных');
-    $('.overlay, .popup__message').fadeIn();
-    $('body').css('overflow', 'hidden');
+    $(".popup").fadeOut();
+    $(".popup__message__title").text(
+      "Валидация не пройдена. Необходимо заполнить все поля формы и дать согласие на обработку персональных данных"
+    );
+    $(".overlay, .popup__message").fadeIn();
+    $("body").css("overflow", "hidden");
 
-    $('.popup__close--msg').on('click', function(e) {
+    $(".popup__close--msg").on("click", function (e) {
       e.preventDefault();
 
-      $('.popup__message').fadeOut();
-      $('.popup__consult').fadeIn();
+      $(".popup__message").fadeOut();
+      $(".popup__consult").fadeIn();
     });
   } else {
-    $('.popup__message__text').text('Валидация не пройдена. Необходимо заполнить все поля формы и дать согласие на обработку персональных данных');
-    console.log('валидация пройдена');
-    
+    $(".popup__message__text").text(
+      "Валидация не пройдена. Необходимо заполнить все поля формы и дать согласие на обработку персональных данных"
+    );
+    console.log("валидация пройдена");
+
     //код для отправки формы
   }
 });
 
-
 //бургер
-const container = document.querySelector('.nav__mobile__btn') //контейнер при клике
-const burger = document.querySelector('.nav__mobile__btn__menu') //кнопка бургера
-const burgerClose = document.querySelector('.nav__mobile__btn__close') //крестик
-const menu = document.querySelector('.nav__mobile__btn__menu__el') //меню бургера
-const nav = document.querySelector('.nav') //хейдер
-const navItems = document.querySelectorAll('.nav__mobile__list li a'); // все элементы списка 
+const container = document.querySelector(".nav__mobile__btn"); //контейнер при клике
+const burger = document.querySelector(".nav__mobile__btn__menu"); //кнопка бургера
+const burgerClose = document.querySelector(".nav__mobile__btn__close"); //крестик
+const menu = document.querySelector(".nav__mobile__btn__menu__el"); //меню бургера
+const nav = document.querySelector(".nav"); //хейдер
+const navItems = document.querySelectorAll(".nav__mobile__list li a"); // все элементы списка
 
-container.addEventListener('click', function(){
-  if(burgerClose.style.display === 'block'){
-    burgerClose.style.display = 'none'
-    menu.style.display = 'none'
-    nav.style.display = 'flex'
-    burger.style.display = 'block'
+container.addEventListener("click", function () {
+  if (burgerClose.style.display === "block") {
+    burgerClose.style.display = "none";
+    menu.style.display = "none";
+    nav.style.display = "flex";
+    burger.style.display = "block";
   } else {
-    burgerClose.style.display = 'block'
-    menu.style.display = 'block'
-    nav.style.display = 'none'
-    burger.style.display = 'none'
+    burgerClose.style.display = "block";
+    menu.style.display = "block";
+    nav.style.display = "none";
+    burger.style.display = "none";
   }
-})
+});
 //закрытие при клике на элемент списка
-navItems.forEach(item => {
-  item.addEventListener('click', function() {
-    burgerClose.style.display = 'none';
-    menu.style.display = 'none';
-    nav.style.display = 'flex';
-    burger.style.display = 'block';
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    burgerClose.style.display = "none";
+    menu.style.display = "none";
+    nav.style.display = "flex";
+    burger.style.display = "block";
   });
 });
-

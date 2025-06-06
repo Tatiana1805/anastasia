@@ -21,7 +21,7 @@
   justify-content: space-between;
   align-items: baseline;
   padding: 22px 0;
-  &__mobile{
+  &__mobile {
     display: none;
   }
   &__logo {
@@ -82,7 +82,7 @@ a {
   }
   &__close {
     display: none;
-    &__img{
+    &__img {
       width: 28px;
       height: 28px;
     }
@@ -93,28 +93,28 @@ a {
   .nav__list {
     display: none;
   }
-  .nav__mobile{
+  .nav__mobile {
     display: block;
-      width: 100%;
-      background: #e1eef6ab
+    width: 100%;
+    background: #e1eef6ab;
   }
   .nav__mobile__el {
-        display: flex;
-        padding: 3%;
-        width: 100%;
-        margin-top: 30px;
-        justify-content: space-between;
-}
-.nav__mobile__btn {
-  display: block;
-}
+    display: flex;
+    padding: 3%;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+  .nav__mobile__btn {
+    display: block;
+  }
   .nav__mobile__btn__menu {
     display: block;
     width: 28px;
     transition: 0.3s;
     cursor: pointer;
   }
-  .nav__mobile__contacts{
+  .nav__mobile__contacts {
     display: flex;
     gap: 10px;
     padding-top: 20px;
@@ -122,23 +122,25 @@ a {
   .nav__contacts {
     display: none;
   }
-  .nav__mobile__btn__menu__el{
+  .nav__mobile__btn__menu__el {
     display: none;
     margin: 0 auto;
   }
-  .nav__mobile__btn__close{
+  .nav__mobile__btn__close {
     margin-top: -94px;
-
   }
-  .nav__mobile__list{
+  .nav__mobile__list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 18px;
   }
-
 }
 @media (max-width: 500px) {
+  .header__container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   .nav__logo {
     display: none;
   }
