@@ -131,6 +131,9 @@
       flex-direction: column;
       align-items: center;
       &__diploma {
+        &__arrow{
+          display: none;
+        }
         &__imgs {
           padding: 0 40px;
           // max-height: 350px;
@@ -157,7 +160,7 @@
     width: auto;
   }
   .qualification__info__diploma__imgs {
-    max-width: 340px;
+    max-width: 300px;
   }
   .qualification__info__diploma__imgs {
     .swiper-slide {

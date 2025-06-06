@@ -62,7 +62,7 @@
 
           &::before {
             content: "";
-            background-image: url(../img/dot.svg);
+            background-image: url(../img/svg/dot.svg);
             position: absolute;
             left: 0;
             top: 32%;
@@ -70,6 +70,7 @@
             width: 11px;
             height: 11px;
             background-repeat: no-repeat;
+            background-size: contain;
           }
           &__thin {
             font-weight: 400;
@@ -147,7 +148,7 @@
 
           &::before {
             content: "";
-            background-image: url(../img/dot.svg);
+            background-image: url(../img/svg/dot.svg);
             position: absolute;
             left: 0;
             top: 32%;
@@ -155,6 +156,7 @@
             width: 11px;
             height: 11px;
             background-repeat: no-repeat;
+            background-size: contain;
           }
         }
       }
@@ -177,12 +179,12 @@
   }
 }
 @media (max-width: 1300px) {
-  .help__list__top {
-    // grid-template-columns: repeat(2, 1fr);
-  }
-  .help__list__bottom {
-    // grid-template-columns: repeat(2, 1fr);
-  }
+  // .help__list__top {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+  // .help__list__bottom {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 
   .help__img,
   .help__list__bottom__itemp__img {
@@ -214,5 +216,48 @@
   .help__list__bottom {
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .help__title {
+    max-width: 400px;
+    margin: auto;
+  }
+  .help__title__text {
+    text-align: center;
+  }
+  .help__title__img {
+    left: 50%;
+  }
+  .help__list__top__item__elem__el {
+    padding-left: 20px;
+  }
+  .help__list__top__item__elem__el::before {
+    width: 8px;
+    height: 8px;
+  }
+  .help__list__bottom__item__elem__el::before {
+    width: 8px;
+    height: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .help__list__top__item__elem__grid {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .help__list__top__item__head__number {
+    font-size: 48px;
+  }
+  .help__list__bottom__item__head__number {
+    font-size: 48px;
+  }
+}
+@media (max-width: 440px) {
+    .help__list__top__item__head__number {
+    font-size: 40px;
+  }
+  .help__list__bottom__item__head__number {
+    font-size: 40px;
   }
 }

@@ -64,14 +64,15 @@
 }
 
 @media (max-width: 1150px){
-// .footer__nav__list {
-//     gap: 42px;
-// }
+.footer {
+    padding: 64px 2% 32px;
+}
 .footer__nav {
   flex-direction: column;
 }
 .footer__nav__logo{
   margin-bottom: 45px;
+  text-align: center;
 }
 }
 @media (max-width: 710px){
@@ -87,5 +88,15 @@
   align-items: center;
   gap: 24px;
   margin-bottom: 30px;
+}
+}
+@media (max-width: 400px){
+.footer__nav__logo{
+  font-size: 32px;
+}
+}
+@media (max-width: 330px){
+.footer__nav__logo{
+  font-size: 24px;
 }
 }

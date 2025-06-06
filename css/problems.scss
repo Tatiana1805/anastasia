@@ -15,22 +15,27 @@
     }
   }
 }
-.problems__hint__mobile{
+.problems__hint__320{
   display: none;
 }
-.problems__hint__mobile__600{
+.problems__hint__600{
   display: none;
 }
-.problems__hint__desk{
+.problems__hint__900{
   display: none;
 }
 
 @media(max-width: 900px){
+  .problems__header{
+    max-width: 460px;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 
-  .problems__hint__desk{
+  .problems__hint__900{
     display: block;
   }
-  .problems__img{
+  .problems__desk{
     display: none;
   }
 }
@@ -38,19 +43,19 @@
   .problems__container{
     padding: 0;
   }
-  .problems__hint__desk{
+  .problems__hint__900{
     display: none;
   }
-  .problems__hint__mobile__600{
+  .problems__hint__600{
     display: block;
   }
 }
 
-@media(max-width: 320px){
-  .problems__hint__mobile__600{
+@media(max-width: 440px){
+  .problems__hint__600{
     display: none;
   }
-  .problems__hint__mobile{
+  .problems__hint__320{
     display: block;
   }
 }

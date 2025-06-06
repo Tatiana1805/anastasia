@@ -38,7 +38,7 @@
         border-radius: 20px;
         text-transform: uppercase;
       }
-      
+
       &__imgAbout {
         // border-radius: 64px;
         // width: 100%;
@@ -81,7 +81,7 @@
           line-height: 150%;
           &::before {
             content: "";
-            background-image: url(../img/dot.svg);
+            background-image: url(../img/svg/dot.svg);
             position: absolute;
             left: 0;
             top: 15%;
@@ -101,70 +101,70 @@
   height: 30px;
 }
 
-@media(max-width: 1200px){
-  .about__end__info__el{
+@media (max-width: 1200px) {
+  .about__end__info__el {
     margin: 0;
     width: 80%;
-    &__item{
+    &__item {
       margin-bottom: 14px;
       font-size: 14px;
     }
   }
 }
 
-@media(max-width: 900px){
-  .about{
+@media (max-width: 900px) {
+  .about {
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    &__start{
+    &__start {
       width: 100%;
-      &__about{
+      &__about {
         margin-bottom: 0;
         margin-left: -14px;
       }
-        &__quote{
-          margin: 0;
-          padding: 5%;
-          &__imgAbout{
-              width: 100%;
-              margin: 0 auto;
-          }
-        &__el{
-        display: none;
-      }
+      &__quote {
+        margin: 0;
+        padding: 5%;
+        &__imgAbout {
+          width: 100%;
+          margin: 0 auto;
+        }
+        &__el {
+          display: none;
         }
       }
-        &__end{
-        width: 100%;
-        &__rectangle{
-          display: none;
     }
-      &__info{
+    &__end {
+      width: 100%;
+      &__rectangle {
+        display: none;
+      }
+      &__info {
         margin: 0 auto;
         padding: 0;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-    &__el__item{
-      font-size: 16px;
-      margin-bottom: 8px;
-      &::before{
-        top: -2%;
-        transform: translateY(135%);
-        width: 8px;
-        height: 8px;
-        background-size: cover;
+        &__el__item {
+          font-size: 16px;
+          margin-bottom: 8px;
+          &::before {
+            top: -2%;
+            transform: translateY(135%);
+            width: 8px;
+            height: 8px;
+            background-size: cover;
+          }
+        }
       }
     }
-  }
-    }
-    &__h2{
+    &__h2 {
       margin-left: 60px;
       // font-size: 28px;
     }
-    &__cloud{
+    &__cloud {
       margin-top: -98px;
       width: 89%;
     }
