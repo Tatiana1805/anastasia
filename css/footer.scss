@@ -102,14 +102,14 @@
     font-size: 24px;
   }
 }
-/* Стили для номера телефона с анимацией подчеркивания */
+
 .footer__info__tel {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
   position: relative;
-  color: inherit; /* или укажите ваш цвет текста */
+  color: inherit; 
 }
 
 .footer__info__number {
@@ -131,7 +131,7 @@
   width: 100%;
 }
 
-/* Дополнительно: плавное изменение цвета иконки */
+
 .footer__info__icon {
   transition: transform 0.3s ease;
 }
@@ -153,4 +153,11 @@
 
 .footer__nav__list__item__link:hover::after {
   opacity: 1;
+}
+.footer__contacts__icon:hover {
+  transform: scale(1.1);
+}
+.contacts__info__end__button:hover {
+  background-color: #276eb3;
+
 }

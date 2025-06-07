@@ -77,7 +77,7 @@ button {
   align-items: center;
   margin-top: 42px;
 }
-button:hover {
+.start__btn:hover {
   background-color: #276eb3;
   overflow: hidden; /* Для анимации заливки */
   transition: all 0.4s ease-out;
