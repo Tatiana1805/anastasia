@@ -79,6 +79,8 @@ button {
 }
 button:hover {
   background-color: #276eb3;
+  overflow: hidden; /* Для анимации заливки */
+  transition: all 0.4s ease-out;
 }
 .hint__h1 {
   display: none;

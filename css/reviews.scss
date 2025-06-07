@@ -223,3 +223,11 @@
     }
   }
 }
+.reviews__info__list__el__link__img {
+  width: 15px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6); /* Пружинный эффект */
+}
+
+.reviews__info__list__el__link:hover .reviews__info__list__el__link__img {
+  transform: translateX(5px) scale(1.1); /* Сдвиг + небольшое увеличение */
+}

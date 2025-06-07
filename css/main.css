@@ -387,7 +387,10 @@ button {
   margin-top: 42px; }
 
 button:hover {
-  background-color: #276eb3; }
+  background-color: #276eb3;
+  overflow: hidden;
+  /* Для анимации заливки */
+  transition: all 0.4s ease-out; }
 
 .hint__h1 {
   display: none; }
@@ -1364,6 +1367,15 @@ button:hover {
       .reviews__info__list__el__link__img {
         width: 15px; }
 
+.reviews__info__list__el__link__img {
+  width: 15px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  /* Пружинный эффект */ }
+
+.reviews__info__list__el__link:hover .reviews__info__list__el__link__img {
+  transform: translateX(5px) scale(1.1);
+  /* Сдвиг + небольшое увеличение */ }
+
 .contacts {
   margin-top: 40px; }
   .contacts__h {
@@ -1527,7 +1539,7 @@ h2 {
     display: flex;
     margin-bottom: 68px;
     justify-content: space-between;
-    align-items: center; }
+    align-items: flex-end; }
     .footer__nav__logo {
       font-family: "Logo";
       font-size: 40px;
@@ -1535,18 +1547,21 @@ h2 {
     .footer__nav__list {
       display: flex;
       gap: 60px; }
-      .footer__nav__list__item__link {
-        color: #e1eef6 !important;
-        font-size: 16px;
-        position: relative;
-        top: 7px; }
+      .footer__nav__list__item {
+        position: relative; }
+        .footer__nav__list__item__link {
+          display: block;
+          color: #e1eef6;
+          position: relative;
+          padding-bottom: 3px;
+          text-decoration: none; }
   .footer__info {
     display: flex;
     justify-content: space-between; }
     .footer__info__p {
       color: #e1eef6 !important;
       font-size: 20px; }
-    .footer__info__tel {
+    .footer__info__number {
       color: #e1eef6 !important;
       font-weight: 700;
       font-family: "MainFontH";
@@ -1574,7 +1589,8 @@ h2 {
     padding: 64px 2% 32px; }
 
   .footer__nav {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
 
   .footer__nav__logo {
     margin-bottom: 45px;
@@ -1596,6 +1612,53 @@ h2 {
 @media (max-width: 330px) {
   .footer__nav__logo {
     font-size: 24px; } }
+/* Стили для номера телефона с анимацией подчеркивания */
+.footer__info__tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  /* или укажите ваш цвет текста */ }
+
+.footer__info__number {
+  position: relative; }
+
+.footer__info__number::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.4s ease; }
+
+.footer__info__tel:hover .footer__info__number::after {
+  width: 100%; }
+
+/* Дополнительно: плавное изменение цвета иконки */
+.footer__info__icon {
+  transition: transform 0.3s ease; }
+
+.footer__info__tel:hover .footer__info__icon {
+  transform: scale(1.1); }
+
+.footer__nav__list__item__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #e1eef6;
+  opacity: 0;
+  transition: opacity 0.3s ease; }
+
+.footer__nav__list__item__link:hover::after {
+  opacity: 1; }
+
 .overlay {
   display: none;
   position: fixed;
