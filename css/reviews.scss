@@ -29,17 +29,12 @@
   flex-shrink: 0;
   box-sizing: border-box;
 }
-.review__content {
+/* Стили для обрезанного текста в карточках */
+.reviews__info__list__el .review__content {
   /* Обязательные свойства для line-clamp */
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 15; /* Число строк */
-
-  /* Стандартизированное свойство (если будет поддерживаться) */
-  line-clamp: 5;
-  box-orient: vertical;
-
-  /* Дополнительные свойства для работы */
+  -webkit-line-clamp: 15; /* Уменьшила число строк для лучшего вида */
   overflow: hidden;
   text-overflow: ellipsis;
 
@@ -50,7 +45,7 @@
 
 /* Градиент для Firefox */
 @supports not (-webkit-line-clamp: 15) {
-  .reviews__info__list__el__p::after {
+  .reviews__info__list__el .review__content::after {
     content: "";
     position: absolute;
     right: 0;
@@ -64,6 +59,25 @@
     );
   }
 }
+
+.review-popup__text .review__content {
+  display: block !important;
+  -webkit-line-clamp: initial !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.review-popup__text .review__content::after {
+  display: none !important;
+}
+
+
+@media (max-width: 768px) {
+  .reviews__info__list__el .review__content {
+    -webkit-line-clamp: 10;
+    max-height: calc(1.5em * 15);
+  }
+}
 .review-popup {
   position: fixed;
   top: 0;
@@ -71,27 +85,35 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 20px;
   box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
+.review-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
 .review-popup__content {
   background: #fff;
   border-radius: 25px;
-  max-width: 800px;
+  max-width: 500px;
   width: 100%;
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
-  background-image: url(/img/svg/stars.svg);
-  background-position: 50% 70px;
-  background-size: 88px;
-  background-repeat: no-repeat;
   padding: 128px 36px 42px;
+  overflow-x: hidden; /* Запрещаем горизонтальную прокрутку */
+  width: calc(100% - 40px); /* Учитываем padding */
+  margin: 0 auto; /* Центрируем */
+  word-wrap: break-word; /* Перенос длинных слов */
+  hyphens: auto; /* Автоматическое переносы слов (если поддерживается) */
 }
 
 .review-popup__close {
@@ -107,8 +129,16 @@
   font-size: 24px;
   cursor: pointer;
 }
-.review-popup__close:hover {
+.review-popup__close:hover,
+.review-popup__close:focus {
+  background-color: transparent !important;
   color: #000 !important;
+  outline: none; /* Убираем стандартный outline при фокусе */
+}
+
+/* Дополнительно можно добавить стили для активного состояния */
+.review-popup__close:active {
+  transform: scale(0.95); /* Легкий эффект нажатия */
 }
 
 .review-popup__text {
@@ -169,6 +199,13 @@
           }
         }
       }
+      &__all {
+        text-align: right;
+        font-size: 15px;
+        margin-top: 10px;
+        font-family: "MainFont";
+        cursor: pointer;
+      }
       &__link {
         display: flex;
         gap: 11px;
@@ -177,10 +214,19 @@
         font-size: 18px;
         font-weight: 600;
         color: #1a5186;
+        align-items: baseline;
         &__img {
           width: 15px;
         }
       }
     }
   }
+}
+.reviews__info__list__el__link__img {
+  width: 15px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6); /* Пружинный эффект */
+}
+
+.reviews__info__list__el__link:hover .reviews__info__list__el__link__img {
+  transform: translateX(5px) scale(1.1); /* Сдвиг + небольшое увеличение */
 }

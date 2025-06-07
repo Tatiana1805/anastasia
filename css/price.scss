@@ -28,7 +28,7 @@
       &:hover {
         background-color: #276eb3;
         color: #ffffff;
-        border: none;
+        border: 3px solid transparent
       }
     }
     &__containerAdd{
@@ -282,4 +282,21 @@
     height: 129px;
     margin-top: -94px;
   }
+}
+
+.price__el__item__info__el__item__arrow {
+  width: 15px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.price__el__item__info__el__item:hover .price__el__item__info__el__item__arrow {
+  transform: translateX(5px) scale(1.1); 
+}
+.price__el__end__button__arrow {
+  width: 15px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.price__el__end__button:hover .price__el__end__button__arrow {
+  transform: translateX(5px) scale(1.1);
 }

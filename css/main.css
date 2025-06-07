@@ -225,21 +225,16 @@ span {
   .nav__contacts {
     gap: 30px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end; }
+    position: relative;
+    top: 5px; }
     .nav__contacts__icon {
       width: 24px; }
   .nav__list {
     display: flex;
-    align-items: center;
     gap: 40px;
     font-weight: 400;
     font-size: 18px;
     justify-content: space-between; }
-    .nav__list__item {
-      color: #6f6f70; }
-      .nav__list__item:hover {
-        text-decoration: underline; }
 
 a {
   color: #393652; }
@@ -324,6 +319,23 @@ a {
 
   .nav__mobile__btn__menu {
     width: 24px; } }
+.nav__contacts__icon:hover {
+  transform: scale(1.1); }
+
+.nav__mobile__list__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #3e3d40ee;
+  opacity: 0;
+  transition: opacity 0.3s ease; }
+
+.nav__mobile__list__item:hover::after {
+  opacity: 1; }
+
 .start__wrapper {
   display: flex;
   margin-top: 76px;
@@ -386,8 +398,11 @@ button {
   align-items: center;
   margin-top: 42px; }
 
-button:hover {
-  background-color: #276eb3; }
+.start__btn:hover {
+  background-color: #276eb3;
+  overflow: hidden;
+  /* Для анимации заливки */
+  transition: all 0.4s ease-out; }
 
 .hint__h1 {
   display: none; }
@@ -639,7 +654,7 @@ button:hover {
     gap: 22px;
     margin: 0 auto; }
     .help__list__top__item {
-      padding: 44px 34px;
+      padding: 41px 34px;
       background-color: #fbfdff;
       border-radius: 25px; }
       .help__list__top__item:first-child {
@@ -815,7 +830,13 @@ button:hover {
     font-size: 48px; }
 
   .help__list__bottom__item__head__number {
-    font-size: 48px; } }
+    font-size: 48px; }
+
+  .help__list__top__item {
+    padding: 30px 20px; }
+
+  .help__list__bottom__item {
+    padding: 30px 20px; } }
 @media (max-width: 440px) {
   .help__list__top__item__head__number {
     font-size: 40px; }
@@ -848,7 +869,7 @@ button:hover {
     .price__el__button:hover {
       background-color: #276eb3;
       color: #ffffff;
-      border: none; }
+      border: 3px solid transparent; }
   .price__el__containerAdd {
     display: none;
     flex-direction: column;
@@ -1040,6 +1061,20 @@ button:hover {
     margin-left: 0px;
     height: 129px;
     margin-top: -94px; } }
+.price__el__item__info__el__item__arrow {
+  width: 15px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+
+.price__el__item__info__el__item:hover .price__el__item__info__el__item__arrow {
+  transform: translateX(5px) scale(1.1); }
+
+.price__el__end__button__arrow {
+  width: 15px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+
+.price__el__end__button:hover .price__el__end__button__arrow {
+  transform: translateX(5px) scale(1.1); }
+
 .qualification__title {
   max-width: 476px;
   position: relative;
@@ -1192,16 +1227,13 @@ button:hover {
   flex-shrink: 0;
   box-sizing: border-box; }
 
-.review__content {
+/* Стили для обрезанного текста в карточках */
+.reviews__info__list__el .review__content {
   /* Обязательные свойства для line-clamp */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 15;
-  /* Число строк */
-  /* Стандартизированное свойство (если будет поддерживаться) */
-  line-clamp: 5;
-  box-orient: vertical;
-  /* Дополнительные свойства для работы */
+  /* Уменьшила число строк для лучшего вида */
   overflow: hidden;
   text-overflow: ellipsis;
   /* Резервный вариант для Firefox */
@@ -1211,7 +1243,7 @@ button:hover {
 
 /* Градиент для Firefox */
 @supports not (-webkit-line-clamp: 15) {
-  .reviews__info__list__el__p::after {
+  .reviews__info__list__el .review__content::after {
     content: "";
     position: absolute;
     right: 0;
@@ -1219,6 +1251,19 @@ button:hover {
     width: 30%;
     height: 1.5em;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white 70%); } }
+.review-popup__text .review__content {
+  display: block !important;
+  -webkit-line-clamp: initial !important;
+  max-height: none !important;
+  overflow: visible !important; }
+
+.review-popup__text .review__content::after {
+  display: none !important; }
+
+@media (max-width: 768px) {
+  .reviews__info__list__el .review__content {
+    -webkit-line-clamp: 10;
+    max-height: calc(1.5em * 15); } }
 .review-popup {
   position: fixed;
   top: 0;
@@ -1226,26 +1271,39 @@ button:hover {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s; }
+
+.review-popup.active {
+  opacity: 1;
+  visibility: visible; }
 
 .review-popup__content {
   background: #fff;
   border-radius: 25px;
-  max-width: 800px;
+  max-width: 500px;
   width: 100%;
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
-  background-image: url(/img/svg/stars.svg);
-  background-position: 50% 70px;
-  background-size: 88px;
-  background-repeat: no-repeat;
-  padding: 128px 36px 42px; }
+  padding: 128px 36px 42px;
+  overflow-x: hidden;
+  /* Запрещаем горизонтальную прокрутку */
+  width: calc(100% - 40px);
+  /* Учитываем padding */
+  margin: 0 auto;
+  /* Центрируем */
+  word-wrap: break-word;
+  /* Перенос длинных слов */
+  hyphens: auto;
+  /* Автоматическое переносы слов (если поддерживается) */ }
 
 .review-popup__close {
   position: absolute;
@@ -1260,8 +1318,17 @@ button:hover {
   font-size: 24px;
   cursor: pointer; }
 
-.review-popup__close:hover {
-  color: #000 !important; }
+.review-popup__close:hover,
+.review-popup__close:focus {
+  background-color: transparent !important;
+  color: #000 !important;
+  outline: none;
+  /* Убираем стандартный outline при фокусе */ }
+
+/* Дополнительно можно добавить стили для активного состояния */
+.review-popup__close:active {
+  transform: scale(0.95);
+  /* Легкий эффект нажатия */ }
 
 .review-popup__text {
   color: #000;
@@ -1306,6 +1373,12 @@ button:hover {
         list-style: square; }
         .reviews__info__list__el__list__li::marker {
           color: #d9d9d9; }
+    .reviews__info__list__el__all {
+      text-align: right;
+      font-size: 15px;
+      margin-top: 10px;
+      font-family: "MainFont";
+      cursor: pointer; }
     .reviews__info__list__el__link {
       display: flex;
       gap: 11px;
@@ -1313,9 +1386,19 @@ button:hover {
       font-family: "MainFontH";
       font-size: 18px;
       font-weight: 600;
-      color: #1a5186; }
+      color: #1a5186;
+      align-items: baseline; }
       .reviews__info__list__el__link__img {
         width: 15px; }
+
+.reviews__info__list__el__link__img {
+  width: 15px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  /* Пружинный эффект */ }
+
+.reviews__info__list__el__link:hover .reviews__info__list__el__link__img {
+  transform: translateX(5px) scale(1.1);
+  /* Сдвиг + небольшое увеличение */ }
 
 .contacts {
   margin-top: 40px; }
@@ -1331,7 +1414,7 @@ button:hover {
       transform: translate(-50%, -50%);
       width: 113%; }
   .contacts__info {
-    background-color: #FBFDFF;
+    background-color: #fbfdff;
     width: 100%;
     margin-top: 100px;
     border-radius: 25px;
@@ -1359,10 +1442,10 @@ button:hover {
         font-family: "MainFontH";
         font-size: 18px;
         font-weight: 600;
-        text-decoration: underline;
         color: black;
         display: flex;
-        align-items: center; }
+        align-items: center;
+        position: relative; }
       .contacts__info__start__tel__p {
         font-size: 20px; }
     .contacts__info__img {
@@ -1472,6 +1555,50 @@ h2 {
         font-size: 20px; }
   .contacts__h__img {
     width: 96%; } }
+.contacts__info__end__span:hover {
+  animation: shake 0.4s ease-in-out; }
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(1deg); }
+  50% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(-1deg); }
+  100% {
+    transform: rotate(0deg); } }
+/* Анимация подчеркивания для номера телефона */
+.contacts__info__start__tel__el {
+  position: relative;
+  display: inline-flex;
+  align-items: center; }
+
+.contacts__info__start__tel__el::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 24px;
+  /* Учитываем ширину иконки */
+  width: calc(100% - 24px);
+  /* Ширина минус иконка */
+  height: 1px;
+  background-color: #0e0e0e;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease; }
+
+.contacts__info__start__tel__el:hover::after {
+  transform: scaleX(1); }
+
+/* Анимация иконки телефона */
+.contacts__info__start__tel__icon {
+  transition: transform 0.3s ease; }
+
+.contacts__info__start__tel__el:hover .contacts__info__start__tel__icon {
+  transform: scale(1.1); }
+
 .footer {
   background: #1a5186;
   margin-top: 100px;
@@ -1480,7 +1607,7 @@ h2 {
     display: flex;
     margin-bottom: 68px;
     justify-content: space-between;
-    align-items: center; }
+    align-items: flex-end; }
     .footer__nav__logo {
       font-family: "Logo";
       font-size: 40px;
@@ -1488,18 +1615,21 @@ h2 {
     .footer__nav__list {
       display: flex;
       gap: 60px; }
-      .footer__nav__list__item__link {
-        color: #e1eef6 !important;
-        font-size: 16px;
-        position: relative;
-        top: 7px; }
+      .footer__nav__list__item {
+        position: relative; }
+        .footer__nav__list__item__link {
+          display: block;
+          color: #e1eef6;
+          position: relative;
+          padding-bottom: 3px;
+          text-decoration: none; }
   .footer__info {
     display: flex;
     justify-content: space-between; }
     .footer__info__p {
       color: #e1eef6 !important;
       font-size: 20px; }
-    .footer__info__tel {
+    .footer__info__number {
       color: #e1eef6 !important;
       font-weight: 700;
       font-family: "MainFontH";
@@ -1527,7 +1657,8 @@ h2 {
     padding: 64px 2% 32px; }
 
   .footer__nav {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
 
   .footer__nav__logo {
     margin-bottom: 45px;
@@ -1549,6 +1680,56 @@ h2 {
 @media (max-width: 330px) {
   .footer__nav__logo {
     font-size: 24px; } }
+.footer__info__tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  position: relative;
+  color: inherit; }
+
+.footer__info__number {
+  position: relative; }
+
+.footer__info__number::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.4s ease; }
+
+.footer__info__tel:hover .footer__info__number::after {
+  width: 100%; }
+
+.footer__info__icon {
+  transition: transform 0.3s ease; }
+
+.footer__info__tel:hover .footer__info__icon {
+  transform: scale(1.1); }
+
+.footer__nav__list__item__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #e1eef6;
+  opacity: 0;
+  transition: opacity 0.3s ease; }
+
+.footer__nav__list__item__link:hover::after {
+  opacity: 1; }
+
+.footer__contacts__icon:hover {
+  transform: scale(1.1); }
+
+.contacts__info__end__button:hover {
+  background-color: #276eb3; }
+
 .overlay {
   display: none;
   position: fixed;

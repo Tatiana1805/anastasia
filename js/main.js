@@ -131,40 +131,38 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-  const reviewLinks = document.querySelectorAll(
-    ".reviews__info__list__el__link"
-  );
+  const reviewAll = document.querySelectorAll(".reviews__info__list__el__all");
   const popup = document.querySelector(".review-popup");
   const popupText = document.querySelector(".review-popup__text");
   const popupClose = document.querySelector(".review-popup__close");
 
-  reviewLinks.forEach((link) => {
+  reviewAll.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       const reviewEl = this.closest(".reviews__info__list__el");
-      const reviewContent = reviewEl.innerHTML;
-
-      // Удаляем кнопку из контента попапа
-      const tempDiv = document.createElement("div");
-      tempDiv.innerHTML = reviewContent;
-      tempDiv.querySelector(".reviews__info__list__el__link").remove();
-
-      popupText.innerHTML = tempDiv.innerHTML;
-      popup.style.display = "flex";
+      
+      // Клонируем только содержимое отзыва
+      const reviewContent = reviewEl.querySelector('.review__content').cloneNode(true);
+      
+      popupText.innerHTML = '';
+      popupText.appendChild(reviewContent);
+      
+      // Показываем попап через добавление класса
+      popup.classList.add('active');
       document.body.style.overflow = "hidden";
     });
   });
 
   // Закрытие попапа
   popupClose.addEventListener("click", () => {
-    popup.style.display = "none";
+    popup.classList.remove('active');
     document.body.style.overflow = "auto";
   });
 
   // Закрытие по клику на оверлей
   popup.addEventListener("click", (e) => {
     if (e.target === popup) {
-      popup.style.display = "none";
+      popup.classList.remove('active');
       document.body.style.overflow = "auto";
     }
   });
