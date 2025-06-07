@@ -25,7 +25,7 @@
     gap: 22px;
     margin: 0 auto;
     &__item {
-      padding: 44px 34px;
+      padding: 41px 34px;
       background-color: #fbfdff;
       border-radius: 25px;
       &:first-child {
@@ -252,6 +252,13 @@
   .help__list__bottom__item__head__number {
     font-size: 48px;
   }
+  .help__list__top__item{
+    padding: 30px 20px;
+  }
+    .help__list__bottom__item{
+    padding: 30px 20px;
+  }
+
 }
 @media (max-width: 440px) {
     .help__list__top__item__head__number {
