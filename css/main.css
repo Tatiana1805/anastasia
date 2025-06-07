@@ -225,21 +225,16 @@ span {
   .nav__contacts {
     gap: 30px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end; }
+    position: relative;
+    top: 5px; }
     .nav__contacts__icon {
       width: 24px; }
   .nav__list {
     display: flex;
-    align-items: center;
     gap: 40px;
     font-weight: 400;
     font-size: 18px;
     justify-content: space-between; }
-    .nav__list__item {
-      color: #6f6f70; }
-      .nav__list__item:hover {
-        text-decoration: underline; }
 
 a {
   color: #393652; }
@@ -324,6 +319,23 @@ a {
 
   .nav__mobile__btn__menu {
     width: 24px; } }
+.nav__contacts__icon:hover {
+  transform: scale(1.1); }
+
+.nav__mobile__list__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #3e3d40ee;
+  opacity: 0;
+  transition: opacity 0.3s ease; }
+
+.nav__mobile__list__item:hover::after {
+  opacity: 1; }
+
 .start__wrapper {
   display: flex;
   margin-top: 76px;
