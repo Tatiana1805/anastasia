@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="libs/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.min.css"/>
   </head>
   <body>
     <div class="wrapper">
@@ -80,7 +80,7 @@
             <div class="start__wrapper__hero__hint">
               <img
                 class="start__wrapper__hero__hint__img"
-                src="./img/hero.png"
+                src="./img/hero.webp"
                 alt="фотография психолога"
               />
               
@@ -95,7 +95,7 @@
             <div class="start__wrapper__hero">
               <img
                 class="start__wrapper__hero__img"
-                src="./img/hero.png"
+                src="./img/hero.webp"
                 alt="фотография психолога"
               />
               
@@ -109,12 +109,12 @@
             <div class="about__start">
               <div class="about__start__about">
                 <h2 class="about__h2">Обо мне</h2>
-                <img class="about__cloud" src="./img/cloud.png" alt="фоновое облако"/>
+                <img class="about__cloud" src="./img/cloud.webp" alt="фоновое облако"/>
               </div>
               <div class="about__start__quote">
                 <img
                   class="about__start__quote__imgAbout"
-                  src="./img/imgAbout.png"
+                  src="./img/imgAbout.webp"
                 />
                 <div class="about__start__quote__el">
                   <img class="quote" src="./img/svg/quote.svg" alt="кавычки" />
@@ -170,10 +170,10 @@
                 я работаю
               </h2>
             </div>
-            <img class="problems__desk" src="./img/problems_desk.png" loading="lazy" alt="problems description" />
-            <img class="problems__hint__900" src="./img/problems_900.png" loading="lazy" alt="problems description" />
-            <img class="problems__hint__600" src="./img/problems_600.png" loading="lazy" alt="problems description" />
-            <img class="problems__hint__320" src="./img/problems_320.png" loading="lazy" alt="problems description" />
+            <img class="problems__desk" src="./img/problems_desk.webp" loading="lazy" alt="problems description" />
+            <img class="problems__hint__900" src="./img/problems_900.webp" loading="lazy" alt="problems description" />
+            <img class="problems__hint__600" src="./img/problems_600.webp" loading="lazy" alt="problems description" />
+            <img class="problems__hint__320" src="./img/problems_320.webp" loading="lazy" alt="problems description" />
           </div>
         </section>
         <section class="help" id="help">
@@ -219,7 +219,7 @@
               присоединиться другой.
               </p>
             </div>
-        <img class="hint__img" loading="lazy" src="./img/help_children.png" alt="Дети злятся" />
+        <img class="hint__img" loading="lazy" src="./img/help_children.webp" alt="Дети злятся" />
             <div class="help__list__top__item">
               
               <div class="help__list__top__item__head">
@@ -255,7 +255,7 @@
             </div>
         
             <div class="help__list__top__itemp">
-              <img class="help__list__top__itemp__img" loading="lazy" src="./img/help_children.png" alt="Дети злятся" />
+              <img class="help__list__top__itemp__img" loading="lazy" src="./img/help_children.webp" alt="Дети злятся" />
               <div class="help__list__top__itemp__quote">
                 <img src="./img/svg/quote_white.svg" class="help__list__top__itemp__quote__svg" alt=" белые кавычки">
               <span class="help__list__top__itemp__quote__blockquote">
@@ -268,7 +268,7 @@
             </div>
             <div class="help__list__bottom">
               <div class="help__list__bottom__itemp">
-              <img class="help__list__bottom__itemp__img" src="./img/help__man.png" loading="lazy" alt="Человек с проблемами" />
+              <img class="help__list__bottom__itemp__img" src="./img/help__man.webp" loading="lazy" alt="Человек с проблемами" />
               </div>
               <div class="help__list__bottom__item">
               <div class="help__list__bottom__item__head">
@@ -452,13 +452,14 @@
                                   медитации.<br>
                                   Помощь в решении сложных жизненных ситуаций и укреплении семейных отношений. Развитие коммуникативных навыков
                                   у всех членов семьи.
-                                <div class="price__el__item__info__el__more" id="more">
-                                  <li> Заниматься в мини-группе с практическими заданиями, которые легко применять в жизни</li>
-                                </div>
-                                <a class="price__el__item__info__el__item">
-                                  <span class="price__el__item__info__el__item__btn">Подробнее</span>
-                                  <img src="./img/svg/arrow.svg" class="price__el__item__info__el__item__arrow">
-                                </a> </p>
+                                  <div class="price__el__item__info__el__more" id="more">
+                                    <li> Заниматься в мини-группе с практическими заданиями, которые легко применять в жизни</li>
+                                  </div>
+                                  <a class="price__el__item__info__el__item">
+                                    <span class="price__el__item__info__el__item__btn">Подробнее</span>
+                                    <img src="./img/svg/arrow.svg" class="price__el__item__info__el__item__arrow">
+                                  </a> 
+                                </p>
                               </div>
                               <div class="price__el__item__info__many">
                                 <span class="price__el__item__info__many__it">40 000 ₽</span>
@@ -513,32 +514,47 @@
                           <div class="swiper qualification__info__diploma__imgs">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip1.jpg" alt="Сертификат">
+                                <a href="./img/dip/dip1.webp" data-fancybox="diplomas" data-caption="Сертификат 1">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip1.webp" alt="Сертификат">
+                                </a>
                               </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip2.jpg" alt="Сертификат" loading="lazy">
+                                <a href="./img/dip/dip2.webp" data-fancybox="diplomas" data-caption="Сертификат 2">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip2.webp" alt="Сертификат" loading="lazy">
+                                </a>
                               </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip3.jpg" alt="Сертификат" loading="lazy">
-                              </div>
+                                <a href="./img/dip/dip3.webp" data-fancybox="diplomas" data-caption="Сертификат 3">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip3.webp" alt="Сертификат" loading="lazy">
+                              </a>
+                            </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip4.jpg" alt="Сертификат" loading="lazy">
-                              </div>
+                                <a href="./img/dip/dip4.webp" data-fancybox="diplomas" data-caption="Сертификат 4">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip4.webp" alt="Сертификат" loading="lazy">
+                              </a>
+                            </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip5.jpg" alt="Сертификат" loading="lazy">
-                              </div>
+                                <a href="./img/dip/dip5.webp" data-fancybox="diplomas" data-caption="Сертификат 5">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip5.webp" alt="Сертификат" loading="lazy">
+                              </a>
+                            </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip6.jpg" alt="Сертификат" loading="lazy">
-                              </div>
+                                <a href="./img/dip/dip6.webp" data-fancybox="diplomas" data-caption="Сертификат 6">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip6.webp" alt="Сертификат" loading="lazy">
+                              </a>
+                            </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip7.jpg" alt="Сертификат" loading="lazy">
-                              </div>
+                                <a href="./img/dip/dip7.webp" data-fancybox="diplomas" data-caption="Сертификат 7">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip7.webp" alt="Сертификат" loading="lazy">
+                              </a>
+                            </div>
                               <div class="swiper-slide">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip8.jpg" alt="Сертификат" loading="lazy">
-                              </div>
+                                <a href="./img/dip/dip8.webp" data-fancybox="diplomas" data-caption="Сертификат 8">
+                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip8.webp" alt="Сертификат" loading="lazy">
+                              </a>
+                            </div>
                             </div>
                           </div>
-                          
                           <div class="qualification__info__diploma__arrow">
                             <a class="diploma-next">
                               <img src="./img/svg/to-right.svg" alt="листать вправо">
@@ -736,7 +752,7 @@
                       </div>
                     </div>
                     <div class="contacts__info__img">
-                      <img src="./img/heroContacts.png" alt="фотография психолога"/>
+                      <img src="./img/heroContacts.webp" alt="фотография психолога"/>
                     </div> 
                     <div class="contacts__info__start__tel contacts__info__start__mobile">
                         <h4>Контакты</h4>
@@ -858,6 +874,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.min.js"></script>
   </body>
 </html>
