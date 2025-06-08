@@ -819,7 +819,8 @@ button {
     display: block;
     max-height: 500px;
     object-fit: cover;
-    object-position: top; }
+    object-position: top;
+    border-radius: 25px; }
 
   .help__list__bottom__itemp__img {
     max-height: 500px;
