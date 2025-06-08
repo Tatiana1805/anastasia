@@ -87,7 +87,7 @@ fieldset {
 
 .container {
   position: relative;
-  width: 1278px;
+  max-width: 1278px;
   margin: 0 auto; }
 
 .main {
@@ -143,6 +143,29 @@ span {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: -0.01em; }
+
+section[id] {
+  scroll-margin-top: 100px;
+  /* Высота вашего хедера + отступ */ }
+
+/* Для плавности всего сайта */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; }
+
+.nav__contacts__icon,
+.nav__mobile__contacts .nav__contacts__icon,
+.nav__mobile__btn__menu,
+.nav__mobile__btn__close {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+  /* Точка трансформации по центру */ }
+
+button, .btn {
+  transition: transform 0.3s ease, background-color 0.3s ease; }
+
+button:hover, .btn:hover {
+  transform: scale(1.05); }
 
 :root {
   --bg-color: #97b9cd; }
@@ -370,7 +393,7 @@ a {
 
 .start__wrapper {
   display: flex;
-  margin-top: 76px;
+  margin-top: 90px;
   background-color: #fbfdff;
   border-radius: 50px;
   border: 2px dashed #b1c0cf;

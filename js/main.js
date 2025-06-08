@@ -31,53 +31,6 @@ function scalePage() {
   }
 }
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   const burger = document.getElementById('burger');
-//   const mobileMenu = document.getElementById('mobileMenu');
-
-//   // Открытие/закрытие меню
-//   burger.addEventListener('click', function() {
-//     this.classList.toggle('active');
-//     mobileMenu.classList.toggle('active');
-//     document.body.classList.toggle('no-scroll');
-//   });
-
-//   // Закрытие при клике на ссылку
-//   mobileMenu.querySelectorAll('a').forEach(link => {
-//     link.addEventListener('click', () => {
-//       burger.classList.remove('active');
-//       mobileMenu.classList.remove('active');
-//       document.body.classList.remove('no-scroll');
-//     });
-//   });
-
-//   // Закрытие при клике вне меню
-//   document.addEventListener('click', function(e) {
-//     if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
-//       burger.classList.remove('active');
-//       mobileMenu.classList.remove('active');
-//       document.body.classList.remove('no-scroll');
-//     }
-//   });
-// });
-// Вызываем функцию при загрузке страницы и изменении размера окна
-// $(window).on("resize load", scalePage);
-//скейлинг страницы при уменьшении экрана
-
-// function toggleContainer(containerId) {
-//   const container = document.getElementById(containerId);
-//   const isVisible = container.style.display === 'block';
-
-//   // Скрываем все контейнеры
-//   const containers = document.querySelectorAll('.price__container__el__item');
-//   containers.forEach((c) => {
-//       c.style.display = 'none';
-//   });
-
-//   // Показываем или скрываем выбранный контейнер
-//   container.style.display = isVisible ? 'none' : 'block';
-// }
-
 // Карусель для сертификатов
 const diplomaSwiper = new Swiper(".qualification__info__diploma__imgs", {
   slidesPerView: 1,
@@ -101,8 +54,8 @@ const diplomaSwiper = new Swiper(".qualification__info__diploma__imgs", {
   },
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Инициализация слайдера отзывов
   const reviewsSwiper = new Swiper(".reviews__swiper", {
     slidesPerView: 3,
     spaceBetween: 20,
