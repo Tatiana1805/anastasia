@@ -322,32 +322,44 @@ $(".popup__form--consult").on("submit", function (e) {
 });
 
 //бургер
-const container = document.querySelector(".nav__mobile__btn"); //контейнер при клике
-const burger = document.querySelector(".nav__mobile__btn__menu"); //кнопка бургера
-const burgerClose = document.querySelector(".nav__mobile__btn__close"); //крестик
-const menu = document.querySelector(".nav__mobile__btn__menu__el"); //меню бургера
-const nav = document.querySelector(".nav"); //хейдер
-const navItems = document.querySelectorAll(".nav__mobile__list li a"); // все элементы списка
+const container = document.querySelector(".nav__mobile__btn");
+const burger = document.querySelector(".nav__mobile__btn__menu");
+const burgerClose = document.querySelector(".nav__mobile__btn__close");
+const menu = document.querySelector(".nav__mobile__btn__menu__el");
+const nav = document.querySelector(".nav");
+const navItems = document.querySelectorAll(".nav__mobile__list li a");
 
-container.addEventListener("click", function () {
-  if (burgerClose.style.display === "block") {
-    burgerClose.style.display = "none";
+// Функция для открытия меню
+function openMenu() {
+  menu.style.display = "block";
+  nav.style.display = "none";
+  burger.style.display = "none";
+  burgerClose.style.display = "block";
+  setTimeout(() => menu.classList.add("active"), 10);
+  console.log("где крестик")
+}
+
+// Функция для закрытия меню
+function closeMenu() {
+  menu.classList.remove("active");
+  setTimeout(() => {
     menu.style.display = "none";
     nav.style.display = "flex";
     burger.style.display = "block";
+    burgerClose.style.display = "none";
+  }, 300);
+}
+
+// Обработчик клика по кнопке
+container.addEventListener("click", function() {
+  if (menu.classList.contains("active")) {
+    closeMenu();
   } else {
-    burgerClose.style.display = "block";
-    menu.style.display = "block";
-    nav.style.display = "none";
-    burger.style.display = "none";
+    openMenu();
   }
 });
-//закрытие при клике на элемент списка
-navItems.forEach((item) => {
-  item.addEventListener("click", function () {
-    burgerClose.style.display = "none";
-    menu.style.display = "none";
-    nav.style.display = "flex";
-    burger.style.display = "block";
-  });
+
+// Закрытие при клике на пункты меню
+navItems.forEach(item => {
+  item.addEventListener("click", closeMenu);
 });
