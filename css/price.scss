@@ -256,8 +256,9 @@
       text-align: center;
     }
     .price__el__button {
-      width: 48%;
+      padding: 8px 40px;
       font-weight: 600;
+      width: auto;
     }
     .price__cloud {
         margin-top: -84px;
@@ -300,3 +301,4 @@
 .price__el__end__button:hover .price__el__end__button__arrow {
   transform: translateX(5px) scale(1.1);
 }
+

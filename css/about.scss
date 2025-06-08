@@ -3,8 +3,8 @@
   gap: 20px;
   justify-content: space-between;
   &__cloud {
-    margin-top: -120px;
     width: auto;
+    margin-top: -62px;
     // width: 252px;
     // height: 52px;
   }
@@ -165,8 +165,9 @@
       // font-size: 28px;
     }
     &__cloud {
-      margin-top: -98px;
-      width: 89%;
+      margin-top: -43px;
+      width: 70%;
+      margin-left: 35px;
     }
   }
 }
