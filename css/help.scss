@@ -92,6 +92,8 @@
       flex-direction: column;
       &__img {
         border-radius: 25px;
+        height: 60%;
+        object-fit: cover;
       }
       &__quote {
         background-color: #1a5186;
@@ -112,9 +114,6 @@
         }
       }
     }
-  }
-  .hint__img {
-    display: none;
   }
   &__bottom {
     display: grid;
@@ -178,6 +177,9 @@
     }
   }
 }
+  .hint__img {
+    display: none;
+  }
 @media (max-width: 1300px) {
   // .help__list__top {
   //   grid-template-columns: repeat(2, 1fr);
