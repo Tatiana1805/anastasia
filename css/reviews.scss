@@ -71,7 +71,6 @@
   display: none !important;
 }
 
-
 @media (max-width: 768px) {
   .reviews__info__list__el .review__content {
     -webkit-line-clamp: 10;
@@ -229,4 +228,14 @@
 
 .reviews__info__list__el__link:hover .reviews__info__list__el__link__img {
   transform: translateX(5px) scale(1.1); /* Сдвиг + небольшое увеличение */
+}
+@media (max-width: 1200px) {
+  .reviews__title {
+    max-width: 520px;
+  }
+}
+@media (max-width: 1024px) {
+  .reviews__info__arrows__el {
+    display: none;
+  }
 }

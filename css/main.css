@@ -203,6 +203,9 @@ button:hover, .btn:hover {
 
   .main {
     gap: 150px; } }
+@media (max-width: 600px) {
+  .main {
+    gap: 100px; } }
 @media (max-width: 340px) {
   h4 {
     max-width: 227px;
@@ -838,6 +841,9 @@ button {
   .help__list__bottom__itemp__img {
     height: 100%;
     object-fit: cover; } }
+@media (max-width: 1200px) {
+  .help__title {
+    max-width: 480px; } }
 @media (max-width: 1000px) {
   .hint__img {
     display: block;
@@ -1461,6 +1467,12 @@ button {
   transform: translateX(5px) scale(1.1);
   /* Сдвиг + небольшое увеличение */ }
 
+@media (max-width: 1200px) {
+  .reviews__title {
+    max-width: 520px; } }
+@media (max-width: 1024px) {
+  .reviews__info__arrows__el {
+    display: none; } }
 .contacts {
   margin-top: 40px; }
   .contacts__h {

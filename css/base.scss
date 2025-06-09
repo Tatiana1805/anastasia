@@ -228,7 +228,11 @@ button:hover, .btn:hover {
     gap: 150px;
   }
 }
-
+@media (max-width: 600px) {
+  .main {
+    gap: 100px;
+  }
+}
 @media (max-width: 340px) {
   h4 {
     max-width: 227px;
