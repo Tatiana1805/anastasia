@@ -121,25 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//открытие доп текста в прайсе
-/* document.querySelectorAll('.price__el__item__info__el__item').forEach(item => {
-  item.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const container = e.target.closest(".price__el__item__info__el") //доходим до родителя
-    const moreText = container.querySelector('.price__el__item__info__el__more') //обращаемся к скрытому тексту через родителя
-    const buttonText = container.querySelector(".price__el__item__info__el__item__btn")
-
-    if (moreText.style.display === "block") {
-      moreText.style.display = "none";
-      buttonText.textContent = "Подробнее";
-    } else {
-      moreText.style.display = "block";
-      buttonText.textContent = "Скрыть";
-    }
-  });
-}); */
-
 //открытие доп текста в прайсе на jquery с анимацией
 $(".price__el__item__info__el__item").on("click", function (e) {
   e.preventDefault();
@@ -154,20 +135,6 @@ $(".price__el__item__info__el__item").on("click", function (e) {
     $(this).find(".price__el__item__info__el__item__btn").text("Скрыть");
   }
 });
-//открытие доп текста в прайсе на jquery с анимацией
-
-//открытие доп курсов
-/* document.getElementById('addPrice').addEventListener('click', function(e){
-  e.preventDefault();
-  const containerAdd = document.getElementById("containerAdd")
-  if(containerAdd.style.display === 'flex'){
-    containerAdd.style.display = 'none';
-    this.textContent = 'Смотреть все программы'
-  } else {
-    containerAdd.style.display = 'flex'
-    this.textContent = 'Скрыть все программы'
-  }
-}) */
 
 //открытие доп курсов на jquery с анимацией
 $("#addPrice").on("click", function (e) {
@@ -176,14 +143,11 @@ $("#addPrice").on("click", function (e) {
 
   if ($("#containerAdd").css("display") != "none") {
     $("#containerAdd").slideUp();
-    console.log("add true");
     $(this).text("Смотреть все программы");
   } else {
     $("#containerAdd").slideDown();
     $("#containerAdd").css("display", "flex");
     $(this).text("Скрыть все программы");
-
-    console.log("add false");
   }
 });
 
@@ -289,7 +253,6 @@ function openMenu() {
   burger.style.display = "none";
   burgerClose.style.display = "block";
   setTimeout(() => menu.classList.add("active"), 10);
-  console.log("где крестик")
 }
 
 // Функция для закрытия меню

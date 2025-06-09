@@ -174,9 +174,6 @@ button:hover,
 .btn:hover {
   transform: scale(1.05); }
 
-:root {
-  --bg-color: #97b9cd; }
-
 @media (max-width: 1300px) {
   .container {
     width: 100%;
@@ -209,10 +206,10 @@ button:hover,
     font-size: 18px; }
 
   .main {
-    gap: 150px; } }
+    gap: 75px; } }
 @media (max-width: 600px) {
   .main {
-    gap: 100px; } }
+    gap: 59px; } }
 @media (max-width: 340px) {
   h4 {
     max-width: 227px;
