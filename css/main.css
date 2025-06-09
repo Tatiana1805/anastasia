@@ -969,7 +969,7 @@ button {
       .price__el__item__info__el__more, .price__el__item__border__info__el__more {
         display: none; }
       .price__el__item__info__el__item__btn, .price__el__item__border__info__el__item__btn {
-        color: #1A5186;
+        color: #1a5186;
         font-weight: 600;
         font-family: "MainFont";
         font-size: 16px; }
@@ -1049,7 +1049,12 @@ button {
 
   .price__el__item__info__el__item__btn,
   .price__el__item__border__info__el__item__btn {
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  .price__cloud {
+    width: 100%;
+    margin-top: -127px;
+    margin-left: 0; } }
 @media (max-width: 900px) {
   .price__el__item__info {
     flex-wrap: wrap;
@@ -1087,12 +1092,14 @@ button {
 
   .mobile {
     display: block !important;
-    color: #B0B0B0;
+    color: #b0b0b0;
     font-size: 16px; }
 
-  .price__el__item, .price__el__item__border {
+  .price__el__item,
+  .price__el__item__border {
     padding: 31px 23px; }
-    .price__el__item__info, .price__el__item__border__info {
+    .price__el__item__info,
+    .price__el__item__border__info {
       justify-content: center; }
 
   .price__el__item__info__many,
@@ -1107,7 +1114,8 @@ button {
     flex-wrap: wrap;
     align-items: center; }
 
-  .price__el__item__info__h, .price__el__item__info__el {
+  .price__el__item__info__h,
+  .price__el__item__info__el {
     text-align: center; }
 
   .price__el__button {
@@ -1122,6 +1130,14 @@ button {
     width: 100%;
     margin: 0 auto;
     margin-top: 25px; } }
+@media (max-width: 550px) {
+  .price__cloud {
+    width: 100%;
+    margin-left: 0; } }
+@media (max-width: 402px) {
+  .price__cloud {
+    width: 83%;
+    margin-left: 30px; } }
 @media (max-width: 380px) {
   .price__el__end__button__h {
     font-size: 16px; }
