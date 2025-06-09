@@ -51,7 +51,6 @@ a {
   text-decoration: none;
   cursor: pointer;
   // transition: display 0.3s ease;
-
 }
 
 b {
@@ -113,18 +112,21 @@ h1 {
   font-size: 60px;
   font-family: "MainFontH";
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 h2 {
   font-size: 48px;
   font-family: "MainFontH";
   color: #1a5186;
+  letter-spacing: -0.02em;
 }
 h3 {
   font-weight: 600;
   font-size: 24px;
   font-family: "MainFontH";
   line-height: 1.5;
+  letter-spacing: -0.02em;
 }
 h4 {
   font-size: 24px;
@@ -133,6 +135,7 @@ h4 {
   margin-bottom: 28px;
   text-transform: uppercase;
   line-height: 1.5;
+  letter-spacing: -0.02em;
 }
 h5 {
   // width: 329px;
@@ -142,6 +145,7 @@ h5 {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.5;
+  letter-spacing: -0.02em;
   color: #1a5186;
 }
 p {
@@ -166,7 +170,7 @@ section[id] {
 /* Для плавности всего сайта */
 html {
   scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
 }
 .nav__contacts__icon,
 .nav__mobile__contacts .nav__contacts__icon,
@@ -175,11 +179,13 @@ html {
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center; /* Точка трансформации по центру */
 }
-button, .btn {
+button,
+.btn {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-button:hover, .btn:hover {
+button:hover,
+.btn:hover {
   transform: scale(1.05);
 }
 :root {
@@ -242,6 +248,6 @@ button:hover, .btn:hover {
     font-size: 16px;
   }
   .main {
-    gap: 80px;
+    gap: 60px;
   }
 }
