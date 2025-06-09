@@ -104,6 +104,7 @@ h1 {
   font-family: "MainFontH";
   line-height: 1.2;
   letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 h2 {
@@ -111,6 +112,7 @@ h2 {
   font-family: "MainFontH";
   color: #1a5186;
   letter-spacing: -0.02em;
+  font-weight: 600;
 }
 h3 {
   font-weight: 600;
@@ -127,6 +129,7 @@ h4 {
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: -0.02em;
+  font-weight: 600;
 }
 h5 {
   height: 36px;
@@ -137,6 +140,16 @@ h5 {
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: #1a5186;
+}
+/* Исправление жирности заголовков */
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Уточнение для Montserrat */
+.text-center h1 {
+  font-weight: 500 !important;
 }
 p {
   font-family: "MainFont";
