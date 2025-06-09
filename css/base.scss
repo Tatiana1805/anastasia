@@ -143,10 +143,9 @@ h5 {
 }
 /* Исправление жирности заголовков */
 h1, h2, h3, h4, h5, h6 {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased; 
+-moz-osx-font-smoothing: grayscale; 
 }
-
 /* Уточнение для Montserrat */
 .text-center h1 {
   font-weight: 500 !important;
