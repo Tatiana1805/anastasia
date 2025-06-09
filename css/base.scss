@@ -151,14 +151,12 @@ h5 {
   letter-spacing: -0.02em;
   color: #1a5186;
 }
-/* Исправление жирности заголовков */
-h1, h2, h3, h4, h5, h6 {
--webkit-font-smoothing: antialiased; 
--moz-osx-font-smoothing: grayscale; 
-}
-/* Уточнение для Montserrat */
-.text-center h1 {
-  font-weight: 500 !important;
+
+@-moz-document url-prefix() {
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+  }
 }
 p {
   font-family: "MainFont";
