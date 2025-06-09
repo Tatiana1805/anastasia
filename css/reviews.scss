@@ -41,6 +41,9 @@
   /* Резервный вариант для Firefox */
   max-height: calc(1.5em * 15); /* line-height × количество строк */
   position: relative;
+  line-clamp: 15;
+  display: box;
+  box-orient: vertical;
 }
 
 /* Градиент для Firefox */
@@ -65,17 +68,22 @@
   -webkit-line-clamp: initial !important;
   max-height: none !important;
   overflow: visible !important;
+  line-clamp: 15;
+  display: box;
+  box-orient: vertical;
 }
 
 .review-popup__text .review__content::after {
   display: none !important;
 }
 
-
 @media (max-width: 768px) {
   .reviews__info__list__el .review__content {
     -webkit-line-clamp: 10;
     max-height: calc(1.5em * 15);
+    line-clamp: 15;
+    display: box;
+    box-orient: vertical;
   }
 }
 .review-popup {
@@ -229,4 +237,14 @@
 
 .reviews__info__list__el__link:hover .reviews__info__list__el__link__img {
   transform: translateX(5px) scale(1.1); /* Сдвиг + небольшое увеличение */
+}
+@media (max-width: 1200px) {
+  .reviews__title {
+    max-width: 520px;
+  }
+}
+@media (max-width: 1024px) {
+  .reviews__info__arrows__el {
+    display: none;
+  }
 }

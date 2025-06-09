@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="libs/normalize.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
-    
-  </head>
+</head>
   <body>
     <div class="wrapper">
         <header class="header">
           <div class="container header__container">
             <nav class="header__nav nav">
-              <div class="nav__logo">Анастасия Тимохина</div>
-              <div class="hidden__logo">АТ</div>
+              <a href="#start" class="nav__logo">Анастасия Тимохина</a>
+              <a href="#start" class="hidden__logo">АТ</a>
                 <div class="nav__contacts">
                   <a href="https://t.me/Ya_Timohina"><img class="nav__contacts__icon" src="./img/svg/telegram.svg" alt="Telegram"></a>
                   <a href="https://wa.me/+79029217670"><img class="nav__contacts__icon" src="./img/svg/whatsapp.svg" alt="WhatsApp"></a>
@@ -29,8 +28,6 @@
                   <li class="nav__list__item"><a href="#contacts">Контакты</a></li>
                 </ul>
               </nav>
-
-                <!-- <div class="burger"> -->
                   <div class="nav__mobile">
                     <div class="nav__mobile__el">
                     <div class="nav__mobile__btn__menu__el">
@@ -54,7 +51,6 @@
                         <img class="nav__mobile__btn__menu" src="./img/svg/burger.svg" alt="мобильное меню">
                         <img class="nav__mobile__btn__close" src="./img/svg/popup-cross.svg" alt="крестик закрытия мобильного меню">
                       </div>
-                <!-- </div> -->
           </div>
         </header>
       <main class="main">
@@ -483,88 +479,89 @@
                 </div>    
   
             </section>
-            <section class="qualification" id="qualification">
-                <div class="container qualification__container">
-                  <div class="qualification__title">
-                    <img class="qualification__title__img" src="./img/svg/cloud.svg" alt="фоновое облако" />
-                    <h2 class="qualification__title__text">Квалификация</h2>
-                    <p>Институт профессионального развития и коммуникации (г. Санкт-Петербург)</p>
-                  </div>
-                    <div class="qualification__info">
-                        <div class="qualification__info__univer">
-                            <h3 class="qualification__info__univer__h3">Интегративный <br> психолог-консультант : </h3>
-                                <ul class="qualification__info__univer__list">
-                                    <li class="qualification__info__univer__list__el">Клиент-центрированная <br>терапия <span class="qualification__info__univer__list__el__span">01</span></li>
-                                    <li class="qualification__info__univer__list__el">МАК-терапия <span class="qualification__info__univer__list__el__span">02</span></li>
-                                    <li class="qualification__info__univer__list__el">Эриксоновский гипноз <span class="qualification__info__univer__list__el__span">03</span></li>
-                                    <li class="qualification__info__univer__list__el">Нейролингвистическое <br> программирование <span class="qualification__info__univer__list__el__span">04</span></li>
-                                    <li class="qualification__info__univer__list__el">Психодрама <span class="qualification__info__univer__list__el__span">05</span></li>
-                                    <li class="qualification__info__univer__list__el">Гештальт-терапия <span class="qualification__info__univer__list__el__span">06</span></li>
-                                    <li class="qualification__info__univer__list__el">EMDR-терапия <span class="qualification__info__univer__list__el__span">07</span></li>
-                                    <li class="qualification__info__univer__list__el">Трансактный анализ <span class="qualification__info__univer__list__el__span">08</span></li>  
-                                    <li class="qualification__info__univer__list__el">Метод В. Макулова <span class="qualification__info__univer__list__el__span">09</span></li>
-                                </ul>
-                        </div>
-                        <div class="qualification__info__diploma">
-                          <div class="qualification__info__diploma__arrow">
-                            <a class="diploma-prev">
-                              <img src="./img/svg/to-left.svg" alt="листать влево">
-                            </a>
-                          </div>
-                          
-                          <div class="swiper qualification__info__diploma__imgs">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                <a href="./img/dip/dip1.webp" data-fancybox="diplomas" data-caption="Сертификат 1">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip1.webp" alt="Сертификат">
-                                </a>
-                              </div>
-                              <div class="swiper-slide">
-                                <a href="./img/dip/dip2.webp" data-fancybox="diplomas" data-caption="Сертификат 2">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip2.webp" alt="Сертификат" loading="lazy">
-                                </a>
-                              </div>
-                              <div class="swiper-slide">
-                                <a href="./img/dip/dip3.webp" data-fancybox="diplomas" data-caption="Сертификат 3">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip3.webp" alt="Сертификат" loading="lazy">
-                              </a>
-                            </div>
-                              <div class="swiper-slide">
-                                <a href="./img/dip/dip4.webp" data-fancybox="diplomas" data-caption="Сертификат 4">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip4.webp" alt="Сертификат" loading="lazy">
-                              </a>
-                            </div>
-                              <div class="swiper-slide">
-                                <a href="./img/dip/dip5.webp" data-fancybox="diplomas" data-caption="Сертификат 5">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip5.webp" alt="Сертификат" loading="lazy">
-                              </a>
-                            </div>
-                              <div class="swiper-slide">
-                                <a href="./img/dip/dip6.webp" data-fancybox="diplomas" data-caption="Сертификат 6">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip6.webp" alt="Сертификат" loading="lazy">
-                              </a>
-                            </div>
-                              <div class="swiper-slide">
-                                <a href="./img/dip/dip7.webp" data-fancybox="diplomas" data-caption="Сертификат 7">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip7.webp" alt="Сертификат" loading="lazy">
-                              </a>
-                            </div>
-                              <div class="swiper-slide">
-                                <a href="./img/dip/dip8.webp" data-fancybox="diplomas" data-caption="Сертификат 8">
-                                <img class="qualification__info__diploma__imgs__el" src="./img/dip/dip8.webp" alt="Сертификат" loading="lazy">
-                              </a>
-                            </div>
-                            </div>
-                          </div>
-                          <div class="qualification__info__diploma__arrow">
-                            <a class="diploma-next">
-                              <img src="./img/svg/to-right.svg" alt="листать вправо">
-                            </a>
-                          </div>
-                        </div>
+           <section class="qualification" id="qualification">
+    <div class="container qualification__container">
+        <div class="qualification__title">
+            <img class="qualification__title__img" src="./img/svg/cloud.svg" alt="фоновое облако" />
+            <h2 class="qualification__title__text">Квалификация</h2>
+            <p>Институт профессионального развития и коммуникации (г. Санкт-Петербург)</p>
+        </div>
+        <div class="qualification__info">
+            <div class="qualification__info__univer">
+                <h3 class="qualification__info__univer__h3">Интегративный <br> психолог-консультант : </h3>
+                <ul class="qualification__info__univer__list">
+                    <li class="qualification__info__univer__list__el">Клиент-центрированная <br>терапия <span
+                            class="qualification__info__univer__list__el__span">01</span></li>
+                    <li class="qualification__info__univer__list__el">МАК-терапия <span
+                            class="qualification__info__univer__list__el__span">02</span></li>
+                    <li class="qualification__info__univer__list__el">Эриксоновский гипноз <span
+                            class="qualification__info__univer__list__el__span">03</span></li>
+                    <li class="qualification__info__univer__list__el">Нейролингвистическое <br> программирование <span
+                            class="qualification__info__univer__list__el__span">04</span></li>
+                    <li class="qualification__info__univer__list__el">Психодрама <span
+                            class="qualification__info__univer__list__el__span">05</span></li>
+                    <li class="qualification__info__univer__list__el">Гештальт-терапия <span
+                            class="qualification__info__univer__list__el__span">06</span></li>
+                    <li class="qualification__info__univer__list__el">EMDR-терапия <span
+                            class="qualification__info__univer__list__el__span">07</span></li>
+                    <li class="qualification__info__univer__list__el">Трансактный анализ <span
+                            class="qualification__info__univer__list__el__span">08</span></li>
+                    <li class="qualification__info__univer__list__el">Метод В. Макулова <span
+                            class="qualification__info__univer__list__el__span">09</span></li>
+                </ul>
+            </div>
+            <div class="qualification__info__diploma">
+                <div class="qualification__info__diploma__arrow">
+                    <a class="diploma-prev">
+                        <img src="./img/svg/to-left.svg" alt="листать влево">
+                    </a>
+                </div>
+
+                <div class="swiper qualification__info__diploma__imgs">
+                    <div class="swiper-wrapper">
+                        <a data-fancybox="gallery" href="img/dip/dip1.webp" class="swiper-slide">
+                            <img class="qualification__info__diploma__imgs__el" src="img/dip/dip1.webp" alt="Сертификат">
+                        </a>
+                        <a data-fancybox="gallery" href="img/dip/dip2.webp" class="swiper-slide">
+                            <img class="qualification__info__diploma__imgs__el" src="img/dip/dip2.webp" alt="Сертификат"
+                                loading="lazy">
+                        </a>
+                        <a data-fancybox="gallery" href="img/dip/dip3.webp" class="swiper-slide">
+                            <img class="qualification__info__diploma__imgs__el" src="img/dip/dip3.webp" alt="Сертификат"
+                                loading="lazy">
+                        </a>
+                        <a data-fancybox="gallery" href="img/dip/dip4.webp" class="swiper-slide">
+                            <img class="qualification__info__diploma__imgs__el" src="img/dip/dip4.webp" alt="Сертификат"
+                                loading="lazy">
+                        </a>
+                        <a data-fancybox="gallery" href="img/dip/dip5.webp" class="swiper-slide">
+                            <img class="qualification__info__diploma__imgs__el" src="img/dip/dip5.webp" alt="Сертификат"
+                                loading="lazy">
+                        </a>
+                        <a data-fancybox="gallery" href="img/dip/dip6.webp" class="swiper-slide">
+                            <img class="qualification__info__diploma__imgs__el" src="img/dip/dip6.webp" alt="Сертификат"
+                                loading="lazy">
+                        </a>
+                        <a data-fancybox="gallery" href="img/dip/dip7.webp" class="swiper-slide">
+                            <img class="qualification__info__diploma__imgs__el" src="img/dip/dip7.webp" alt="Сертификат"
+                                loading="lazy">
+                        </a>
+                        <a data-fancybox="gallery" href="img/dip/dip8.webp" class="swiper-slide">
+                            <img class="qualification__info__diploma__imgs__el" src="img/dip/dip8.webp" alt="Сертификат"
+                                loading="lazy">
+                        </a>
                     </div>
                 </div>
-            </section>
+
+                <div class="qualification__info__diploma__arrow">
+                    <a class="diploma-next">
+                        <img src="./img/svg/to-right.svg" alt="листать вправо">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
             <section class="reviews" id="reviews">
               <div class="container reviews__container">
                 <div class="reviews__title">
@@ -874,7 +871,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

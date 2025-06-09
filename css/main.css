@@ -99,18 +99,21 @@ h1 {
   color: #1a5186;
   font-size: 60px;
   font-family: "MainFontH";
-  line-height: 1.2; }
+  line-height: 1.2;
+  letter-spacing: -0.02em; }
 
 h2 {
   font-size: 48px;
   font-family: "MainFontH";
-  color: #1a5186; }
+  color: #1a5186;
+  letter-spacing: -0.02em; }
 
 h3 {
   font-weight: 600;
   font-size: 24px;
   font-family: "MainFontH";
-  line-height: 1.5; }
+  line-height: 1.5;
+  letter-spacing: -0.02em; }
 
 h4 {
   font-size: 24px;
@@ -118,7 +121,8 @@ h4 {
   color: #0e0e0e;
   margin-bottom: 28px;
   text-transform: uppercase;
-  line-height: 1.5; }
+  line-height: 1.5;
+  letter-spacing: -0.02em; }
 
 h5 {
   height: 36px;
@@ -127,6 +131,7 @@ h5 {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.5;
+  letter-spacing: -0.02em;
   color: #1a5186; }
 
 p {
@@ -161,10 +166,12 @@ html {
   transform-origin: center;
   /* Точка трансформации по центру */ }
 
-button, .btn {
+button,
+.btn {
   transition: transform 0.3s ease, background-color 0.3s ease; }
 
-button:hover, .btn:hover {
+button:hover,
+.btn:hover {
   transform: scale(1.05); }
 
 :root {
@@ -203,6 +210,9 @@ button:hover, .btn:hover {
 
   .main {
     gap: 150px; } }
+@media (max-width: 600px) {
+  .main {
+    gap: 100px; } }
 @media (max-width: 340px) {
   h4 {
     max-width: 227px;
@@ -212,7 +222,7 @@ button:hover, .btn:hover {
     font-size: 16px; }
 
   .main {
-    gap: 80px; } }
+    gap: 60px; } }
 .header {
   width: 100%;
   background: #e1eef6ab;
@@ -838,6 +848,9 @@ button {
   .help__list__bottom__itemp__img {
     height: 100%;
     object-fit: cover; } }
+@media (max-width: 1200px) {
+  .help__title {
+    max-width: 480px; } }
 @media (max-width: 1000px) {
   .hint__img {
     display: block;
@@ -1300,7 +1313,10 @@ button {
   /* Резервный вариант для Firefox */
   max-height: calc(1.5em * 15);
   /* line-height × количество строк */
-  position: relative; }
+  position: relative;
+  line-clamp: 15;
+  display: box;
+  box-orient: vertical; }
 
 /* Градиент для Firefox */
 @supports not (-webkit-line-clamp: 15) {
@@ -1316,7 +1332,10 @@ button {
   display: block !important;
   -webkit-line-clamp: initial !important;
   max-height: none !important;
-  overflow: visible !important; }
+  overflow: visible !important;
+  line-clamp: 15;
+  display: box;
+  box-orient: vertical; }
 
 .review-popup__text .review__content::after {
   display: none !important; }
@@ -1324,7 +1343,10 @@ button {
 @media (max-width: 768px) {
   .reviews__info__list__el .review__content {
     -webkit-line-clamp: 10;
-    max-height: calc(1.5em * 15); } }
+    max-height: calc(1.5em * 15);
+    line-clamp: 15;
+    display: box;
+    box-orient: vertical; } }
 .review-popup {
   position: fixed;
   top: 0;
@@ -1461,6 +1483,12 @@ button {
   transform: translateX(5px) scale(1.1);
   /* Сдвиг + небольшое увеличение */ }
 
+@media (max-width: 1200px) {
+  .reviews__title {
+    max-width: 520px; } }
+@media (max-width: 1024px) {
+  .reviews__info__arrows__el {
+    display: none; } }
 .contacts {
   margin-top: 40px; }
   .contacts__h {
