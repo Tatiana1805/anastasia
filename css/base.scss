@@ -153,8 +153,13 @@ h5 {
 }
 
 @-moz-document url-prefix() {
-
-  h1, h2, h3, h4, h5, h6, span {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
     font-weight: 400;
   }
 }
@@ -247,6 +252,7 @@ button:hover,
 @media (max-width: 600px) {
   .main {
     gap: 100px;
+    -webkit-gap: 100px;
   }
 }
 @media (max-width: 340px) {
@@ -259,5 +265,6 @@ button:hover,
   }
   .main {
     gap: 80px;
+    -webkit-gap: 80px;
   }
 }
