@@ -5,14 +5,11 @@
   &__cloud {
     width: auto;
     margin-top: -62px;
-    // width: 252px;
-    // height: 52px;
   }
   &__h2 {
     position: relative;
     text-align: left;
     z-index: 1;
-    // margin-top: 80px;
     margin-left: 49px;
   }
 
@@ -28,21 +25,15 @@
       fill: #63676c;
       &__el {
         padding: 32px 34px;
-        // margin: 33px 37px;
         display: flex;
         gap: 18px;
-        // width: 520px;
         max-height: 145px;
         background-color: #fbfdff;
         border: 2px dashed #b1c0cf;
         border-radius: 20px;
         text-transform: uppercase;
       }
-
       &__imgAbout {
-        // border-radius: 64px;
-        // width: 100%;
-        // max-height: 386px;
         margin-bottom: 22px;
       }
     }
@@ -63,8 +54,6 @@
       }
     }
     &__info {
-      // display: flex;
-      // gap: 25px;
       max-width: 593px;
       margin-top: 130px;
       padding-top: 65px;
@@ -104,7 +93,7 @@
 @media (max-width: 1200px) {
   .about__end__info__el {
     margin: 0;
-    width: 80%;
+    width: 95%;
     &__item {
       margin-bottom: 14px;
       font-size: 14px;
@@ -162,7 +151,6 @@
     }
     &__h2 {
       margin-left: 60px;
-      // font-size: 28px;
     }
     &__cloud {
       margin-top: -43px;

@@ -58,7 +58,6 @@
           padding-left: 30px;
           font-weight: 600;
           font-size: 16px;
-          // margin-bottom: 12px;
 
           &::before {
             content: "";
@@ -181,13 +180,6 @@
   display: none;
 }
 @media (max-width: 1300px) {
-  // .help__list__top {
-  //   grid-template-columns: repeat(2, 1fr);
-  // }
-  // .help__list__bottom {
-  //   grid-template-columns: repeat(2, 1fr);
-  // }
-
   .help__img,
   .help__list__bottom__itemp__img {
     height: 100%;

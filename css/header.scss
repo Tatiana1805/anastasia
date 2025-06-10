@@ -49,9 +49,7 @@
     display: flex;
     gap: 40px;
     font-weight: 400;
-    // font-style: normal;
     font-size: 18px;
-    // text-transform: uppercase;
     justify-content: space-between;
   }
 }
@@ -64,9 +62,6 @@ a {
 }
 .nav__mobile__btn {
   display: none;
-  // background: #e1eef6ab;
-  //   height: 200px;
-  //   padding: 0;
   &__menu {
     display: none;
   }
@@ -94,7 +89,6 @@ a {
     display: flex;
     padding: 3%;
     width: 100%;
-    // margin-top: 30px;
     justify-content: space-between;
   }
   .header__container {

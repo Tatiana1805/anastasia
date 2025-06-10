@@ -186,9 +186,6 @@ button:hover,
 .btn:hover {
   transform: scale(1.05); }
 
-:root {
-  --bg-color: #97b9cd; }
-
 @media (max-width: 1300px) {
   .container {
     width: 100%;
@@ -221,11 +218,13 @@ button:hover,
     font-size: 18px; }
 
   .main {
-    gap: 150px; } }
+    gap: 75px; } }
 @media (max-width: 600px) {
   .main {
     gap: 100px;
-    -webkit-gap: 100px; } }
+    -webkit-gap: 100px; } 
+}
+
 @media (max-width: 340px) {
   h4 {
     max-width: 227px;
@@ -615,7 +614,7 @@ button {
 @media (max-width: 1200px) {
   .about__end__info__el {
     margin: 0;
-    width: 80%; }
+    width: 95%; }
     .about__end__info__el__item {
       margin-bottom: 14px;
       font-size: 14px; } }

@@ -8,9 +8,7 @@ body {
 }
 
 body {
-  // overflow-x: hidden;
   margin: rem(0px);
-  // font-size: rem(16px);
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,22 +33,18 @@ ul > li {
 }
 
 ul {
-  // font-size: 1.5rem;
   font-family: "MainFont";
 }
 
 li {
-  // font-size: 1.1vw;
   font-family: "MainFont";
   position: relative;
-  // padding-left: 20px;
   line-height: 1.5;
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
-  // transition: display 0.3s ease;
 }
 
 b {
@@ -92,13 +86,10 @@ fieldset {
 .wrapper {
   position: relative;
   width: 100%;
-  // overflow-x: hidden;
 }
 
 .container {
   position: relative;
-  // max-width: 70%; //ширина контейнера
-  // width: 100%;
   max-width: 1278px;
   margin: 0 auto;
 }
@@ -141,7 +132,6 @@ h4 {
   font-weight: 600;
 }
 h5 {
-  // width: 329px;
   height: 36px;
   font-family: "MainFont";
   font-style: normal;
@@ -203,11 +193,6 @@ button:hover,
 .btn:hover {
   transform: scale(1.05);
 }
-:root {
-  --bg-color: #97b9cd;
-  // --color: #f0f8ff; //нежно-голубой, на всякий
-}
-
 @media (max-width: 1300px) {
   .container {
     width: 100%;
@@ -246,7 +231,7 @@ button:hover,
     font-size: 18px;
   }
   .main {
-    gap: 150px;
+    gap: 75px;
   }
 }
 @media (max-width: 600px) {
