@@ -244,7 +244,10 @@
   }
 }
 @media (max-width: 1024px) {
-  .reviews__info__arrows__el {
+  .reviews__info__arrows {
     display: none;
   }
+  .qualification__title {
+margin-bottom: 30px;
+}
 }

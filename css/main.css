@@ -1509,8 +1509,11 @@ button {
   .reviews__title {
     max-width: 520px; } }
 @media (max-width: 1024px) {
-  .reviews__info__arrows__el {
-    display: none; } }
+  .reviews__info__arrows {
+    display: none; }
+
+  .qualification__title {
+    margin-bottom: 30px; } }
 .contacts {
   margin-top: 40px; }
   .contacts__h {
@@ -1634,7 +1637,8 @@ h2 {
       .contacts__info__start__tel {
         display: none; }
       .contacts__info__start__mobile {
-        display: block; }
+        display: block;
+        text-align: center; }
     .contacts__info__end {
       margin: 0;
       width: 70%; }
