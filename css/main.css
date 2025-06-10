@@ -138,7 +138,13 @@ h5 {
   color: #1a5186; }
 
 @-moz-document url-prefix() {
-  h1, h2, h3, h4, h5, h6, span {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
     font-weight: 400; } }
 p {
   font-family: "MainFont";
@@ -215,7 +221,10 @@ button:hover,
     gap: 75px; } }
 @media (max-width: 600px) {
   .main {
-    gap: 59px; } }
+    gap: 100px;
+    -webkit-gap: 100px; } 
+}
+
 @media (max-width: 340px) {
   h4 {
     max-width: 227px;
@@ -225,7 +234,8 @@ button:hover,
     font-size: 16px; }
 
   .main {
-    gap: 80px; } }
+    gap: 80px;
+    -webkit-gap: 80px; } }
 .header {
   width: 100%;
   background: #e1eef6ab;
