@@ -29,6 +29,17 @@
   flex-shrink: 0;
   box-sizing: border-box;
 }
+.reviews__button{
+  &__img{
+
+  }
+  &__title{
+
+  }
+  &__arrow{
+    
+  }
+}
 /* Стили для обрезанного текста в карточках */
 .reviews__info__list__el .review__content {
   /* Обязательные свойства для line-clamp */
