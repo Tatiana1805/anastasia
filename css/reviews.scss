@@ -37,6 +37,8 @@
   -webkit-line-clamp: 15; /* Уменьшила число строк для лучшего вида */
   overflow: hidden;
   text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  hyphens: auto;
 
   /* Резервный вариант для Firefox */
   max-height: calc(1.5em * 15); /* line-height × количество строк */
@@ -71,6 +73,7 @@
   line-clamp: 15;
   display: box;
   box-orient: vertical;
+
 }
 
 .review-popup__text .review__content::after {
@@ -166,28 +169,28 @@
   }
 }
 .reviews__button {
-      max-width: 372px;
-      margin-top: 77px;
-      margin-left: auto;
-      &__link {
-        position: relative;
-        display: flex;
-        gap: 10px;
-        &__h {
-          margin-left: 41px;
-          cursor: pointer;
-        }
-        &__arrow {
-          width: 14px;
-          height: 19px;
-          margin: auto 0;
-        }
-      }
-
-      &__img {
-        margin-top: -85px;
-      }
+  max-width: 372px;
+  margin-top: 77px;
+  margin-left: auto;
+  &__link {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    &__h {
+      margin-left: 41px;
+      cursor: pointer;
     }
+    &__arrow {
+      width: 14px;
+      height: 19px;
+      margin: auto 0;
+    }
+  }
+
+  &__img {
+    margin-top: -85px;
+  }
+}
 .reviews__info {
   &__arrows {
     display: flex;
@@ -262,7 +265,7 @@
   transform: translateX(5px) scale(1.1); /* Сдвиг + небольшое увеличение */
 }
 .reviews__button__link__arrow {
-width: 15px;
+  width: 15px;
   transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6); /* Пружинный эффект */
 }
 
@@ -280,6 +283,6 @@ width: 15px;
     display: none;
   }
   .qualification__title {
-margin-bottom: 30px;
-}
+    margin-bottom: 30px;
+  }
 }
