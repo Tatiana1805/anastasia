@@ -1340,6 +1340,8 @@ button {
   /* Уменьшила число строк для лучшего вида */
   overflow: hidden;
   text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  hyphens: auto;
   /* Резервный вариант для Firefox */
   max-height: calc(1.5em * 15);
   /* line-height × количество строк */
