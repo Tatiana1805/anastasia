@@ -1453,6 +1453,24 @@ button {
 @media (min-width: 1024px) {
   .reviews__info__list__el {
     width: calc(33.333% - 15px); } }
+.reviews__button {
+  max-width: 372px;
+  margin-top: 77px;
+  margin-left: auto; }
+  .reviews__button__link {
+    position: relative;
+    display: flex;
+    gap: 10px; }
+    .reviews__button__link__h {
+      margin-left: 41px;
+      cursor: pointer; }
+    .reviews__button__link__arrow {
+      width: 14px;
+      height: 19px;
+      margin: auto 0; }
+  .reviews__button__img {
+    margin-top: -85px; }
+
 .reviews__info__arrows {
   display: flex;
   justify-content: space-between;
@@ -1510,6 +1528,15 @@ button {
   /* Пружинный эффект */ }
 
 .reviews__info__list__el__link:hover .reviews__info__list__el__link__img {
+  transform: translateX(5px) scale(1.1);
+  /* Сдвиг + небольшое увеличение */ }
+
+.reviews__button__link__arrow {
+  width: 15px;
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  /* Пружинный эффект */ }
+
+.reviews__button__link:hover .reviews__button__link__arrow {
   transform: translateX(5px) scale(1.1);
   /* Сдвиг + небольшое увеличение */ }
 
