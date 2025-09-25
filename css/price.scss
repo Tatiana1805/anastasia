@@ -47,9 +47,6 @@
       transition: 0.3s;
       &__border {
         border: 2px dashed #b1c0cf;
-        &:hover {
-          border: 2px solid transparent;
-        }
       }
 
       &__info {
@@ -136,10 +133,14 @@
   }
 }
 @media (hover: hover) {
-    .price__el__item:hover, .price__el__item__border:hover {
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
+  .price__el__item:hover,
+  .price__el__item__border:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  .price__el__item__border__border:hover {
+    border: 2px solid transparent;
+  }
 }
-
 
 @media (max-width: 1200px) {
   .price__h__h2 {
@@ -277,10 +278,10 @@
   }
 }
 @media (max-width: 402px) {
-    .price__cloud {
-        width: 83%;
-        margin-left: 30px;
-    }
+  .price__cloud {
+    width: 83%;
+    margin-left: 30px;
+  }
 }
 
 @media (max-width: 380px) {
